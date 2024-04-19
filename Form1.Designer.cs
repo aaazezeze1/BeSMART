@@ -37,6 +37,7 @@
             NewButton = new Button();
             ConverterButton = new Button();
             TimerButton = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)previousNotes).BeginInit();
             SuspendLayout();
             // 
@@ -80,7 +81,9 @@
             // 
             // LoadButton
             // 
+            LoadButton.FlatStyle = FlatStyle.Flat;
             LoadButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoadButton.ForeColor = Color.White;
             LoadButton.Location = new Point(15, 423);
             LoadButton.Name = "LoadButton";
             LoadButton.Size = new Size(86, 31);
@@ -88,10 +91,14 @@
             LoadButton.Text = "Load";
             LoadButton.UseVisualStyleBackColor = true;
             LoadButton.Click += LoadButton_Click;
+            LoadButton.MouseLeave += LoadButton_MouseLeave;
+            LoadButton.MouseHover += LoadButton_MouseHover;
             // 
             // DeleteButton
             // 
+            DeleteButton.FlatStyle = FlatStyle.Flat;
             DeleteButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DeleteButton.ForeColor = Color.White;
             DeleteButton.Location = new Point(15, 460);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(86, 31);
@@ -99,10 +106,14 @@
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = true;
             DeleteButton.Click += DeleteButton_Click;
+            DeleteButton.MouseLeave += DeleteButton_MouseLeave;
+            DeleteButton.MouseHover += DeleteButton_MouseHover;
             // 
             // SaveButton
             // 
+            SaveButton.FlatStyle = FlatStyle.Flat;
             SaveButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SaveButton.ForeColor = Color.White;
             SaveButton.Location = new Point(104, 460);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(86, 31);
@@ -110,10 +121,14 @@
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = true;
             SaveButton.Click += SaveButton_Click;
+            SaveButton.MouseLeave += SaveButton_MouseLeave;
+            SaveButton.MouseHover += SaveButton_MouseHover;
             // 
             // NewButton
             // 
+            NewButton.FlatStyle = FlatStyle.Flat;
             NewButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NewButton.ForeColor = Color.White;
             NewButton.Location = new Point(104, 423);
             NewButton.Name = "NewButton";
             NewButton.Size = new Size(86, 31);
@@ -121,26 +136,37 @@
             NewButton.Text = "New";
             NewButton.UseVisualStyleBackColor = true;
             NewButton.Click += NewButton_Click;
+            NewButton.MouseLeave += NewButton_MouseLeave;
+            NewButton.MouseHover += NewButton_MouseHover;
             // 
             // ConverterButton
             // 
+            ConverterButton.FlatStyle = FlatStyle.Flat;
             ConverterButton.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ConverterButton.ForeColor = Color.White;
             ConverterButton.Location = new Point(15, 497);
             ConverterButton.Name = "ConverterButton";
             ConverterButton.Size = new Size(175, 32);
             ConverterButton.TabIndex = 7;
             ConverterButton.Text = "Converter";
             ConverterButton.UseVisualStyleBackColor = true;
+            ConverterButton.Click += ConverterButton_Click;
+            ConverterButton.MouseLeave += ConverterButton_OnMouseLeave;
+            ConverterButton.MouseHover += ConverterButton_MouseHover;
             // 
             // TimerButton
             // 
+            TimerButton.FlatStyle = FlatStyle.Flat;
             TimerButton.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TimerButton.ForeColor = Color.White;
             TimerButton.Location = new Point(15, 535);
             TimerButton.Name = "TimerButton";
             TimerButton.Size = new Size(175, 32);
             TimerButton.TabIndex = 8;
             TimerButton.Text = "Timer";
             TimerButton.UseVisualStyleBackColor = true;
+            TimerButton.MouseLeave += TimerButton_MouseLeave;
+            TimerButton.MouseHover += TimerButton_MouseHover;
             // 
             // NotesApp
             // 
@@ -157,7 +183,10 @@
             Controls.Add(previousNotes);
             Controls.Add(NoteBox);
             Controls.Add(TitleBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "NotesApp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NotesApp";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)previousNotes).EndInit();
@@ -176,5 +205,6 @@
         private Button NewButton;
         private Button ConverterButton;
         private Button TimerButton;
+        private SaveFileDialog saveFileDialog1;
     }
 }
