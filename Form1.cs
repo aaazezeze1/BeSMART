@@ -1,6 +1,10 @@
 using System.Windows.Forms;
-// import data table library
+// Import the data table library
 using System.Data;
+
+// Import for File Saving 
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace NotesApp
 {
@@ -26,6 +30,7 @@ namespace NotesApp
             TitleBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
             NoteBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
             editing = true;
+
         }
 
         private void NewButton_Click(object sender, EventArgs e)
@@ -41,7 +46,7 @@ namespace NotesApp
             {
                 notes.Rows[previousNotes.CurrentCell.RowIndex].Delete();
             }
-            catch (Exception error)
+            catch (Exception)
             {
                 Console.WriteLine("Invalid Operation");
             }
@@ -57,6 +62,17 @@ namespace NotesApp
             else
             {
                 notes.Rows.Add(TitleBox.Text, NoteBox.Text);
+            }
+
+            // Let the user save the file to whatever directory they want as long as access is granted
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using Stream s = File.Open(saveFileDialog1.FileName, FileMode.CreateNew);
+                using (StreamWriter sw = new StreamWriter(s))
+                {
+                    sw.Write(NoteBox.Text);
+                }
             }
 
             // Clear the text when saved

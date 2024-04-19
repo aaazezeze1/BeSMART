@@ -37,6 +37,7 @@
             NewButton = new Button();
             ConverterButton = new Button();
             TimerButton = new Button();
+            saveFileDialog1 = new SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)previousNotes).BeginInit();
             SuspendLayout();
             // 
@@ -185,6 +186,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "NotesApp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NotesApp";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)previousNotes).EndInit();
@@ -203,5 +205,6 @@
         private Button NewButton;
         private Button ConverterButton;
         private Button TimerButton;
+        private SaveFileDialog saveFileDialog1;
     }
 }

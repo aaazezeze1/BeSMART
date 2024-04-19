@@ -18,7 +18,7 @@ namespace NotesApp
     {
         public Converter()
         {
-            InitializeComponent();
+            InitializeComponents();
         }
 
         private void ConvertTempButton_Click(object sender, EventArgs e)
@@ -80,6 +80,18 @@ namespace NotesApp
             return rate;
         }
 
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // Converter
+            // 
+            ClientSize = new Size(284, 261);
+            Name = "Converter";
+            StartPosition = FormStartPosition.CenterScreen;
+            ResumeLayout(false);
+        }
+
         private void ConvertCurrencyButton_Click(object sender, EventArgs e)
         {
             string fromCurrency = FromCurrencyCombo.SelectedItem.ToString();
@@ -87,7 +99,7 @@ namespace NotesApp
 
             double amount;
 
-            if(!double.TryParse(AmountTxtBox.Text, out amount))
+            if (!double.TryParse(AmountTxtBox.Text, out amount))
             {
                 MessageBox.Show("Invalid Input. Please Try Again.", "Error", MessageBoxButtons.OK);
                 return;
