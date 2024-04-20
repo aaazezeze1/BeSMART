@@ -63,6 +63,7 @@ namespace NotesApp
 
         private void Converter_Load(object sender, EventArgs e)
         {
+            // Upon load the default item selected is the PHP
             ToCurrencyCombo.SelectedItem = "PHP";
         }
 
@@ -71,6 +72,7 @@ namespace NotesApp
             string json;
             using (var client = new WebClient())
             {
+                // Fetch the exchange rate data using the API with the parameter from the Currency Combo Box
                 json = client.DownloadString($"https://api.exchangerate-api.com/v4/latest/{FromCurrencyCombo}");
             }
 
@@ -99,7 +101,12 @@ namespace NotesApp
 
             double amount;
 
+<<<<<<< Updated upstream
             if (!double.TryParse(AmountTxtBox.Text, out amount))
+=======
+            // Parse to double and if its not double then show an error
+            if(!double.TryParse(AmountTxtBox.Text, out amount))
+>>>>>>> Stashed changes
             {
                 MessageBox.Show("Invalid Input. Please Try Again.", "Error", MessageBoxButtons.OK);
                 return;
@@ -117,6 +124,7 @@ namespace NotesApp
             }
 
             double convertedAmount = amount * exchangeRate;
+            // Show the converted amount with two decimal places
             LblCurrencyResult.Text = "Converted Amount: " + toCurrency + convertedAmount.ToString("F2");
         }
     }
