@@ -55,7 +55,7 @@ namespace NotesApp
         // Change button color on hover or leave
         private void ConvertTempButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertTempButton.BackColor = Color.FromArgb(155, 89, 182);
+            ConvertTempButton.BackColor = Color.FromArgb(66, 69, 73);
         }
 
         private void ConvertTempButton_MouseLeave(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace NotesApp
 
         private void TempResetButton_MouseHover(object sender, EventArgs e)
         {
-            TempResetButton.BackColor = Color.FromArgb(155, 89, 182);
+            TempResetButton.BackColor = Color.FromArgb(66, 69, 73);
         }
 
         private void TempResetButton_MouseLeave(object sender, EventArgs e)
@@ -80,6 +80,10 @@ namespace NotesApp
         {
             // Upon load the default item selected is the PHP
             ToCurrencyCombo.SelectedItem = "PHP";
+
+            // Upon load the default text selected is Select Unit
+            FromUnitCmb.Text = "Select Unit";
+            ToUnitCmb.Text = "Select Unit";
         }
 
         private double GetExchangeRate(string FromCurrencyCombo, string ToCurrencyCombo)
@@ -128,13 +132,77 @@ namespace NotesApp
 
         private void ConvertCurrencyButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertCurrencyButton.BackColor = Color.FromArgb(155, 89, 182);
+            ConvertCurrencyButton.BackColor = Color.FromArgb(66, 69, 73);
         }
 
         private void ConvertCurrencyButton_MouseLeave(object sender, EventArgs e)
         {
             ConvertCurrencyButton.ResetBackColor();
             ConvertCurrencyButton.UseVisualStyleBackColor = true;
+        }
+
+        // Unit Conversion Code
+        private void ConvertUnitButton_Click(object sender, EventArgs e)
+        {
+            if (FromUnitCmb.Text == "Select Unit" || ToUnitCmb.Text == "Select Unit")
+            {
+                MessageBox.Show("Please Select a Unit");
+            }
+            else
+            {
+                if (FromUnitCmb.Text == "Kilometer" && ToUnitCmb.Text == "Meter")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 1000);
+                }
+                if (FromUnitCmb.Text == "Meter" && ToUnitCmb.Text == "Kilometer")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 1000);
+                }
+                if (FromUnitCmb.Text == "Centimeter" && ToUnitCmb.Text == "Meter")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 100);
+                }
+                if (FromUnitCmb.Text == "Meter" && ToUnitCmb.Text == "Centimeter")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 100);
+                }
+                if (FromUnitCmb.Text == "Centimeter" && ToUnitCmb.Text == "Feet")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 30.48);
+                }
+                if (FromUnitCmb.Text == "Feet" && ToUnitCmb.Text == "Centimeter")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 30.48);
+                }
+                if (FromUnitCmb.Text == "Kilograms" && ToUnitCmb.Text == "Grams")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 1000);
+                }
+                if (FromUnitCmb.Text == "Grams" && ToUnitCmb.Text == "Kilograms")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 1000);
+                }
+                if (FromUnitCmb.Text == "Miligrams" && ToUnitCmb.Text == "Grams")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 1000);
+                }
+                if (FromUnitCmb.Text == "Grams" && ToUnitCmb.Text == "Miligrams")
+                {
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 1000);
+                }
+            }
+
+        }
+
+        private void ConvertUnitButton_MouseHover(object sender, EventArgs e)
+        {
+            ConvertUnitButton.BackColor = Color.FromArgb(114, 137, 218);
+        }
+
+        private void ConvertUnitButton_MouseLeave(object sender, EventArgs e)
+        {
+            ConvertUnitButton.ResetBackColor();
+            ConvertUnitButton.UseVisualStyleBackColor = true;
         }
     }
 }

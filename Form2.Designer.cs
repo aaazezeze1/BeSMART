@@ -46,6 +46,17 @@
             label2 = new Label();
             TempTxtBox = new TextBox();
             label1 = new Label();
+            UnitAmountTxtBox = new TextBox();
+            FromUnitCmb = new ComboBox();
+            label4 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            ToUnitCmb = new ComboBox();
+            ConvertUnitButton = new Button();
+            UnitResultTxtBox = new TextBox();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,15 +88,17 @@
             // ConvertTempButton
             // 
             ConvertTempButton.FlatStyle = FlatStyle.Flat;
-            ConvertTempButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ConvertTempButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertTempButton.ForeColor = Color.White;
             ConvertTempButton.Location = new Point(9, 204);
             ConvertTempButton.Name = "ConvertTempButton";
-            ConvertTempButton.Size = new Size(75, 34);
+            ConvertTempButton.Size = new Size(86, 34);
             ConvertTempButton.TabIndex = 19;
             ConvertTempButton.Text = "Convert";
             ConvertTempButton.UseVisualStyleBackColor = true;
             ConvertTempButton.Click += ConvertTempButton_Click;
+            ConvertTempButton.MouseLeave += ConvertTempButton_MouseLeave;
+            ConvertTempButton.MouseHover += ConvertTempButton_MouseHover;
             // 
             // ToCurrencyCombo
             // 
@@ -108,11 +121,11 @@
             // ConvertCurrencyButton
             // 
             ConvertCurrencyButton.FlatStyle = FlatStyle.Flat;
-            ConvertCurrencyButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ConvertCurrencyButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertCurrencyButton.ForeColor = Color.White;
-            ConvertCurrencyButton.Location = new Point(45, 531);
+            ConvertCurrencyButton.Location = new Point(36, 531);
             ConvertCurrencyButton.Name = "ConvertCurrencyButton";
-            ConvertCurrencyButton.Size = new Size(75, 34);
+            ConvertCurrencyButton.Size = new Size(84, 34);
             ConvertCurrencyButton.TabIndex = 16;
             ConvertCurrencyButton.Text = "Convert";
             ConvertCurrencyButton.UseVisualStyleBackColor = true;
@@ -173,17 +186,17 @@
             // 
             // TempResultTxtBox
             // 
-            TempResultTxtBox.Location = new Point(36, 175);
+            TempResultTxtBox.Location = new Point(45, 175);
             TempResultTxtBox.Name = "TempResultTxtBox";
-            TempResultTxtBox.Size = new Size(84, 23);
+            TempResultTxtBox.Size = new Size(75, 23);
             TempResultTxtBox.TabIndex = 8;
             // 
             // TempResetButton
             // 
             TempResetButton.FlatStyle = FlatStyle.Flat;
-            TempResetButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TempResetButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TempResetButton.ForeColor = Color.White;
-            TempResetButton.Location = new Point(90, 204);
+            TempResetButton.Location = new Point(101, 204);
             TempResetButton.Name = "TempResetButton";
             TempResetButton.Size = new Size(75, 34);
             TempResetButton.TabIndex = 7;
@@ -259,23 +272,148 @@
             label1.TabIndex = 1;
             label1.Text = "Enter Temperature";
             // 
+            // UnitAmountTxtBox
+            // 
+            UnitAmountTxtBox.Location = new Point(292, 31);
+            UnitAmountTxtBox.Name = "UnitAmountTxtBox";
+            UnitAmountTxtBox.Size = new Size(111, 23);
+            UnitAmountTxtBox.TabIndex = 2;
+            // 
+            // FromUnitCmb
+            // 
+            FromUnitCmb.FormattingEnabled = true;
+            FromUnitCmb.Items.AddRange(new object[] { "Kilometer", "Meter", "Centimeter", "Feet", "Kilograms", "Grams", "Miligrams" });
+            FromUnitCmb.Location = new Point(292, 93);
+            FromUnitCmb.Name = "FromUnitCmb";
+            FromUnitCmb.Size = new Size(111, 23);
+            FromUnitCmb.TabIndex = 3;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(292, 7);
+            label4.Name = "label4";
+            label4.Size = new Size(111, 21);
+            label4.TabIndex = 4;
+            label4.Text = "Enter Amount";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(292, 68);
+            label8.Name = "label8";
+            label8.Size = new Size(48, 21);
+            label8.TabIndex = 5;
+            label8.Text = "From";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(292, 138);
+            label9.Name = "label9";
+            label9.Size = new Size(27, 21);
+            label9.TabIndex = 6;
+            label9.Text = "To";
+            // 
+            // ToUnitCmb
+            // 
+            ToUnitCmb.FormattingEnabled = true;
+            ToUnitCmb.Items.AddRange(new object[] { "Kilometer", "Meter", "Centimeter", "Feet", "Kilograms", "Grams", "Miligrams" });
+            ToUnitCmb.Location = new Point(292, 162);
+            ToUnitCmb.Name = "ToUnitCmb";
+            ToUnitCmb.Size = new Size(111, 23);
+            ToUnitCmb.TabIndex = 7;
+            // 
+            // ConvertUnitButton
+            // 
+            ConvertUnitButton.FlatStyle = FlatStyle.Flat;
+            ConvertUnitButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ConvertUnitButton.ForeColor = Color.White;
+            ConvertUnitButton.Location = new Point(273, 203);
+            ConvertUnitButton.Name = "ConvertUnitButton";
+            ConvertUnitButton.Size = new Size(84, 34);
+            ConvertUnitButton.TabIndex = 20;
+            ConvertUnitButton.Text = "Convert";
+            ConvertUnitButton.UseVisualStyleBackColor = true;
+            ConvertUnitButton.Click += ConvertUnitButton_Click;
+            ConvertUnitButton.MouseLeave += ConvertUnitButton_MouseLeave;
+            ConvertUnitButton.MouseHover += ConvertUnitButton_MouseHover;
+            // 
+            // UnitResultTxtBox
+            // 
+            UnitResultTxtBox.Location = new Point(363, 212);
+            UnitResultTxtBox.Name = "UnitResultTxtBox";
+            UnitResultTxtBox.Size = new Size(100, 23);
+            UnitResultTxtBox.TabIndex = 21;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(273, 276);
+            label10.Name = "label10";
+            label10.Size = new Size(199, 21);
+            label10.TabIndex = 22;
+            label10.Text = "Conversion Units Available:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(292, 306);
+            label11.Name = "label11";
+            label11.Size = new Size(149, 210);
+            label11.TabIndex = 25;
+            label11.Text = "Kilometer to Meter\r\nMeter to Kilometer\r\nCentimeter to Meter\r\nMeter to Centimeter\r\nCentimeter to Feet\r\nFeet to Centimeter\r\nKilograms to Grams\r\nGrams to Kilograms\r\nMiligrams to Grams\r\nGrams to Miligrams";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(114, 137, 218);
+            label12.Location = new Point(273, 527);
+            label12.Name = "label12";
+            label12.Size = new Size(201, 42);
+            label12.TabIndex = 26;
+            label12.Text = "*No Output will be shown \r\nif unit is not listed";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(66, 69, 73);
             ClientSize = new Size(800, 578);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(UnitResultTxtBox);
+            Controls.Add(ConvertUnitButton);
+            Controls.Add(ToUnitCmb);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label4);
+            Controls.Add(FromUnitCmb);
+            Controls.Add(UnitAmountTxtBox);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "Converter";
             Load += Form2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -298,5 +436,16 @@
         private ComboBox ToCurrencyCombo;
         private ComboBox FromCurrencyCombo;
         private Button ConvertTempButton;
+        private TextBox UnitAmountTxtBox;
+        private ComboBox FromUnitCmb;
+        private Label label4;
+        private Label label8;
+        private Label label9;
+        private ComboBox ToUnitCmb;
+        private Button ConvertUnitButton;
+        private TextBox UnitResultTxtBox;
+        private Label label10;
+        private Label label11;
+        private Label label12;
     }
 }
