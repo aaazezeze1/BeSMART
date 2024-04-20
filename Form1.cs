@@ -91,8 +91,11 @@ namespace NotesApp
 
         private void ConverterButton_Click(object sender, EventArgs e)
         {
-            Converter converterForm = new Converter();
-            converterForm.Show();
+            //Converter converterForm = new Converter();
+            //converterForm.Show();
+
+            Form2 form2 = new Form2();
+            form2.Show();
         }
 
         // Change color of the converter button on hover

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -14,13 +16,14 @@ using Newtonsoft.Json.Linq;
 
 namespace NotesApp
 {
-    public partial class Converter : Form
+    public partial class Form2 : Form
     {
-        public Converter()
+        public Form2()
         {
-            InitializeComponents();
+            InitializeComponent();
         }
 
+        // Temperature Converter Code
         private void ConvertTempButton_Click(object sender, EventArgs e)
         {
             double celcius, farenheit;
@@ -39,7 +42,6 @@ namespace NotesApp
                 celcius = (farenheit - 32) * 5 / 9;
                 double result = Math.Round(Convert.ToDouble(celcius), 2);
                 TempResultTxtBox.Text = Convert.ToString(result);
-
             }
         }
 
@@ -50,6 +52,7 @@ namespace NotesApp
             TempTxtBox.Text = "";
         }
 
+        // Change button color on hover or leave
         private void ConvertTempButton_MouseHover(object sender, EventArgs e)
         {
             ConvertTempButton.BackColor = Color.FromArgb(155, 89, 182);
@@ -61,7 +64,19 @@ namespace NotesApp
             ConvertTempButton.UseVisualStyleBackColor = true;
         }
 
-        private void Converter_Load(object sender, EventArgs e)
+        private void TempResetButton_MouseHover(object sender, EventArgs e)
+        {
+            TempResetButton.BackColor = Color.FromArgb(155, 89, 182);
+        }
+
+        private void TempResetButton_MouseLeave(object sender, EventArgs e)
+        {
+            TempResetButton.ResetBackColor();
+            TempResetButton.UseVisualStyleBackColor = true;
+        }
+
+        // Currency Converter Code
+        private void Form2_Load(object sender, EventArgs e)
         {
             // Upon load the default item selected is the PHP
             ToCurrencyCombo.SelectedItem = "PHP";
@@ -82,31 +97,14 @@ namespace NotesApp
             return rate;
         }
 
-        private void InitializeComponent()
-        {
-            SuspendLayout();
-            // 
-            // Converter
-            // 
-            ClientSize = new Size(284, 261);
-            Name = "Converter";
-            StartPosition = FormStartPosition.CenterScreen;
-            ResumeLayout(false);
-        }
-
         private void ConvertCurrencyButton_Click(object sender, EventArgs e)
         {
             string fromCurrency = FromCurrencyCombo.SelectedItem.ToString();
             string toCurrency = ToCurrencyCombo.SelectedItem.ToString();
-
             double amount;
 
-<<<<<<< Updated upstream
-            if (!double.TryParse(AmountTxtBox.Text, out amount))
-=======
             // Parse to double and if its not double then show an error
-            if(!double.TryParse(AmountTxtBox.Text, out amount))
->>>>>>> Stashed changes
+            if (!double.TryParse(AmountTxtBox.Text, out amount))
             {
                 MessageBox.Show("Invalid Input. Please Try Again.", "Error", MessageBoxButtons.OK);
                 return;
@@ -126,6 +124,17 @@ namespace NotesApp
             double convertedAmount = amount * exchangeRate;
             // Show the converted amount with two decimal places
             LblCurrencyResult.Text = "Converted Amount: " + toCurrency + convertedAmount.ToString("F2");
+        }
+
+        private void ConvertCurrencyButton_MouseHover(object sender, EventArgs e)
+        {
+            ConvertCurrencyButton.BackColor = Color.FromArgb(155, 89, 182);
+        }
+
+        private void ConvertCurrencyButton_MouseLeave(object sender, EventArgs e)
+        {
+            ConvertCurrencyButton.ResetBackColor();
+            ConvertCurrencyButton.UseVisualStyleBackColor = true;
         }
     }
 }

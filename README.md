@@ -10,3 +10,5 @@ Final Project in ITEC 103 (Intermediate Programming). Made by Amazing Grace Cabi
 
 Note: After installing Newtonsoft.Json using NuGet, go to the project's solution and click Rebuild Solution. Once it's done, Newtonsoft can now be imported by typing using Newtonsoft.Json.Linq;
 
+# Things to Improve
+1. Get a new API key that shows the latest currency exchange rate. 
