@@ -393,6 +393,12 @@
             // 
             // pictureBox1
             // 
+            // This is most likely a visual studio bug
+            // The bug is basically generating the wrong code to display the png 
+            // Everytime the project is loaded it changes the code to 
+            // NotesApp.Resources.Screenshot_2024_04_21_1801342 which is wrong
+            // What should be loaded instead to make it work is
+            // .Resources.Screenshot_2024_04_21_1801342
             pictureBox1.Image = Properties.Resources.Screenshot_2024_04_21_1801342;
             pictureBox1.Location = new Point(478, -1);
             pictureBox1.Name = "pictureBox1";
@@ -404,7 +410,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(66, 69, 73);
+            BackColor = Color.FromArgb(54, 57, 62);
             ClientSize = new Size(824, 742);
             Controls.Add(pictureBox1);
             Controls.Add(label12);

@@ -4,6 +4,7 @@ using System.Data;
 
 // Import for File Saving 
 using System.IO;
+
 using static System.Net.Mime.MediaTypeNames;
 
 namespace NotesApp
@@ -33,7 +34,6 @@ namespace NotesApp
             TitleBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
             NoteBox.Text = notes.Rows[previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
             editing = true;
-
         }
 
         private void NewButton_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace NotesApp
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex);
+                MessageBox.Show("Error: " + ex);
             }
         }
 
@@ -181,6 +181,12 @@ namespace NotesApp
         {
             ToDoListButton.ResetBackColor();
             ToDoListButton.UseVisualStyleBackColor = true;
+        }
+
+        private void TimerButton_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
         }
     }
 }

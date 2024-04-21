@@ -124,8 +124,8 @@ namespace NotesApp
                 MessageBox.Show("An error has occurred.", "API Error", MessageBoxButtons.OK);
                 return;
             }
-
             double convertedAmount = amount * exchangeRate;
+
             // Show the converted amount with two decimal places
             LblCurrencyResult.Text = "Converted Amount: " + toCurrency + convertedAmount.ToString("F2");
         }

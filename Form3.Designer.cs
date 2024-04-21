@@ -160,7 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(66, 69, 73);
+            BackColor = Color.FromArgb(54, 57, 62);
             ClientSize = new Size(648, 447);
             Controls.Add(ToDoListView);
             Controls.Add(SaveButton);

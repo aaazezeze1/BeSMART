@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             TitleBox = new TextBox();
             NoteBox = new TextBox();
             previousNotes = new DataGridView();
@@ -73,44 +73,44 @@
             // 
             // previousNotes
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            previousNotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(114, 137, 218);
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            previousNotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             previousNotes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             previousNotes.BackgroundColor = Color.White;
             previousNotes.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            previousNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = Color.FromArgb(114, 137, 218);
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle10.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(114, 137, 218);
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            previousNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             previousNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            previousNotes.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.White;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(114, 137, 218);
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            previousNotes.DefaultCellStyle = dataGridViewCellStyle11;
             previousNotes.GridColor = Color.FromArgb(54, 57, 62);
             previousNotes.Location = new Point(15, 12);
             previousNotes.Name = "previousNotes";
             previousNotes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            previousNotes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle12.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(114, 137, 218);
+            dataGridViewCellStyle12.SelectionForeColor = Color.White;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            previousNotes.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             previousNotes.RowHeadersVisible = false;
             previousNotes.Size = new Size(175, 405);
             previousNotes.TabIndex = 2;
@@ -202,6 +202,7 @@
             TimerButton.TabIndex = 8;
             TimerButton.Text = "Timer";
             TimerButton.UseVisualStyleBackColor = true;
+            TimerButton.Click += TimerButton_Click;
             TimerButton.MouseLeave += TimerButton_MouseLeave;
             TimerButton.MouseHover += TimerButton_MouseHover;
             // 
@@ -225,7 +226,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(54, 57, 62);
-            ClientSize = new Size(800, 615);
+            ClientSize = new Size(800, 617);
             Controls.Add(ToDoListButton);
             Controls.Add(TimerButton);
             Controls.Add(ConverterButton);
