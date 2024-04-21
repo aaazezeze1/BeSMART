@@ -19,7 +19,7 @@ namespace NotesApp
 
         private const int SECONDS = 60;
         private const int POMODORO = 25;
-        private const int SHORTB = 1;
+        private const int SHORTB = 5;
         private const int LONGB = 15;
 
         // Import sound player
