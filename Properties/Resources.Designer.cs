@@ -59,5 +59,35 @@ namespace NotesApp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_04_21_180134 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-04-21 180134", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_04_21_1801341 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-04-21 1801341", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_04_21_1801342 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-04-21 1801342", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

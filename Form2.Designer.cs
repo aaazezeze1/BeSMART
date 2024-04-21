@@ -57,7 +57,9 @@
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -82,7 +84,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(267, 580);
+            panel1.Size = new Size(267, 749);
             panel1.TabIndex = 0;
             // 
             // ConvertTempButton
@@ -274,18 +276,20 @@
             // 
             // UnitAmountTxtBox
             // 
+            UnitAmountTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             UnitAmountTxtBox.Location = new Point(292, 31);
             UnitAmountTxtBox.Name = "UnitAmountTxtBox";
-            UnitAmountTxtBox.Size = new Size(111, 23);
+            UnitAmountTxtBox.Size = new Size(111, 29);
             UnitAmountTxtBox.TabIndex = 2;
             // 
             // FromUnitCmb
             // 
+            FromUnitCmb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FromUnitCmb.FormattingEnabled = true;
             FromUnitCmb.Items.AddRange(new object[] { "Kilometer", "Meter", "Centimeter", "Feet", "Kilograms", "Grams", "Miligrams" });
             FromUnitCmb.Location = new Point(292, 93);
             FromUnitCmb.Name = "FromUnitCmb";
-            FromUnitCmb.Size = new Size(111, 23);
+            FromUnitCmb.Size = new Size(111, 29);
             FromUnitCmb.TabIndex = 3;
             // 
             // label4
@@ -323,11 +327,12 @@
             // 
             // ToUnitCmb
             // 
+            ToUnitCmb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ToUnitCmb.FormattingEnabled = true;
             ToUnitCmb.Items.AddRange(new object[] { "Kilometer", "Meter", "Centimeter", "Feet", "Kilograms", "Grams", "Miligrams" });
             ToUnitCmb.Location = new Point(292, 162);
             ToUnitCmb.Name = "ToUnitCmb";
-            ToUnitCmb.Size = new Size(111, 23);
+            ToUnitCmb.Size = new Size(111, 29);
             ToUnitCmb.TabIndex = 7;
             // 
             // ConvertUnitButton
@@ -347,9 +352,10 @@
             // 
             // UnitResultTxtBox
             // 
-            UnitResultTxtBox.Location = new Point(363, 212);
+            UnitResultTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UnitResultTxtBox.Location = new Point(363, 207);
             UnitResultTxtBox.Name = "UnitResultTxtBox";
-            UnitResultTxtBox.Size = new Size(100, 23);
+            UnitResultTxtBox.Size = new Size(100, 29);
             UnitResultTxtBox.TabIndex = 21;
             // 
             // label10
@@ -385,12 +391,22 @@
             label12.TabIndex = 26;
             label12.Text = "*No Output will be shown \r\nif unit is not listed";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Screenshot_2024_04_21_1801342;
+            pictureBox1.Location = new Point(478, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(347, 749);
+            pictureBox1.TabIndex = 27;
+            pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(66, 69, 73);
-            ClientSize = new Size(800, 578);
+            ClientSize = new Size(824, 742);
+            Controls.Add(pictureBox1);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -405,13 +421,13 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            MinimizeBox = false;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Converter";
             Load += Form2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -447,5 +463,6 @@
         private Label label10;
         private Label label11;
         private Label label12;
+        private PictureBox pictureBox1;
     }
 }

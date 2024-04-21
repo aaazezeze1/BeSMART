@@ -23,6 +23,9 @@ namespace NotesApp
             notes.Columns.Add("Title");
             notes.Columns.Add("Note");
             previousNotes.DataSource = notes;
+
+            // Change the color of the first cell
+            previousNotes.Rows[0].DefaultCellStyle.BackColor = Color.FromArgb(114, 137, 218);
         }
 
         private void LoadButton_Click(object sender, EventArgs e)
@@ -46,9 +49,9 @@ namespace NotesApp
             {
                 notes.Rows[previousNotes.CurrentCell.RowIndex].Delete();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Invalid Operation");
+                Console.WriteLine("Error: " + ex);
             }
         }
 
@@ -91,9 +94,6 @@ namespace NotesApp
 
         private void ConverterButton_Click(object sender, EventArgs e)
         {
-            //Converter converterForm = new Converter();
-            //converterForm.Show();
-
             Form2 form2 = new Form2();
             form2.Show();
         }
@@ -164,6 +164,23 @@ namespace NotesApp
         {
             TimerButton.ResetBackColor();
             TimerButton.UseVisualStyleBackColor = true;
+        }
+
+        private void ToDoListButton_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        private void ToDoListButton_MouseHover(object sender, EventArgs e)
+        {
+            ToDoListButton.BackColor = Color.FromArgb(114, 137, 218);
+        }
+
+        private void ToDoListButton_MouseLeave(object sender, EventArgs e)
+        {
+            ToDoListButton.ResetBackColor();
+            ToDoListButton.UseVisualStyleBackColor = true;
         }
     }
 }
