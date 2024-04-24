@@ -47,41 +47,43 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1146, 24);
+            menuStrip1.Size = new Size(1146, 29);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadFolderToolStripMenuItem });
+            fileToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Size = new Size(46, 25);
             fileToolStripMenuItem.Text = "File";
             // 
             // loadFolderToolStripMenuItem
             // 
             loadFolderToolStripMenuItem.Name = "loadFolderToolStripMenuItem";
-            loadFolderToolStripMenuItem.Size = new Size(136, 22);
+            loadFolderToolStripMenuItem.Size = new Size(180, 26);
             loadFolderToolStripMenuItem.Text = "Load Folder";
             loadFolderToolStripMenuItem.Click += LoadFolderEvent;
             // 
             // MediaPlayer
             // 
             MediaPlayer.Enabled = true;
-            MediaPlayer.Location = new Point(228, 27);
+            MediaPlayer.Location = new Point(228, 48);
             MediaPlayer.Name = "MediaPlayer";
             MediaPlayer.OcxState = (AxHost.State)resources.GetObject("MediaPlayer.OcxState");
-            MediaPlayer.Size = new Size(906, 543);
+            MediaPlayer.Size = new Size(906, 522);
             MediaPlayer.TabIndex = 1;
             MediaPlayer.PlayStateChange += MediaPlayer_PlayStateChange;
             // 
             // Playlist
             // 
+            Playlist.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Playlist.FormattingEnabled = true;
-            Playlist.ItemHeight = 15;
-            Playlist.Location = new Point(12, 27);
+            Playlist.ItemHeight = 21;
+            Playlist.Location = new Point(12, 48);
             Playlist.Name = "Playlist";
-            Playlist.Size = new Size(202, 544);
+            Playlist.Size = new Size(202, 508);
             Playlist.TabIndex = 2;
             Playlist.SelectedIndexChanged += PlayListChanged;
             // 
