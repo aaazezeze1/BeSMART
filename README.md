@@ -44,3 +44,4 @@ Once the application is reloaded again, the history or previous txt files create
 *The saved txt files can still be found on the users machine where they stored it. Only the history disappears upon reload.*
 
 5. Add an extra music file for the timer notification incase the user runs the app in other OS's.
+6. Make the UI look more modern.
