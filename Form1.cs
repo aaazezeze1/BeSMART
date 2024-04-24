@@ -194,5 +194,11 @@ namespace NotesApp
             Form5 form5 = new Form5();
             form5.Show();
         }
+
+        private void MP4Button_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+        }
     }
 }

@@ -257,6 +257,7 @@
             MP4Button.TabIndex = 12;
             MP4Button.Text = "Video Player";
             MP4Button.UseVisualStyleBackColor = false;
+            MP4Button.Click += MP4Button_Click;
             // 
             // NotesApp
             // 
