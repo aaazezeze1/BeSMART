@@ -141,5 +141,10 @@ namespace NotesApp
             string file = Path.GetFileName(Playlist.SelectedItem.ToString());
             name.Text = "Currently Playing: " + file;
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This project is made by Amazing Cabiles and Cyrelle Gapit");
+        }
     }
 }

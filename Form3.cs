@@ -47,9 +47,9 @@ namespace NotesApp
             {
                 todoList.Rows[ToDoListView.CurrentCell.RowIndex].Delete();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex);
+                MessageBox.Show("Error: Unable to Delete");
             }
         }
 

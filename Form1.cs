@@ -49,9 +49,9 @@ namespace NotesApp
             {
                 notes.Rows[previousNotes.CurrentCell.RowIndex].Delete();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex);
+                MessageBox.Show("Error: Unable to Delete");
             }
         }
 

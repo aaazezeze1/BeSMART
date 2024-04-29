@@ -92,7 +92,7 @@
             ConvertTempButton.FlatStyle = FlatStyle.Flat;
             ConvertTempButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertTempButton.ForeColor = Color.White;
-            ConvertTempButton.Location = new Point(9, 204);
+            ConvertTempButton.Location = new Point(9, 210);
             ConvertTempButton.Name = "ConvertTempButton";
             ConvertTempButton.Size = new Size(86, 34);
             ConvertTempButton.TabIndex = 19;
@@ -104,20 +104,22 @@
             // 
             // ToCurrencyCombo
             // 
+            ToCurrencyCombo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ToCurrencyCombo.FormattingEnabled = true;
             ToCurrencyCombo.Items.AddRange(new object[] { "AUD", "CAD", "EUR", "GBP", "JPY", "NZD", "PHP", "USD" });
             ToCurrencyCombo.Location = new Point(23, 480);
             ToCurrencyCombo.Name = "ToCurrencyCombo";
-            ToCurrencyCombo.Size = new Size(121, 23);
+            ToCurrencyCombo.Size = new Size(121, 29);
             ToCurrencyCombo.TabIndex = 18;
             // 
             // FromCurrencyCombo
             // 
+            FromCurrencyCombo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FromCurrencyCombo.FormattingEnabled = true;
             FromCurrencyCombo.Items.AddRange(new object[] { "AUD", "CAD", "EUR", "GBP", "JPY", "NZD", "PHP", "USD" });
             FromCurrencyCombo.Location = new Point(23, 415);
             FromCurrencyCombo.Name = "FromCurrencyCombo";
-            FromCurrencyCombo.Size = new Size(121, 23);
+            FromCurrencyCombo.Size = new Size(121, 29);
             FromCurrencyCombo.TabIndex = 17;
             // 
             // ConvertCurrencyButton
@@ -137,9 +139,10 @@
             // 
             // AmountTxtBox
             // 
-            AmountTxtBox.Location = new Point(32, 349);
+            AmountTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AmountTxtBox.Location = new Point(28, 349);
             AmountTxtBox.Name = "AmountTxtBox";
-            AmountTxtBox.Size = new Size(100, 23);
+            AmountTxtBox.Size = new Size(111, 29);
             AmountTxtBox.TabIndex = 15;
             // 
             // label7
@@ -188,9 +191,10 @@
             // 
             // TempResultTxtBox
             // 
+            TempResultTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TempResultTxtBox.Location = new Point(45, 175);
             TempResultTxtBox.Name = "TempResultTxtBox";
-            TempResultTxtBox.Size = new Size(75, 23);
+            TempResultTxtBox.Size = new Size(75, 29);
             TempResultTxtBox.TabIndex = 8;
             // 
             // TempResetButton
@@ -198,7 +202,7 @@
             TempResetButton.FlatStyle = FlatStyle.Flat;
             TempResetButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TempResetButton.ForeColor = Color.White;
-            TempResetButton.Location = new Point(101, 204);
+            TempResetButton.Location = new Point(101, 210);
             TempResetButton.Name = "TempResetButton";
             TempResetButton.Size = new Size(75, 34);
             TempResetButton.TabIndex = 7;
@@ -258,9 +262,10 @@
             // 
             // TempTxtBox
             // 
-            TempTxtBox.Location = new Point(36, 32);
+            TempTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TempTxtBox.Location = new Point(45, 32);
             TempTxtBox.Name = "TempTxtBox";
-            TempTxtBox.Size = new Size(84, 23);
+            TempTxtBox.Size = new Size(84, 29);
             TempTxtBox.TabIndex = 2;
             // 
             // label1
@@ -268,7 +273,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 8);
+            label1.Location = new Point(14, 8);
             label1.Name = "label1";
             label1.Size = new Size(151, 21);
             label1.TabIndex = 1;
@@ -393,12 +398,6 @@
             // 
             // pictureBox1
             // 
-            // This is most likely a visual studio bug
-            // The bug is basically generating the wrong code to display the png 
-            // Everytime the project is loaded it changes the code to 
-            // NotesApp.Resources.Screenshot_2024_04_21_1801342 which is wrong
-            // What should be loaded instead to make it work is
-            // .Resources.Screenshot_2024_04_21_1801342
             pictureBox1.Image = Properties.Resources.Screenshot_2024_04_21_1801342;
             pictureBox1.Location = new Point(478, -1);
             pictureBox1.Name = "pictureBox1";

@@ -18,6 +18,10 @@ namespace NotesApp
 {
     public partial class Form2 : Form
     {
+        private const int HUNDRED = 100;
+        private const int THOUSAND = 1000;
+        private const double CMFT = 30.48;
+
         public Form2()
         {
             InitializeComponent();
@@ -152,46 +156,45 @@ namespace NotesApp
             {
                 if (FromUnitCmb.Text == "Kilometer" && ToUnitCmb.Text == "Meter")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 1000);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * THOUSAND);
                 }
                 if (FromUnitCmb.Text == "Meter" && ToUnitCmb.Text == "Kilometer")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 1000);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / THOUSAND);
                 }
                 if (FromUnitCmb.Text == "Centimeter" && ToUnitCmb.Text == "Meter")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 100);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / HUNDRED);
                 }
                 if (FromUnitCmb.Text == "Meter" && ToUnitCmb.Text == "Centimeter")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 100);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * HUNDRED);
                 }
                 if (FromUnitCmb.Text == "Centimeter" && ToUnitCmb.Text == "Feet")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 30.48);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / CMFT);
                 }
                 if (FromUnitCmb.Text == "Feet" && ToUnitCmb.Text == "Centimeter")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 30.48);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * CMFT);
                 }
                 if (FromUnitCmb.Text == "Kilograms" && ToUnitCmb.Text == "Grams")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 1000);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * THOUSAND);
                 }
                 if (FromUnitCmb.Text == "Grams" && ToUnitCmb.Text == "Kilograms")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 1000);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / THOUSAND);
                 }
                 if (FromUnitCmb.Text == "Miligrams" && ToUnitCmb.Text == "Grams")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / 1000);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) / THOUSAND);
                 }
                 if (FromUnitCmb.Text == "Grams" && ToUnitCmb.Text == "Miligrams")
                 {
-                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * 1000);
+                    UnitResultTxtBox.Text = Convert.ToString(Convert.ToDouble(UnitAmountTxtBox.Text) * THOUSAND);
                 }
             }
-
         }
 
         private void ConvertUnitButton_MouseHover(object sender, EventArgs e)

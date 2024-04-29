@@ -38,6 +38,7 @@
             FileName = new Label();
             durationLbl = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            aboutToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MediaPlayer).BeginInit();
             SuspendLayout();
@@ -53,7 +54,7 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadFolderToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadFolderToolStripMenuItem, aboutToolStripMenuItem });
             fileToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(46, 25);
@@ -113,6 +114,13 @@
             // 
             timer1.Tick += TimerEvent;
             // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(180, 26);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
             // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -146,5 +154,6 @@
         private Label FileName;
         private Label durationLbl;
         private System.Windows.Forms.Timer timer1;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
