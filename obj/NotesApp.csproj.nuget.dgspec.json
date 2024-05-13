@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amazing\\Desktop\\NotesApp\\NotesApp.csproj": {}
+    "C:\\Users\\acer\\source\\repos\\NotesApp\\NotesApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amazing\\Desktop\\NotesApp\\NotesApp.csproj": {
+    "C:\\Users\\acer\\source\\repos\\NotesApp\\NotesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amazing\\Desktop\\NotesApp\\NotesApp.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\source\\repos\\NotesApp\\NotesApp.csproj",
         "projectName": "NotesApp",
-        "projectPath": "C:\\Users\\Amazing\\Desktop\\NotesApp\\NotesApp.csproj",
-        "packagesPath": "C:\\Users\\Amazing\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amazing\\Desktop\\NotesApp\\obj\\",
+        "projectPath": "C:\\Users\\acer\\source\\repos\\NotesApp\\NotesApp.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acer\\source\\repos\\NotesApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Amazing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,20 +34,31 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "ReaLTaiizor": {
+              "target": "Package",
+              "version": "[3.8.0.5, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
@@ -69,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

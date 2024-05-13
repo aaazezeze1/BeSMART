@@ -28,165 +28,449 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            TitleTxtBox = new TextBox();
-            DescTxtBox = new TextBox();
-            NewButton = new Button();
-            EditButton = new Button();
-            DeleteButton = new Button();
-            SaveButton = new Button();
-            ToDoListView = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)ToDoListView).BeginInit();
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            fLP1Sidebar = new FlowLayoutPanel();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            labl1BeSMART = new Label();
+            panel2 = new Panel();
+            btn1Schedule = new Button();
+            panel3 = new Panel();
+            btn2ToDoList = new Button();
+            panel5 = new Panel();
+            btn4Formula = new Button();
+            panel4 = new Panel();
+            btn3Converter = new Button();
+            panel6 = new Panel();
+            btn5Settings = new Button();
+            timer1SidebarTransition = new System.Windows.Forms.Timer(components);
+            panel8 = new Panel();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            fLP1CalendarContent = new FlowLayoutPanel();
+            btn2Next = new Button();
+            btn1Previous = new Button();
+            fLP2Days = new FlowLayoutPanel();
+            LBDATE = new Label();
+            fLP1Sidebar.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            panel6.SuspendLayout();
+            panel8.SuspendLayout();
+            fLP2Days.SuspendLayout();
             SuspendLayout();
             // 
-            // TitleTxtBox
+            // fLP1Sidebar
             // 
-            TitleTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TitleTxtBox.ForeColor = Color.FromArgb(54, 57, 62);
-            TitleTxtBox.Location = new Point(12, 12);
-            TitleTxtBox.Name = "TitleTxtBox";
-            TitleTxtBox.PlaceholderText = "Title";
-            TitleTxtBox.Size = new Size(158, 29);
-            TitleTxtBox.TabIndex = 0;
+            fLP1Sidebar.BackColor = Color.DarkSlateGray;
+            fLP1Sidebar.Controls.Add(panel1);
+            fLP1Sidebar.Controls.Add(panel2);
+            fLP1Sidebar.Controls.Add(panel3);
+            fLP1Sidebar.Controls.Add(panel5);
+            fLP1Sidebar.Controls.Add(panel4);
+            fLP1Sidebar.Controls.Add(panel6);
+            fLP1Sidebar.Dock = DockStyle.Left;
+            fLP1Sidebar.Location = new Point(0, 0);
+            fLP1Sidebar.Name = "fLP1Sidebar";
+            fLP1Sidebar.Size = new Size(77, 636);
+            fLP1Sidebar.TabIndex = 5;
             // 
-            // DescTxtBox
+            // panel1
             // 
-            DescTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DescTxtBox.ForeColor = Color.FromArgb(54, 57, 62);
-            DescTxtBox.Location = new Point(12, 47);
-            DescTxtBox.Multiline = true;
-            DescTxtBox.Name = "DescTxtBox";
-            DescTxtBox.PlaceholderText = "Description";
-            DescTxtBox.Size = new Size(159, 185);
-            DescTxtBox.TabIndex = 1;
+            panel1.BackColor = Color.DarkSlateGray;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(labl1BeSMART);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(179, 87);
+            panel1.TabIndex = 15;
             // 
-            // NewButton
+            // pictureBox1
             // 
-            NewButton.FlatStyle = FlatStyle.Flat;
-            NewButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NewButton.ForeColor = Color.White;
-            NewButton.Location = new Point(12, 246);
-            NewButton.Name = "NewButton";
-            NewButton.Size = new Size(76, 34);
-            NewButton.TabIndex = 4;
-            NewButton.Text = "New";
-            NewButton.UseVisualStyleBackColor = true;
-            NewButton.Click += NewButton_Click;
-            NewButton.MouseLeave += NewButton_MouseLeave;
-            NewButton.MouseHover += NewButton_MouseHover;
+            pictureBox1.BackColor = Color.DarkSlateGray;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(9, 20);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(56, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // EditButton
+            // labl1BeSMART
             // 
-            EditButton.FlatStyle = FlatStyle.Flat;
-            EditButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EditButton.ForeColor = Color.White;
-            EditButton.Location = new Point(12, 297);
-            EditButton.Name = "EditButton";
-            EditButton.Size = new Size(76, 34);
-            EditButton.TabIndex = 5;
-            EditButton.Text = "Edit";
-            EditButton.UseVisualStyleBackColor = true;
-            EditButton.Click += EditButton_Click;
-            EditButton.MouseLeave += EditButton_MouseLeave;
-            EditButton.MouseHover += EditButton_MouseHover;
+            labl1BeSMART.AutoSize = true;
+            labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labl1BeSMART.ForeColor = Color.White;
+            labl1BeSMART.Location = new Point(71, 34);
+            labl1BeSMART.Name = "labl1BeSMART";
+            labl1BeSMART.Size = new Size(105, 28);
+            labl1BeSMART.TabIndex = 2;
+            labl1BeSMART.Text = "BeSMART";
             // 
-            // DeleteButton
+            // panel2
             // 
-            DeleteButton.FlatStyle = FlatStyle.Flat;
-            DeleteButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DeleteButton.ForeColor = Color.White;
-            DeleteButton.Location = new Point(12, 350);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(76, 34);
-            DeleteButton.TabIndex = 6;
-            DeleteButton.Text = "Delete";
-            DeleteButton.UseVisualStyleBackColor = true;
-            DeleteButton.Click += DeleteButton_Click;
-            DeleteButton.MouseLeave += DeleteButton_MouseLeave;
-            DeleteButton.MouseHover += DeleteButton_MouseHover;
+            panel2.BackColor = Color.DarkSlateGray;
+            panel2.Controls.Add(btn1Schedule);
+            panel2.Location = new Point(3, 96);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(179, 98);
+            panel2.TabIndex = 2;
             // 
-            // SaveButton
+            // btn1Schedule
             // 
-            SaveButton.FlatStyle = FlatStyle.Flat;
-            SaveButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SaveButton.ForeColor = Color.White;
-            SaveButton.Location = new Point(12, 404);
-            SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(76, 34);
-            SaveButton.TabIndex = 7;
-            SaveButton.Text = "Save";
-            SaveButton.UseVisualStyleBackColor = true;
-            SaveButton.Click += SaveButton_Click;
-            SaveButton.MouseLeave += SaveButton_MouseLeave;
-            SaveButton.MouseHover += SaveButton_MouseHover;
+            btn1Schedule.BackColor = Color.DarkSlateGray;
+            btn1Schedule.FlatStyle = FlatStyle.Flat;
+            btn1Schedule.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1Schedule.ForeColor = Color.White;
+            btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
+            btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
+            btn1Schedule.Location = new Point(-9, -12);
+            btn1Schedule.Name = "btn1Schedule";
+            btn1Schedule.Padding = new Padding(30, 0, 0, 0);
+            btn1Schedule.Size = new Size(226, 121);
+            btn1Schedule.TabIndex = 3;
+            btn1Schedule.Text = "         Schedule";
+            btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
+            btn1Schedule.UseVisualStyleBackColor = false;
             // 
-            // ToDoListView
+            // panel3
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            ToDoListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            ToDoListView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            ToDoListView.BackgroundColor = Color.White;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            ToDoListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            ToDoListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            ToDoListView.DefaultCellStyle = dataGridViewCellStyle3;
-            ToDoListView.GridColor = Color.FromArgb(66, 69, 73);
-            ToDoListView.Location = new Point(177, 12);
-            ToDoListView.Name = "ToDoListView";
-            ToDoListView.RowHeadersVisible = false;
-            ToDoListView.Size = new Size(459, 426);
-            ToDoListView.TabIndex = 8;
+            panel3.BackColor = Color.DarkSlateGray;
+            panel3.Controls.Add(btn2ToDoList);
+            panel3.Location = new Point(3, 200);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(179, 98);
+            panel3.TabIndex = 3;
+            // 
+            // btn2ToDoList
+            // 
+            btn2ToDoList.BackColor = Color.DarkSlateGray;
+            btn2ToDoList.FlatStyle = FlatStyle.Flat;
+            btn2ToDoList.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn2ToDoList.ForeColor = Color.White;
+            btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
+            btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
+            btn2ToDoList.Location = new Point(-19, -11);
+            btn2ToDoList.Name = "btn2ToDoList";
+            btn2ToDoList.Padding = new Padding(35, 0, 0, 0);
+            btn2ToDoList.Size = new Size(236, 121);
+            btn2ToDoList.TabIndex = 3;
+            btn2ToDoList.Text = "          To Do List";
+            btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
+            btn2ToDoList.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.DarkSlateGray;
+            panel5.Controls.Add(btn4Formula);
+            panel5.Location = new Point(3, 304);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(179, 98);
+            panel5.TabIndex = 5;
+            // 
+            // btn4Formula
+            // 
+            btn4Formula.BackColor = Color.DarkSlateGray;
+            btn4Formula.FlatStyle = FlatStyle.Flat;
+            btn4Formula.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn4Formula.ForeColor = Color.White;
+            btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
+            btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
+            btn4Formula.Location = new Point(-9, -11);
+            btn4Formula.Name = "btn4Formula";
+            btn4Formula.Padding = new Padding(30, 0, 0, 0);
+            btn4Formula.Size = new Size(226, 121);
+            btn4Formula.TabIndex = 3;
+            btn4Formula.Text = "         Formula";
+            btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
+            btn4Formula.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.DarkSlateGray;
+            panel4.Controls.Add(btn3Converter);
+            panel4.Location = new Point(3, 408);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(185, 98);
+            panel4.TabIndex = 4;
+            // 
+            // btn3Converter
+            // 
+            btn3Converter.BackColor = Color.DarkSlateGray;
+            btn3Converter.FlatStyle = FlatStyle.Flat;
+            btn3Converter.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn3Converter.ForeColor = Color.White;
+            btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
+            btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
+            btn3Converter.Location = new Point(-9, -14);
+            btn3Converter.Name = "btn3Converter";
+            btn3Converter.Padding = new Padding(30, 0, 0, 0);
+            btn3Converter.Size = new Size(207, 121);
+            btn3Converter.TabIndex = 3;
+            btn3Converter.Text = "         Converter";
+            btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
+            btn3Converter.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.DarkSlateGray;
+            panel6.Controls.Add(btn5Settings);
+            panel6.Location = new Point(3, 512);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(187, 89);
+            panel6.TabIndex = 6;
+            // 
+            // btn5Settings
+            // 
+            btn5Settings.BackColor = Color.DarkSlateGray;
+            btn5Settings.FlatStyle = FlatStyle.Flat;
+            btn5Settings.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn5Settings.ForeColor = Color.White;
+            btn5Settings.Image = (Image)resources.GetObject("btn5Settings.Image");
+            btn5Settings.ImageAlign = ContentAlignment.MiddleLeft;
+            btn5Settings.Location = new Point(-9, -13);
+            btn5Settings.Name = "btn5Settings";
+            btn5Settings.Padding = new Padding(30, 0, 0, 0);
+            btn5Settings.Size = new Size(234, 125);
+            btn5Settings.TabIndex = 3;
+            btn5Settings.Text = "         Settings";
+            btn5Settings.TextAlign = ContentAlignment.MiddleLeft;
+            btn5Settings.UseVisualStyleBackColor = false;
+            // 
+            // timer1SidebarTransition
+            // 
+            timer1SidebarTransition.Interval = 10;
+            timer1SidebarTransition.Tick += timer1SidebarTransition_Tick;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.DimGray;
+            panel8.Controls.Add(label7);
+            panel8.Controls.Add(label6);
+            panel8.Controls.Add(label5);
+            panel8.Controls.Add(label4);
+            panel8.Controls.Add(label3);
+            panel8.Controls.Add(label2);
+            panel8.Controls.Add(label1);
+            panel8.Location = new Point(3, 3);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(663, 34);
+            panel8.TabIndex = 9;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(581, 9);
+            label7.Name = "label7";
+            label7.Size = new Size(70, 20);
+            label7.TabIndex = 16;
+            label7.Text = "Saturday";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(504, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(52, 20);
+            label6.TabIndex = 15;
+            label6.Text = "Friday";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(401, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(72, 20);
+            label5.TabIndex = 14;
+            label5.Text = "Thursday";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(280, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(97, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Wednnesday";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(195, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(64, 20);
+            label3.TabIndex = 12;
+            label3.Text = "Tuesday";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(104, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 20);
+            label2.TabIndex = 11;
+            label2.Text = "Monday";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(19, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Sunday";
+            // 
+            // fLP1CalendarContent
+            // 
+            fLP1CalendarContent.BackColor = Color.LightGray;
+            fLP1CalendarContent.Location = new Point(104, 131);
+            fLP1CalendarContent.Name = "fLP1CalendarContent";
+            fLP1CalendarContent.Size = new Size(672, 438);
+            fLP1CalendarContent.TabIndex = 7;
+            // 
+            // btn2Next
+            // 
+            btn2Next.BackColor = Color.DarkSlateGray;
+            btn2Next.FlatStyle = FlatStyle.Flat;
+            btn2Next.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn2Next.ForeColor = Color.White;
+            btn2Next.Location = new Point(679, 588);
+            btn2Next.Name = "btn2Next";
+            btn2Next.Size = new Size(97, 36);
+            btn2Next.TabIndex = 8;
+            btn2Next.Text = "Next";
+            btn2Next.UseVisualStyleBackColor = false;
+            btn2Next.Click += btn2Next_Click;
+            // 
+            // btn1Previous
+            // 
+            btn1Previous.BackColor = Color.DarkSlateGray;
+            btn1Previous.FlatStyle = FlatStyle.Flat;
+            btn1Previous.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1Previous.ForeColor = Color.White;
+            btn1Previous.Location = new Point(570, 588);
+            btn1Previous.Name = "btn1Previous";
+            btn1Previous.Size = new Size(97, 36);
+            btn1Previous.TabIndex = 7;
+            btn1Previous.Text = "Previous";
+            btn1Previous.UseVisualStyleBackColor = false;
+            btn1Previous.Click += btn1Previous_Click;
+            // 
+            // fLP2Days
+            // 
+            fLP2Days.BackColor = Color.DimGray;
+            fLP2Days.Controls.Add(panel8);
+            fLP2Days.Location = new Point(104, 84);
+            fLP2Days.Name = "fLP2Days";
+            fLP2Days.Size = new Size(672, 41);
+            fLP2Days.TabIndex = 10;
+            // 
+            // LBDATE
+            // 
+            LBDATE.BackColor = Color.Transparent;
+            LBDATE.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LBDATE.ForeColor = Color.Black;
+            LBDATE.Location = new Point(166, 26);
+            LBDATE.Name = "LBDATE";
+            LBDATE.Size = new Size(519, 42);
+            LBDATE.TabIndex = 14;
+            LBDATE.Text = "MONTH YEAR";
+            LBDATE.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form3
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(54, 57, 62);
-            ClientSize = new Size(648, 447);
-            Controls.Add(ToDoListView);
-            Controls.Add(SaveButton);
-            Controls.Add(DeleteButton);
-            Controls.Add(EditButton);
-            Controls.Add(NewButton);
-            Controls.Add(DescTxtBox);
-            Controls.Add(TitleTxtBox);
-            MaximizeBox = false;
+            ClientSize = new Size(1093, 636);
+            Controls.Add(fLP1Sidebar);
+            Controls.Add(LBDATE);
+            Controls.Add(btn2Next);
+            Controls.Add(btn1Previous);
+            Controls.Add(fLP2Days);
+            Controls.Add(fLP1CalendarContent);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "To Do List";
+            Text = "Schedule";
             Load += Form3_Load;
-            ((System.ComponentModel.ISupportInitialize)ToDoListView).EndInit();
+            fLP1Sidebar.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            fLP2Days.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private TextBox TitleTxtBox;
-        private TextBox DescTxtBox;
-        private Button NewButton;
-        private Button EditButton;
-        private Button DeleteButton;
-        private Button SaveButton;
-        private DataGridView ToDoListView;
+        private FlowLayoutPanel fLP1Sidebar;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Label labl1BeSMART;
+        private Panel panel2;
+        private Button btn1Schedule;
+        private Panel panel3;
+        private Button btn2ToDoList;
+        private Panel panel5;
+        private Button btn4Formula;
+        private Panel panel4;
+        private Button btn3Converter;
+        private Panel panel6;
+        private Button btn5Settings;
+        private System.Windows.Forms.Timer timer1SidebarTransition;
+        private FlowLayoutPanel fLP1CalendarContent;
+        private Button button1;
+        private Button button2;
+        private Panel panel8;
+        private Label label1;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private FlowLayoutPanel fLP2Days;
+        private FlowLayoutPanel fLP3PreviousNext;
+        private Button btn2Next;
+        private Button btn1Previous;
+        private Label LBDATE;
     }
 }
