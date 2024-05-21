@@ -32,8 +32,8 @@
             label2 = new Label();
             label3 = new Label();
             mTxtBoxDate = new MaskedTextBox();
-            mTxtBoxTime = new MaskedTextBox();
-            txtBoxEvents = new TextBox();
+            mTxtBoxEventTime = new MaskedTextBox();
+            txtBoxEventsTitle = new TextBox();
             saveEventButton = new Button();
             backToCalendarButton = new Button();
             rdBtn1PersonalEvents = new RadioButton();
@@ -82,24 +82,24 @@
             mTxtBoxDate.TabIndex = 3;
             mTxtBoxDate.ValidatingType = typeof(DateTime);
             // 
-            // mTxtBoxTime
+            // mTxtBoxEventTime
             // 
-            mTxtBoxTime.BackColor = SystemColors.Control;
-            mTxtBoxTime.BorderStyle = BorderStyle.None;
-            mTxtBoxTime.Cursor = Cursors.IBeam;
-            mTxtBoxTime.Location = new Point(88, 88);
-            mTxtBoxTime.Mask = "90:00";
-            mTxtBoxTime.Name = "mTxtBoxTime";
-            mTxtBoxTime.Size = new Size(37, 20);
-            mTxtBoxTime.TabIndex = 4;
+            mTxtBoxEventTime.BackColor = SystemColors.Control;
+            mTxtBoxEventTime.BorderStyle = BorderStyle.None;
+            mTxtBoxEventTime.Cursor = Cursors.IBeam;
+            mTxtBoxEventTime.Location = new Point(88, 88);
+            mTxtBoxEventTime.Mask = "90:00";
+            mTxtBoxEventTime.Name = "mTxtBoxEventTime";
+            mTxtBoxEventTime.Size = new Size(37, 20);
+            mTxtBoxEventTime.TabIndex = 4;
             // 
-            // txtBoxEvents
+            // txtBoxEventsTitle
             // 
-            txtBoxEvents.BorderStyle = BorderStyle.FixedSingle;
-            txtBoxEvents.Location = new Point(86, 140);
-            txtBoxEvents.Name = "txtBoxEvents";
-            txtBoxEvents.Size = new Size(421, 27);
-            txtBoxEvents.TabIndex = 5;
+            txtBoxEventsTitle.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxEventsTitle.Location = new Point(86, 140);
+            txtBoxEventsTitle.Name = "txtBoxEventsTitle";
+            txtBoxEventsTitle.Size = new Size(421, 27);
+            txtBoxEventsTitle.TabIndex = 5;
             // 
             // saveEventButton
             // 
@@ -112,6 +112,7 @@
             saveEventButton.TabIndex = 6;
             saveEventButton.Text = "Save Event";
             saveEventButton.UseVisualStyleBackColor = false;
+            saveEventButton.Click += saveEventButton_Click;
             // 
             // backToCalendarButton
             // 
@@ -124,6 +125,7 @@
             backToCalendarButton.TabIndex = 7;
             backToCalendarButton.Text = "Back";
             backToCalendarButton.UseVisualStyleBackColor = false;
+            backToCalendarButton.Click += backToCalendarButton_Click;
             // 
             // rdBtn1PersonalEvents
             // 
@@ -174,8 +176,8 @@
             Controls.Add(rdBtn1PersonalEvents);
             Controls.Add(backToCalendarButton);
             Controls.Add(saveEventButton);
-            Controls.Add(txtBoxEvents);
-            Controls.Add(mTxtBoxTime);
+            Controls.Add(txtBoxEventsTitle);
+            Controls.Add(mTxtBoxEventTime);
             Controls.Add(mTxtBoxDate);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -193,8 +195,8 @@
         private Label label2;
         private Label label3;
         private MaskedTextBox mTxtBoxDate;
-        private MaskedTextBox mTxtBoxTime;
-        private TextBox txtBoxEvents;
+        private MaskedTextBox mTxtBoxEventTime;
+        private TextBox txtBoxEventsTitle;
         private Button saveEventButton;
         private Button backToCalendarButton;
         private RadioButton rdBtn1PersonalEvents;

@@ -188,6 +188,7 @@
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
             btn2ToDoList.UseVisualStyleBackColor = false;
+            btn2ToDoList.Click += btn2ToDoList_Click;
             // 
             // panel5
             // 
@@ -214,6 +215,7 @@
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
             btn4Formula.UseVisualStyleBackColor = false;
+            btn4Formula.Click += btn4Formula_Click;
             // 
             // panel4
             // 
@@ -240,6 +242,7 @@
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
             btn3Converter.UseVisualStyleBackColor = false;
+            btn3Converter.Click += btn3Converter_Click;
             // 
             // panel6
             // 
@@ -266,6 +269,7 @@
             btn5Settings.Text = "         Settings";
             btn5Settings.TextAlign = ContentAlignment.MiddleLeft;
             btn5Settings.UseVisualStyleBackColor = false;
+            btn5Settings.Click += btn5Settings_Click;
             // 
             // NotesApp
             // 

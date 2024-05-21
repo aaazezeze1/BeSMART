@@ -86,3 +86,7 @@ C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\ref\NotesApp.dll
 C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.UserControl1Week.resources
 C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.UserControlDays.resources
 C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.EventsSchedForm4.resources
+C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form4.resources
+C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form6.resources
+C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form5.resources
+C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form7.resources
