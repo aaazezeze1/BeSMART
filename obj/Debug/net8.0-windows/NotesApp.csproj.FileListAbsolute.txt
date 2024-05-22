@@ -90,8 +90,6 @@ C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form4.reso
 C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form6.resources
 C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form5.resources
 C:\Users\acer\source\repos\NotesApp\obj\Debug\net8.0-windows\NotesApp.Form7.resources
-C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\NotesApp.exe
-C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\NotesApp.dll
 C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
 C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
 C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll

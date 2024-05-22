@@ -81,8 +81,9 @@
             fLP1Sidebar.Controls.Add(panel6);
             fLP1Sidebar.Dock = DockStyle.Left;
             fLP1Sidebar.Location = new Point(0, 0);
+            fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
             fLP1Sidebar.Name = "fLP1Sidebar";
-            fLP1Sidebar.Size = new Size(77, 636);
+            fLP1Sidebar.Size = new Size(67, 477);
             fLP1Sidebar.TabIndex = 5;
             // 
             // panel1
@@ -90,18 +91,20 @@
             panel1.BackColor = Color.DarkSlateGray;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(labl1BeSMART);
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(179, 87);
+            panel1.Size = new Size(157, 65);
             panel1.TabIndex = 15;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DarkSlateGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(9, 20);
+            pictureBox1.Location = new Point(8, 15);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 55);
+            pictureBox1.Size = new Size(49, 41);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -112,9 +115,9 @@
             labl1BeSMART.AutoSize = true;
             labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labl1BeSMART.ForeColor = Color.White;
-            labl1BeSMART.Location = new Point(71, 34);
+            labl1BeSMART.Location = new Point(62, 26);
             labl1BeSMART.Name = "labl1BeSMART";
-            labl1BeSMART.Size = new Size(105, 28);
+            labl1BeSMART.Size = new Size(83, 21);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
             // 
@@ -122,9 +125,10 @@
             // 
             panel2.BackColor = Color.DarkSlateGray;
             panel2.Controls.Add(btn1Schedule);
-            panel2.Location = new Point(3, 96);
+            panel2.Location = new Point(3, 71);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(179, 98);
+            panel2.Size = new Size(157, 74);
             panel2.TabIndex = 2;
             // 
             // btn1Schedule
@@ -135,10 +139,11 @@
             btn1Schedule.ForeColor = Color.White;
             btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
             btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1Schedule.Location = new Point(-9, -12);
+            btn1Schedule.Location = new Point(-8, -9);
+            btn1Schedule.Margin = new Padding(3, 2, 3, 2);
             btn1Schedule.Name = "btn1Schedule";
-            btn1Schedule.Padding = new Padding(30, 0, 0, 0);
-            btn1Schedule.Size = new Size(226, 121);
+            btn1Schedule.Padding = new Padding(26, 0, 0, 0);
+            btn1Schedule.Size = new Size(198, 91);
             btn1Schedule.TabIndex = 3;
             btn1Schedule.Text = "         Schedule";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
@@ -149,9 +154,10 @@
             // 
             panel3.BackColor = Color.DarkSlateGray;
             panel3.Controls.Add(btn2ToDoList);
-            panel3.Location = new Point(3, 200);
+            panel3.Location = new Point(3, 149);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(179, 98);
+            panel3.Size = new Size(157, 74);
             panel3.TabIndex = 3;
             // 
             // btn2ToDoList
@@ -162,10 +168,11 @@
             btn2ToDoList.ForeColor = Color.White;
             btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
             btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2ToDoList.Location = new Point(-19, -11);
+            btn2ToDoList.Location = new Point(-17, -8);
+            btn2ToDoList.Margin = new Padding(3, 2, 3, 2);
             btn2ToDoList.Name = "btn2ToDoList";
-            btn2ToDoList.Padding = new Padding(35, 0, 0, 0);
-            btn2ToDoList.Size = new Size(236, 121);
+            btn2ToDoList.Padding = new Padding(31, 0, 0, 0);
+            btn2ToDoList.Size = new Size(206, 91);
             btn2ToDoList.TabIndex = 3;
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
@@ -176,9 +183,10 @@
             // 
             panel5.BackColor = Color.DarkSlateGray;
             panel5.Controls.Add(btn4Formula);
-            panel5.Location = new Point(3, 304);
+            panel5.Location = new Point(3, 227);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(179, 98);
+            panel5.Size = new Size(157, 74);
             panel5.TabIndex = 5;
             // 
             // btn4Formula
@@ -189,10 +197,11 @@
             btn4Formula.ForeColor = Color.White;
             btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
             btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
-            btn4Formula.Location = new Point(-9, -11);
+            btn4Formula.Location = new Point(-8, -8);
+            btn4Formula.Margin = new Padding(3, 2, 3, 2);
             btn4Formula.Name = "btn4Formula";
-            btn4Formula.Padding = new Padding(30, 0, 0, 0);
-            btn4Formula.Size = new Size(226, 121);
+            btn4Formula.Padding = new Padding(26, 0, 0, 0);
+            btn4Formula.Size = new Size(198, 91);
             btn4Formula.TabIndex = 3;
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
@@ -203,9 +212,10 @@
             // 
             panel4.BackColor = Color.DarkSlateGray;
             panel4.Controls.Add(btn3Converter);
-            panel4.Location = new Point(3, 408);
+            panel4.Location = new Point(3, 305);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(185, 98);
+            panel4.Size = new Size(162, 74);
             panel4.TabIndex = 4;
             // 
             // btn3Converter
@@ -216,10 +226,11 @@
             btn3Converter.ForeColor = Color.White;
             btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
             btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3Converter.Location = new Point(-9, -14);
+            btn3Converter.Location = new Point(-8, -10);
+            btn3Converter.Margin = new Padding(3, 2, 3, 2);
             btn3Converter.Name = "btn3Converter";
-            btn3Converter.Padding = new Padding(30, 0, 0, 0);
-            btn3Converter.Size = new Size(207, 121);
+            btn3Converter.Padding = new Padding(26, 0, 0, 0);
+            btn3Converter.Size = new Size(181, 91);
             btn3Converter.TabIndex = 3;
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
@@ -230,9 +241,10 @@
             // 
             panel6.BackColor = Color.DarkSlateGray;
             panel6.Controls.Add(btn5Settings);
-            panel6.Location = new Point(3, 512);
+            panel6.Location = new Point(3, 383);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(187, 89);
+            panel6.Size = new Size(164, 67);
             panel6.TabIndex = 6;
             // 
             // btn5Settings
@@ -243,10 +255,11 @@
             btn5Settings.ForeColor = Color.White;
             btn5Settings.Image = (Image)resources.GetObject("btn5Settings.Image");
             btn5Settings.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.Location = new Point(-9, -13);
+            btn5Settings.Location = new Point(-8, -10);
+            btn5Settings.Margin = new Padding(3, 2, 3, 2);
             btn5Settings.Name = "btn5Settings";
-            btn5Settings.Padding = new Padding(30, 0, 0, 0);
-            btn5Settings.Size = new Size(234, 125);
+            btn5Settings.Padding = new Padding(26, 0, 0, 0);
+            btn5Settings.Size = new Size(205, 94);
             btn5Settings.TabIndex = 3;
             btn5Settings.Text = "         Settings";
             btn5Settings.TextAlign = ContentAlignment.MiddleLeft;
@@ -268,9 +281,10 @@
             panel8.Controls.Add(label3);
             panel8.Controls.Add(label2);
             panel8.Controls.Add(label1);
-            panel8.Location = new Point(3, 3);
+            panel8.Location = new Point(3, 2);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(663, 34);
+            panel8.Size = new Size(580, 26);
             panel8.TabIndex = 9;
             // 
             // label7
@@ -279,9 +293,9 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(581, 9);
+            label7.Location = new Point(508, 7);
             label7.Name = "label7";
-            label7.Size = new Size(70, 20);
+            label7.Size = new Size(54, 15);
             label7.TabIndex = 16;
             label7.Text = "Saturday";
             // 
@@ -291,9 +305,9 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(504, 9);
+            label6.Location = new Point(441, 7);
             label6.Name = "label6";
-            label6.Size = new Size(52, 20);
+            label6.Size = new Size(39, 15);
             label6.TabIndex = 15;
             label6.Text = "Friday";
             // 
@@ -303,9 +317,9 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(401, 9);
+            label5.Location = new Point(351, 7);
             label5.Name = "label5";
-            label5.Size = new Size(72, 20);
+            label5.Size = new Size(56, 15);
             label5.TabIndex = 14;
             label5.Text = "Thursday";
             // 
@@ -315,9 +329,9 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(280, 9);
+            label4.Location = new Point(245, 7);
             label4.Name = "label4";
-            label4.Size = new Size(97, 20);
+            label4.Size = new Size(76, 15);
             label4.TabIndex = 13;
             label4.Text = "Wednnesday";
             // 
@@ -327,9 +341,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(195, 9);
+            label3.Location = new Point(171, 7);
             label3.Name = "label3";
-            label3.Size = new Size(64, 20);
+            label3.Size = new Size(50, 15);
             label3.TabIndex = 12;
             label3.Text = "Tuesday";
             // 
@@ -339,9 +353,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(104, 9);
+            label2.Location = new Point(91, 7);
             label2.Name = "label2";
-            label2.Size = new Size(66, 20);
+            label2.Size = new Size(51, 15);
             label2.TabIndex = 11;
             label2.Text = "Monday";
             // 
@@ -351,18 +365,19 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(19, 9);
+            label1.Location = new Point(17, 7);
             label1.Name = "label1";
-            label1.Size = new Size(60, 20);
+            label1.Size = new Size(47, 15);
             label1.TabIndex = 10;
             label1.Text = "Sunday";
             // 
             // fLP1CalendarContent
             // 
             fLP1CalendarContent.BackColor = Color.LightGray;
-            fLP1CalendarContent.Location = new Point(104, 131);
+            fLP1CalendarContent.Location = new Point(91, 98);
+            fLP1CalendarContent.Margin = new Padding(3, 2, 3, 2);
             fLP1CalendarContent.Name = "fLP1CalendarContent";
-            fLP1CalendarContent.Size = new Size(672, 438);
+            fLP1CalendarContent.Size = new Size(588, 328);
             fLP1CalendarContent.TabIndex = 7;
             // 
             // btn2Next
@@ -371,9 +386,10 @@
             btn2Next.FlatStyle = FlatStyle.Flat;
             btn2Next.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn2Next.ForeColor = Color.White;
-            btn2Next.Location = new Point(679, 588);
+            btn2Next.Location = new Point(594, 441);
+            btn2Next.Margin = new Padding(3, 2, 3, 2);
             btn2Next.Name = "btn2Next";
-            btn2Next.Size = new Size(97, 36);
+            btn2Next.Size = new Size(85, 27);
             btn2Next.TabIndex = 8;
             btn2Next.Text = "Next";
             btn2Next.UseVisualStyleBackColor = false;
@@ -385,9 +401,10 @@
             btn1Previous.FlatStyle = FlatStyle.Flat;
             btn1Previous.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn1Previous.ForeColor = Color.White;
-            btn1Previous.Location = new Point(570, 588);
+            btn1Previous.Location = new Point(499, 441);
+            btn1Previous.Margin = new Padding(3, 2, 3, 2);
             btn1Previous.Name = "btn1Previous";
-            btn1Previous.Size = new Size(97, 36);
+            btn1Previous.Size = new Size(85, 27);
             btn1Previous.TabIndex = 7;
             btn1Previous.Text = "Previous";
             btn1Previous.UseVisualStyleBackColor = false;
@@ -397,9 +414,10 @@
             // 
             fLP2Days.BackColor = Color.DimGray;
             fLP2Days.Controls.Add(panel8);
-            fLP2Days.Location = new Point(104, 84);
+            fLP2Days.Location = new Point(91, 63);
+            fLP2Days.Margin = new Padding(3, 2, 3, 2);
             fLP2Days.Name = "fLP2Days";
-            fLP2Days.Size = new Size(672, 41);
+            fLP2Days.Size = new Size(588, 31);
             fLP2Days.TabIndex = 10;
             // 
             // LBDATE
@@ -407,18 +425,18 @@
             LBDATE.BackColor = Color.Transparent;
             LBDATE.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBDATE.ForeColor = Color.Black;
-            LBDATE.Location = new Point(166, 26);
+            LBDATE.Location = new Point(145, 20);
             LBDATE.Name = "LBDATE";
-            LBDATE.Size = new Size(519, 42);
+            LBDATE.Size = new Size(454, 32);
             LBDATE.TabIndex = 14;
             LBDATE.Text = "MONTH YEAR";
             LBDATE.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Form3
+            // ScheduleForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1093, 636);
+            ClientSize = new Size(956, 477);
             Controls.Add(fLP1Sidebar);
             Controls.Add(LBDATE);
             Controls.Add(btn2Next);
@@ -426,7 +444,9 @@
             Controls.Add(fLP2Days);
             Controls.Add(fLP1CalendarContent);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form3";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "ScheduleForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Schedule";
             Load += Form3_Load;
             fLP1Sidebar.ResumeLayout(false);
