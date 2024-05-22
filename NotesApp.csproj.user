@@ -2,28 +2,28 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Form7.cs">
+    <Compile Update="ConverterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="EventsSchedForm4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.cs">
+    <Compile Update="NotesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form3.cs">
+    <Compile Update="ScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form4.cs">
+    <Compile Update="FormulaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form6.cs">
+    <Compile Update="MediaPlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form5.cs">
+    <Compile Update="ToDoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserControl1Week.cs">

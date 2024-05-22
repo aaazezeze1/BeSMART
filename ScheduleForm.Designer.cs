@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class Form3
+    partial class ScheduleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScheduleForm));
             fLP1Sidebar = new FlowLayoutPanel();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();

@@ -22,13 +22,15 @@ using System.Media;
 
 namespace NotesApp
 {
-    public partial class Form2 : Form
+    public partial class NotesForm : Form
     {
         DataTable notes = new DataTable();
         bool editing = false;
         private ColorDialog colorDialog;
 
-        //pomodoro timer
+        private Class1 mp3 = new Class1();
+
+        // Pomodoro timer
 
         private int timeLeft;
 
@@ -40,55 +42,10 @@ namespace NotesApp
         // Import sound player
         SoundPlayer player = new SoundPlayer();
 
-        public Form2()
+        public NotesForm()
         {
             InitializeComponent();
-            timer1SidebarTransition.Tick += timer1SidebarTransition_Tick;
             colorDialog = new ColorDialog();
-
-        }
-
-        bool sidebarExpand = false; //collapsed sidebar
-
-        private void timer1SidebarTransition_Tick(object sender, EventArgs e)
-        {
-            if (sidebarExpand) //expanding sidebar
-            {
-                if (fLP1Sidebar.Width < 190)
-                {
-                    fLP1Sidebar.Width += 10;
-                    //fLP2NotesContent.Width -= 10;
-                    //fLP2NotesContent.Left += 10;
-                }
-                else
-                {
-                    //make sure sidebar does not go below min width
-                    fLP1Sidebar.Width = 190;
-                    sidebarExpand = false;
-                    timer1SidebarTransition.Stop();
-                }
-            }
-            else //collapse seidebar
-            {
-                if (fLP1Sidebar.Width > 72)
-                {
-                    fLP1Sidebar.Width -= 10;
-                    //fLP2NotesContent.Width += 10;
-                    //fLP2NotesContent.Left -= 10;
-                }
-                else
-                {
-                    //make sure sidebar does not exceed the max width
-                    fLP1Sidebar.Width = 72;
-                    sidebarExpand = true;
-                    timer1SidebarTransition.Stop();
-                }
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            timer1SidebarTransition.Start();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -97,9 +54,9 @@ namespace NotesApp
             notes.Columns.Add("Note");
             dGR1previousNotes.DataSource = notes;
 
-            //load the fonts into the combobox when the form loads
-            //Get all the Font Family names from Graphics associated to richTextBox
-            //Then load the font name to the combobox
+            // Load the fonts into the combobox when the form loads
+            // Get all the Font Family names from Graphics associated to richTextBox
+            // Then load the font name to the combobox
             Graphics gr = rTxtBoxNotes.CreateGraphics();
             foreach (System.Drawing.FontFamily F_family in System.Drawing.FontFamily.GetFamilies(gr))
             {
@@ -115,7 +72,7 @@ namespace NotesApp
 
         private void SetNewFont()
         {
-            //declarations that will feed Font Ctor
+            // Declarations that will feed Font 
             System.Drawing.Font old_font = null;
             System.Drawing.Font new_font;
             String Fname;
@@ -123,7 +80,7 @@ namespace NotesApp
             FontStyle style = 0;
             byte charset = 0;
 
-            //Grab required information from UI
+            // Grab required information from UI
             Fname = comboBox1Font.Text;
             if (string.IsNullOrEmpty(comboBox1FontSize.Text))
             {
@@ -135,7 +92,7 @@ namespace NotesApp
                 old_font = rTxtBoxNotes.SelectionFont;
             }
 
-            //treat the situation of no font/selection text
+            // If no font / selection text then default 
             if (old_font == null)
             {
                 style = FontStyle.Regular;
@@ -146,12 +103,10 @@ namespace NotesApp
                 charset = old_font.GdiCharSet;
             }
 
-            //Construct the font
+            // Construct the font
             new_font = new System.Drawing.Font(Fname, Fsize, style, GraphicsUnit.Point, charset);
             rTxtBoxNotes.SelectionFont = new_font;
-
         }
-
 
         private void btn1Load_Click(object sender, EventArgs e)
         {
@@ -202,14 +157,15 @@ namespace NotesApp
 
                 switch (extension)
                 {
+                    // Ensure text content is passed
                     case ".txt":
                         File.WriteAllText(filename, rTxtBoxNotes.Text);
                         break;
                     case ".pdf":
-                        SaveAsPdf(filename, rTxtBoxNotes.Text);  // Ensure text content is passed
+                        SaveAsPdf(filename, rTxtBoxNotes.Text);  
                         break;
                     case ".docx":
-                        SaveAsDocx(filename, rTxtBoxNotes.Text);  // Ensure text content is passed
+                        SaveAsDocx(filename, rTxtBoxNotes.Text);  
                         break;
                     default:
                         MessageBox.Show("Unsupported file type.");
@@ -247,7 +203,6 @@ namespace NotesApp
                 mainPart.Document.Save();
             }
         }
-
         private void dGR1previousNotes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtBoxTitle.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
@@ -265,6 +220,7 @@ namespace NotesApp
                 rTxtBoxNotes.SelectionFont = newFont;
             }
         }
+
         private void btn6Italic_Click(object sender, EventArgs e)
         {
             if (rTxtBoxNotes.SelectionFont != null)
@@ -287,7 +243,7 @@ namespace NotesApp
             }
         }
 
-        //set the font and size
+        // Set the font and size
         private void comboBox1Font_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetNewFont();
@@ -320,7 +276,7 @@ namespace NotesApp
             rTxtBoxNotes.SelectionIndent = 20;  // Optional: Sets indent for better visibility
         }
 
-        //timer code starts here
+        // Timer code starts here
         private void UpdateLabel()
         {
             // Convert time then update the timer
@@ -398,44 +354,64 @@ namespace NotesApp
             timer2Pomodoro.Start();
         }
 
+        // Sidebar
         private void btn1Schedule_Click(object sender, EventArgs e)
         {
-            var SchedForm3 = new Form3();
+            var SchedForm3 = new ScheduleForm();
             SchedForm3.Show();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
         private void btn2ToDoList_Click(object sender, EventArgs e)
         {
-            var ToDoListForm5 = new Form5();
+            var ToDoListForm5 = new ToDoForm();
             ToDoListForm5.Show();
             ToDoListForm5.FormClosed += (s, args) => this.Show();
         }
 
         private void btn4Formula_Click(object sender, EventArgs e)
         {
-            var FormulaForm4 = new Form4();
+            var FormulaForm4 = new FormulaForm();
             FormulaForm4.Show();
             FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
         private void btn3Converter_Click(object sender, EventArgs e)
         {
-            var ConverterForm7 = new Form7();
+            var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
-        private void btn5Settings_Click(object sender, EventArgs e)
+        private void btn5MediaPlayer_Click(object sender, EventArgs e)
         {
-            var MediaPlayerForm6 = new Form6();
+            var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
+        }
+
+        // Music Player
+        private void FSearchButton_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog fd = new OpenFileDialog())
+            {
+                fd.Filter = "Mp3 Files|*.mp3";
+
+                if (fd.ShowDialog() == DialogResult.OK)
+                {
+                    mp3.open(fd.FileName);
+                }
+            }
+        }
+
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
+            mp3.play();
+        }
+
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            mp3.stop();
         }
     }
 }

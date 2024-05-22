@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class Form5
+    partial class ToDoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToDoForm));
             TitleTxtBox = new TextBox();
             DescTxtBox = new TextBox();
             NewButton = new Button();
@@ -53,8 +52,7 @@
             panel4 = new Panel();
             btn3Converter = new Button();
             panel6 = new Panel();
-            btn5Settings = new Button();
-            timer1SidebarTransition = new System.Windows.Forms.Timer(components);
+            btn5MediaPlayer = new Button();
             ((System.ComponentModel.ISupportInitialize)ToDoListView).BeginInit();
             fLP1Sidebar.SuspendLayout();
             panel1.SuspendLayout();
@@ -70,35 +68,33 @@
             // 
             TitleTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TitleTxtBox.ForeColor = Color.FromArgb(54, 57, 62);
-            TitleTxtBox.Location = new Point(103, 27);
-            TitleTxtBox.Margin = new Padding(3, 4, 3, 4);
+            TitleTxtBox.Location = new Point(181, 30);
             TitleTxtBox.Name = "TitleTxtBox";
             TitleTxtBox.PlaceholderText = "Title";
-            TitleTxtBox.Size = new Size(953, 34);
+            TitleTxtBox.Size = new Size(834, 29);
             TitleTxtBox.TabIndex = 0;
             // 
             // DescTxtBox
             // 
             DescTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DescTxtBox.ForeColor = Color.FromArgb(54, 57, 62);
-            DescTxtBox.Location = new Point(103, 69);
-            DescTxtBox.Margin = new Padding(3, 4, 3, 4);
+            DescTxtBox.Location = new Point(181, 62);
             DescTxtBox.Multiline = true;
             DescTxtBox.Name = "DescTxtBox";
             DescTxtBox.PlaceholderText = "Description";
-            DescTxtBox.Size = new Size(953, 54);
+            DescTxtBox.Size = new Size(834, 42);
             DescTxtBox.TabIndex = 1;
             // 
             // NewButton
             // 
             NewButton.BackColor = Color.DimGray;
+            NewButton.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray;
             NewButton.FlatStyle = FlatStyle.Flat;
             NewButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             NewButton.ForeColor = Color.White;
-            NewButton.Location = new Point(106, 133);
-            NewButton.Margin = new Padding(3, 4, 3, 4);
+            NewButton.Location = new Point(184, 110);
             NewButton.Name = "NewButton";
-            NewButton.Size = new Size(233, 46);
+            NewButton.Size = new Size(204, 34);
             NewButton.TabIndex = 4;
             NewButton.Text = "New";
             NewButton.UseVisualStyleBackColor = false;
@@ -109,13 +105,13 @@
             // EditButton
             // 
             EditButton.BackColor = Color.DimGray;
+            EditButton.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray;
             EditButton.FlatStyle = FlatStyle.Flat;
             EditButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EditButton.ForeColor = Color.White;
-            EditButton.Location = new Point(345, 131);
-            EditButton.Margin = new Padding(3, 4, 3, 4);
+            EditButton.Location = new Point(393, 108);
             EditButton.Name = "EditButton";
-            EditButton.Size = new Size(233, 46);
+            EditButton.Size = new Size(204, 34);
             EditButton.TabIndex = 5;
             EditButton.Text = "Edit";
             EditButton.UseVisualStyleBackColor = false;
@@ -126,13 +122,13 @@
             // DeleteButton
             // 
             DeleteButton.BackColor = Color.DimGray;
+            DeleteButton.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray;
             DeleteButton.FlatStyle = FlatStyle.Flat;
             DeleteButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DeleteButton.ForeColor = Color.White;
-            DeleteButton.Location = new Point(584, 133);
-            DeleteButton.Margin = new Padding(3, 4, 3, 4);
+            DeleteButton.Location = new Point(602, 110);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(233, 46);
+            DeleteButton.Size = new Size(204, 34);
             DeleteButton.TabIndex = 6;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = false;
@@ -143,13 +139,13 @@
             // SaveButton
             // 
             SaveButton.BackColor = Color.DimGray;
+            SaveButton.FlatAppearance.MouseOverBackColor = Color.DarkSlateGray;
             SaveButton.FlatStyle = FlatStyle.Flat;
             SaveButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SaveButton.ForeColor = Color.White;
-            SaveButton.Location = new Point(823, 133);
-            SaveButton.Margin = new Padding(3, 4, 3, 4);
+            SaveButton.Location = new Point(811, 110);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(233, 46);
+            SaveButton.Size = new Size(204, 34);
             SaveButton.TabIndex = 7;
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = false;
@@ -159,38 +155,37 @@
             // 
             // ToDoListView
             // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            ToDoListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = Color.White;
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle16.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle16.SelectionBackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
+            ToDoListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             ToDoListView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ToDoListView.BackgroundColor = Color.White;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            ToDoListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle17.ForeColor = Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
+            ToDoListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             ToDoListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(114, 137, 218);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            ToDoListView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = Color.White;
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle18.ForeColor = Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
+            ToDoListView.DefaultCellStyle = dataGridViewCellStyle18;
             ToDoListView.GridColor = Color.FromArgb(66, 69, 73);
-            ToDoListView.Location = new Point(106, 189);
-            ToDoListView.Margin = new Padding(3, 4, 3, 4);
+            ToDoListView.Location = new Point(184, 152);
             ToDoListView.Name = "ToDoListView";
             ToDoListView.RowHeadersVisible = false;
             ToDoListView.RowHeadersWidth = 51;
-            ToDoListView.Size = new Size(950, 408);
+            ToDoListView.Size = new Size(831, 306);
             ToDoListView.TabIndex = 8;
             // 
             // fLP1Sidebar
@@ -204,8 +199,9 @@
             fLP1Sidebar.Controls.Add(panel6);
             fLP1Sidebar.Dock = DockStyle.Left;
             fLP1Sidebar.Location = new Point(0, 0);
+            fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
             fLP1Sidebar.Name = "fLP1Sidebar";
-            fLP1Sidebar.Size = new Size(71, 636);
+            fLP1Sidebar.Size = new Size(164, 477);
             fLP1Sidebar.TabIndex = 9;
             // 
             // panel1
@@ -213,31 +209,32 @@
             panel1.BackColor = Color.DarkSlateGray;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(labl1BeSMART);
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(182, 87);
+            panel1.Size = new Size(159, 65);
             panel1.TabIndex = 15;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DarkSlateGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(9, 20);
+            pictureBox1.Location = new Point(8, 15);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 55);
+            pictureBox1.Size = new Size(49, 41);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // labl1BeSMART
             // 
             labl1BeSMART.AutoSize = true;
             labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labl1BeSMART.ForeColor = Color.White;
-            labl1BeSMART.Location = new Point(71, 34);
+            labl1BeSMART.Location = new Point(62, 26);
             labl1BeSMART.Name = "labl1BeSMART";
-            labl1BeSMART.Size = new Size(105, 28);
+            labl1BeSMART.Size = new Size(83, 21);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
             // 
@@ -245,9 +242,10 @@
             // 
             panel2.BackColor = Color.DarkSlateGray;
             panel2.Controls.Add(btn1Schedule);
-            panel2.Location = new Point(3, 96);
+            panel2.Location = new Point(3, 71);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(179, 98);
+            panel2.Size = new Size(157, 74);
             panel2.TabIndex = 2;
             // 
             // btn1Schedule
@@ -258,23 +256,25 @@
             btn1Schedule.ForeColor = Color.White;
             btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
             btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1Schedule.Location = new Point(-9, -12);
+            btn1Schedule.Location = new Point(-8, -9);
+            btn1Schedule.Margin = new Padding(3, 2, 3, 2);
             btn1Schedule.Name = "btn1Schedule";
-            btn1Schedule.Padding = new Padding(30, 0, 0, 0);
-            btn1Schedule.Size = new Size(226, 121);
+            btn1Schedule.Padding = new Padding(26, 0, 0, 0);
+            btn1Schedule.Size = new Size(198, 91);
             btn1Schedule.TabIndex = 3;
             btn1Schedule.Text = "         Schedule";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
-            btn1Schedule.Click += btn1Schedule_Click;
+            btn1Schedule.Click += btn1Schedule_Click_1;
             // 
             // panel3
             // 
             panel3.BackColor = Color.DarkSlateGray;
             panel3.Controls.Add(btn2ToDoList);
-            panel3.Location = new Point(3, 200);
+            panel3.Location = new Point(3, 149);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(179, 98);
+            panel3.Size = new Size(157, 74);
             panel3.TabIndex = 3;
             // 
             // btn2ToDoList
@@ -285,23 +285,25 @@
             btn2ToDoList.ForeColor = Color.White;
             btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
             btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2ToDoList.Location = new Point(-19, -11);
+            btn2ToDoList.Location = new Point(-17, -8);
+            btn2ToDoList.Margin = new Padding(3, 2, 3, 2);
             btn2ToDoList.Name = "btn2ToDoList";
-            btn2ToDoList.Padding = new Padding(35, 0, 0, 0);
-            btn2ToDoList.Size = new Size(236, 121);
+            btn2ToDoList.Padding = new Padding(31, 0, 0, 0);
+            btn2ToDoList.Size = new Size(206, 91);
             btn2ToDoList.TabIndex = 3;
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
             btn2ToDoList.UseVisualStyleBackColor = false;
-            btn2ToDoList.Click += btn2ToDoList_Click;
+            btn2ToDoList.Click += btn2ToDoList_Click_1;
             // 
             // panel5
             // 
             panel5.BackColor = Color.DarkSlateGray;
             panel5.Controls.Add(btn4Formula);
-            panel5.Location = new Point(3, 304);
+            panel5.Location = new Point(3, 227);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(179, 98);
+            panel5.Size = new Size(157, 74);
             panel5.TabIndex = 5;
             // 
             // btn4Formula
@@ -312,23 +314,25 @@
             btn4Formula.ForeColor = Color.White;
             btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
             btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
-            btn4Formula.Location = new Point(-9, -11);
+            btn4Formula.Location = new Point(-8, -8);
+            btn4Formula.Margin = new Padding(3, 2, 3, 2);
             btn4Formula.Name = "btn4Formula";
-            btn4Formula.Padding = new Padding(30, 0, 0, 0);
-            btn4Formula.Size = new Size(226, 121);
+            btn4Formula.Padding = new Padding(26, 0, 0, 0);
+            btn4Formula.Size = new Size(198, 91);
             btn4Formula.TabIndex = 3;
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
             btn4Formula.UseVisualStyleBackColor = false;
-            btn4Formula.Click += btn4Formula_Click;
+            btn4Formula.Click += btn4Formula_Click_1;
             // 
             // panel4
             // 
             panel4.BackColor = Color.DarkSlateGray;
             panel4.Controls.Add(btn3Converter);
-            panel4.Location = new Point(3, 408);
+            panel4.Location = new Point(3, 305);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(185, 98);
+            panel4.Size = new Size(162, 74);
             panel4.TabIndex = 4;
             // 
             // btn3Converter
@@ -339,54 +343,52 @@
             btn3Converter.ForeColor = Color.White;
             btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
             btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3Converter.Location = new Point(-9, -14);
+            btn3Converter.Location = new Point(-8, -10);
+            btn3Converter.Margin = new Padding(3, 2, 3, 2);
             btn3Converter.Name = "btn3Converter";
-            btn3Converter.Padding = new Padding(30, 0, 0, 0);
-            btn3Converter.Size = new Size(207, 121);
+            btn3Converter.Padding = new Padding(26, 0, 0, 0);
+            btn3Converter.Size = new Size(181, 91);
             btn3Converter.TabIndex = 3;
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
             btn3Converter.UseVisualStyleBackColor = false;
-            btn3Converter.Click += btn3Converter_Click;
+            btn3Converter.Click += btn3Converter_Click_1;
             // 
             // panel6
             // 
             panel6.BackColor = Color.DarkSlateGray;
-            panel6.Controls.Add(btn5Settings);
-            panel6.Location = new Point(3, 512);
+            panel6.Controls.Add(btn5MediaPlayer);
+            panel6.Location = new Point(3, 383);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(187, 98);
+            panel6.Size = new Size(164, 74);
             panel6.TabIndex = 6;
             // 
-            // btn5Settings
+            // btn5MediaPlayer
             // 
-            btn5Settings.BackColor = Color.DarkSlateGray;
-            btn5Settings.FlatStyle = FlatStyle.Flat;
-            btn5Settings.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5Settings.ForeColor = Color.White;
-            btn5Settings.Image = (Image)resources.GetObject("btn5Settings.Image");
-            btn5Settings.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.Location = new Point(-8, -13);
-            btn5Settings.Name = "btn5Settings";
-            btn5Settings.Padding = new Padding(30, 0, 0, 0);
-            btn5Settings.Size = new Size(234, 120);
-            btn5Settings.TabIndex = 3;
-            btn5Settings.Text = "         Settings";
-            btn5Settings.TextAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.UseVisualStyleBackColor = false;
-            btn5Settings.Click += btn5Settings_Click;
+            btn5MediaPlayer.BackColor = Color.DarkSlateGray;
+            btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
+            btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn5MediaPlayer.ForeColor = Color.White;
+            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
+            btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
+            btn5MediaPlayer.Location = new Point(-7, -10);
+            btn5MediaPlayer.Margin = new Padding(3, 2, 3, 2);
+            btn5MediaPlayer.Name = "btn5MediaPlayer";
+            btn5MediaPlayer.Padding = new Padding(26, 0, 0, 0);
+            btn5MediaPlayer.Size = new Size(205, 90);
+            btn5MediaPlayer.TabIndex = 3;
+            btn5MediaPlayer.Text = "         Media Player";
+            btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
+            btn5MediaPlayer.UseVisualStyleBackColor = false;
+            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
             // 
-            // timer1SidebarTransition
+            // ToDoForm
             // 
-            timer1SidebarTransition.Interval = 10;
-            timer1SidebarTransition.Tick += timer1SidebarTransition_Tick;
-            // 
-            // Form5
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1093, 636);
+            ClientSize = new Size(1035, 477);
             Controls.Add(fLP1Sidebar);
             Controls.Add(ToDoListView);
             Controls.Add(SaveButton);
@@ -396,9 +398,8 @@
             Controls.Add(DescTxtBox);
             Controls.Add(TitleTxtBox);
             ForeColor = Color.Black;
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
-            Name = "Form5";
+            Name = "ToDoForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "To Do List";
             Load += Form3_Load;
@@ -438,7 +439,6 @@
         private Panel panel4;
         private Button btn3Converter;
         private Panel panel6;
-        private Button btn5Settings;
-        private System.Windows.Forms.Timer timer1SidebarTransition;
+        private Button btn5MediaPlayer;
     }
 }

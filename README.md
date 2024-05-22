@@ -1,4 +1,4 @@
-# NotesApp
+# BeSMART Notes App
 Final Project in ITEC 103 (Intermediate Programming). Made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.
 
 # What we used for the project

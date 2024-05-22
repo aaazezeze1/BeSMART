@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace NotesApp
 {
-    public partial class Form3 : Form
+    public partial class ScheduleForm : Form
     {
         int month, year;
         //private List<EventStorageClass2> events = new List<EventStorageClass2>();
@@ -31,7 +31,7 @@ namespace NotesApp
         }
 
 
-        public Form3()
+        public ScheduleForm()
         {
             InitializeComponent();
             // LoadEventsForCurrentMonth();
@@ -286,28 +286,28 @@ namespace NotesApp
 
         private void btn2ToDoList_Click(object sender, EventArgs e)
         {
-            var ToDoListForm5 = new Form5();
+            var ToDoListForm5 = new ToDoForm();
             ToDoListForm5.Show();
             ToDoListForm5.FormClosed += (s, args) => this.Show();
         }
 
         private void btn4Formula_Click(object sender, EventArgs e)
         {
-            var FormulaForm4 = new Form4();
+            var FormulaForm4 = new FormulaForm();
             FormulaForm4.Show();
             FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
         private void btn3Converter_Click(object sender, EventArgs e)
         {
-            var ConverterForm7 = new Form7();
+            var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
         private void btn5Settings_Click(object sender, EventArgs e)
         {
-            var MediaPlayerForm6 = new Form6();
+            var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }

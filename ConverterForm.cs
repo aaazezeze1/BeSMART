@@ -16,13 +16,13 @@ using Newtonsoft.Json.Linq;
 
 namespace NotesApp
 {
-    public partial class Form7 : Form
+    public partial class ConverterForm : Form
     {
         private const int HUNDRED = 100;
         private const int THOUSAND = 1000;
         private const double CMFT = 30.48;
 
-        public Form7()
+        public ConverterForm()
         {
             InitializeComponent();
         }

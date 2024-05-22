@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class Form6
+    partial class MediaPlayerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
-            menuStrip1 = new MenuStrip();
-            fileToolStripMenuItem = new ToolStripMenuItem();
-            loadFolderToolStripMenuItem = new ToolStripMenuItem();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MediaPlayerForm));
             MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             Playlist = new ListBox();
             FileName = new Label();
             durationLbl = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            timer1SidebarTransition = new System.Windows.Forms.Timer(components);
             fLP1Sidebar = new FlowLayoutPanel();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
@@ -53,8 +48,11 @@
             panel4 = new Panel();
             btn3Converter = new Button();
             panel6 = new Panel();
-            btn5Settings = new Button();
-            menuStrip1.SuspendLayout();
+            btn5MediaPlayer = new Button();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            menuStrip2 = new MenuStrip();
+            fileToolStripMenuItem1 = new ToolStripMenuItem();
+            loadFolderToolStripMenuItem1 = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)MediaPlayer).BeginInit();
             fLP1Sidebar.SuspendLayout();
             panel1.SuspendLayout();
@@ -64,51 +62,16 @@
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
+            menuStrip2.SuspendLayout();
             SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Dock = DockStyle.None;
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
-            menuStrip1.Location = new Point(303, 22);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(65, 38);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
-            // 
-            // fileToolStripMenuItem
-            // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { loadFolderToolStripMenuItem, aboutToolStripMenuItem });
-            fileToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(56, 32);
-            fileToolStripMenuItem.Text = "File";
-            // 
-            // loadFolderToolStripMenuItem
-            // 
-            loadFolderToolStripMenuItem.Name = "loadFolderToolStripMenuItem";
-            loadFolderToolStripMenuItem.Size = new Size(202, 32);
-            loadFolderToolStripMenuItem.Text = "Load Folder";
-            loadFolderToolStripMenuItem.Click += LoadFolderEvent;
-            // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(202, 32);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // MediaPlayer
             // 
             MediaPlayer.Enabled = true;
-            MediaPlayer.Location = new Point(303, 64);
-            MediaPlayer.Margin = new Padding(3, 4, 3, 4);
+            MediaPlayer.Location = new Point(359, 46);
             MediaPlayer.Name = "MediaPlayer";
             MediaPlayer.OcxState = (AxHost.State)resources.GetObject("MediaPlayer.OcxState");
-            MediaPlayer.Size = new Size(548, 377);
+            MediaPlayer.Size = new Size(723, 416);
             MediaPlayer.TabIndex = 1;
             MediaPlayer.PlayStateChange += MediaPlayer_PlayStateChange;
             // 
@@ -116,11 +79,10 @@
             // 
             Playlist.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Playlist.FormattingEnabled = true;
-            Playlist.ItemHeight = 28;
-            Playlist.Location = new Point(110, 64);
-            Playlist.Margin = new Padding(3, 4, 3, 4);
+            Playlist.ItemHeight = 21;
+            Playlist.Location = new Point(173, 59);
             Playlist.Name = "Playlist";
-            Playlist.Size = new Size(167, 368);
+            Playlist.Size = new Size(180, 403);
             Playlist.TabIndex = 2;
             Playlist.SelectedIndexChanged += PlayListChanged;
             // 
@@ -129,9 +91,9 @@
             FileName.AutoSize = true;
             FileName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FileName.ForeColor = Color.White;
-            FileName.Location = new Point(493, 466);
+            FileName.Location = new Point(359, 471);
             FileName.Name = "FileName";
-            FileName.Size = new Size(64, 28);
+            FileName.Size = new Size(52, 21);
             FileName.TabIndex = 3;
             FileName.Text = "Name";
             // 
@@ -140,20 +102,15 @@
             durationLbl.AutoSize = true;
             durationLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             durationLbl.ForeColor = Color.White;
-            durationLbl.Location = new Point(303, 466);
+            durationLbl.Location = new Point(173, 471);
             durationLbl.Name = "durationLbl";
-            durationLbl.Size = new Size(109, 28);
+            durationLbl.Size = new Size(87, 21);
             durationLbl.TabIndex = 4;
             durationLbl.Text = "Duration: 0";
             // 
             // timer1
             // 
             timer1.Tick += TimerEvent;
-            // 
-            // timer1SidebarTransition
-            // 
-            timer1SidebarTransition.Interval = 10;
-            timer1SidebarTransition.Tick += timer1SidebarTransition_Tick;
             // 
             // fLP1Sidebar
             // 
@@ -165,41 +122,43 @@
             fLP1Sidebar.Controls.Add(panel4);
             fLP1Sidebar.Controls.Add(panel6);
             fLP1Sidebar.Dock = DockStyle.Left;
-            fLP1Sidebar.Location = new Point(0, 0);
+            fLP1Sidebar.Location = new Point(0, 29);
+            fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
             fLP1Sidebar.Name = "fLP1Sidebar";
-            fLP1Sidebar.Size = new Size(71, 636);
-            fLP1Sidebar.TabIndex = 10;
+            fLP1Sidebar.Size = new Size(164, 468);
+            fLP1Sidebar.TabIndex = 6;
             // 
             // panel1
             // 
             panel1.BackColor = Color.DarkSlateGray;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(labl1BeSMART);
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(182, 87);
+            panel1.Size = new Size(159, 65);
             panel1.TabIndex = 15;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DarkSlateGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(9, 20);
+            pictureBox1.Location = new Point(8, 15);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 55);
+            pictureBox1.Size = new Size(49, 41);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // labl1BeSMART
             // 
             labl1BeSMART.AutoSize = true;
             labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labl1BeSMART.ForeColor = Color.White;
-            labl1BeSMART.Location = new Point(71, 34);
+            labl1BeSMART.Location = new Point(62, 26);
             labl1BeSMART.Name = "labl1BeSMART";
-            labl1BeSMART.Size = new Size(105, 28);
+            labl1BeSMART.Size = new Size(83, 21);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
             // 
@@ -207,9 +166,10 @@
             // 
             panel2.BackColor = Color.DarkSlateGray;
             panel2.Controls.Add(btn1Schedule);
-            panel2.Location = new Point(3, 96);
+            panel2.Location = new Point(3, 71);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(179, 98);
+            panel2.Size = new Size(157, 74);
             panel2.TabIndex = 2;
             // 
             // btn1Schedule
@@ -220,23 +180,25 @@
             btn1Schedule.ForeColor = Color.White;
             btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
             btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1Schedule.Location = new Point(-9, -12);
+            btn1Schedule.Location = new Point(-8, -9);
+            btn1Schedule.Margin = new Padding(3, 2, 3, 2);
             btn1Schedule.Name = "btn1Schedule";
-            btn1Schedule.Padding = new Padding(30, 0, 0, 0);
-            btn1Schedule.Size = new Size(226, 121);
+            btn1Schedule.Padding = new Padding(26, 0, 0, 0);
+            btn1Schedule.Size = new Size(198, 91);
             btn1Schedule.TabIndex = 3;
             btn1Schedule.Text = "         Schedule";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
-            btn1Schedule.Click += btn1Schedule_Click;
+            btn1Schedule.Click += btn1Schedule_Click_1;
             // 
             // panel3
             // 
             panel3.BackColor = Color.DarkSlateGray;
             panel3.Controls.Add(btn2ToDoList);
-            panel3.Location = new Point(3, 200);
+            panel3.Location = new Point(3, 149);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(179, 98);
+            panel3.Size = new Size(157, 74);
             panel3.TabIndex = 3;
             // 
             // btn2ToDoList
@@ -247,23 +209,25 @@
             btn2ToDoList.ForeColor = Color.White;
             btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
             btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2ToDoList.Location = new Point(-19, -11);
+            btn2ToDoList.Location = new Point(-17, -8);
+            btn2ToDoList.Margin = new Padding(3, 2, 3, 2);
             btn2ToDoList.Name = "btn2ToDoList";
-            btn2ToDoList.Padding = new Padding(35, 0, 0, 0);
-            btn2ToDoList.Size = new Size(236, 121);
+            btn2ToDoList.Padding = new Padding(31, 0, 0, 0);
+            btn2ToDoList.Size = new Size(206, 91);
             btn2ToDoList.TabIndex = 3;
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
             btn2ToDoList.UseVisualStyleBackColor = false;
-            btn2ToDoList.Click += btn2ToDoList_Click;
+            btn2ToDoList.Click += btn2ToDoList_Click_1;
             // 
             // panel5
             // 
             panel5.BackColor = Color.DarkSlateGray;
             panel5.Controls.Add(btn4Formula);
-            panel5.Location = new Point(3, 304);
+            panel5.Location = new Point(3, 227);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(179, 98);
+            panel5.Size = new Size(157, 74);
             panel5.TabIndex = 5;
             // 
             // btn4Formula
@@ -274,23 +238,25 @@
             btn4Formula.ForeColor = Color.White;
             btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
             btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
-            btn4Formula.Location = new Point(-9, -11);
+            btn4Formula.Location = new Point(-8, -8);
+            btn4Formula.Margin = new Padding(3, 2, 3, 2);
             btn4Formula.Name = "btn4Formula";
-            btn4Formula.Padding = new Padding(30, 0, 0, 0);
-            btn4Formula.Size = new Size(226, 121);
+            btn4Formula.Padding = new Padding(26, 0, 0, 0);
+            btn4Formula.Size = new Size(198, 91);
             btn4Formula.TabIndex = 3;
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
             btn4Formula.UseVisualStyleBackColor = false;
-            btn4Formula.Click += btn4Formula_Click;
+            btn4Formula.Click += btn4Formula_Click_1;
             // 
             // panel4
             // 
             panel4.BackColor = Color.DarkSlateGray;
             panel4.Controls.Add(btn3Converter);
-            panel4.Location = new Point(3, 408);
+            panel4.Location = new Point(3, 305);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(185, 98);
+            panel4.Size = new Size(162, 74);
             panel4.TabIndex = 4;
             // 
             // btn3Converter
@@ -301,63 +267,91 @@
             btn3Converter.ForeColor = Color.White;
             btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
             btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3Converter.Location = new Point(-9, -14);
+            btn3Converter.Location = new Point(-8, -10);
+            btn3Converter.Margin = new Padding(3, 2, 3, 2);
             btn3Converter.Name = "btn3Converter";
-            btn3Converter.Padding = new Padding(30, 0, 0, 0);
-            btn3Converter.Size = new Size(207, 121);
+            btn3Converter.Padding = new Padding(26, 0, 0, 0);
+            btn3Converter.Size = new Size(181, 91);
             btn3Converter.TabIndex = 3;
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
             btn3Converter.UseVisualStyleBackColor = false;
-            btn3Converter.Click += btn3Converter_Click;
+            btn3Converter.Click += btn3Converter_Click_1;
             // 
             // panel6
             // 
             panel6.BackColor = Color.DarkSlateGray;
-            panel6.Controls.Add(btn5Settings);
-            panel6.Location = new Point(3, 512);
+            panel6.Controls.Add(btn5MediaPlayer);
+            panel6.Location = new Point(3, 383);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(187, 98);
+            panel6.Size = new Size(164, 74);
             panel6.TabIndex = 6;
             // 
-            // btn5Settings
+            // btn5MediaPlayer
             // 
-            btn5Settings.BackColor = Color.DarkSlateGray;
-            btn5Settings.FlatStyle = FlatStyle.Flat;
-            btn5Settings.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5Settings.ForeColor = Color.White;
-            btn5Settings.Image = (Image)resources.GetObject("btn5Settings.Image");
-            btn5Settings.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.Location = new Point(-8, -13);
-            btn5Settings.Name = "btn5Settings";
-            btn5Settings.Padding = new Padding(30, 0, 0, 0);
-            btn5Settings.Size = new Size(234, 120);
-            btn5Settings.TabIndex = 3;
-            btn5Settings.Text = "         Settings";
-            btn5Settings.TextAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.UseVisualStyleBackColor = false;
-            btn5Settings.Click += btn5Settings_Click;
+            btn5MediaPlayer.BackColor = Color.DarkSlateGray;
+            btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
+            btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn5MediaPlayer.ForeColor = Color.White;
+            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
+            btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
+            btn5MediaPlayer.Location = new Point(-7, -10);
+            btn5MediaPlayer.Margin = new Padding(3, 2, 3, 2);
+            btn5MediaPlayer.Name = "btn5MediaPlayer";
+            btn5MediaPlayer.Padding = new Padding(26, 0, 0, 0);
+            btn5MediaPlayer.Size = new Size(205, 90);
+            btn5MediaPlayer.TabIndex = 3;
+            btn5MediaPlayer.Text = "         Media Player";
+            btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
+            btn5MediaPlayer.UseVisualStyleBackColor = false;
+            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
             // 
-            // Form6
+            // contextMenuStrip1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
+            // menuStrip2
+            // 
+            menuStrip2.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1 });
+            menuStrip2.Location = new Point(0, 0);
+            menuStrip2.Name = "menuStrip2";
+            menuStrip2.Size = new Size(1095, 29);
+            menuStrip2.TabIndex = 8;
+            menuStrip2.Text = "menuStrip2";
+            // 
+            // fileToolStripMenuItem1
+            // 
+            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { loadFolderToolStripMenuItem1 });
+            fileToolStripMenuItem1.Font = new Font("Segoe UI", 12F);
+            fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
+            fileToolStripMenuItem1.Size = new Size(46, 25);
+            fileToolStripMenuItem1.Text = "File";
+            // 
+            // loadFolderToolStripMenuItem1
+            // 
+            loadFolderToolStripMenuItem1.Name = "loadFolderToolStripMenuItem1";
+            loadFolderToolStripMenuItem1.Size = new Size(162, 26);
+            loadFolderToolStripMenuItem1.Text = "Load Folder";
+            loadFolderToolStripMenuItem1.Click += LoadFolderEvent;
+            // 
+            // MediaPlayerForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(54, 57, 62);
-            ClientSize = new Size(1093, 636);
+            ClientSize = new Size(1095, 497);
             Controls.Add(fLP1Sidebar);
-            Controls.Add(menuStrip1);
+            Controls.Add(menuStrip2);
             Controls.Add(durationLbl);
             Controls.Add(FileName);
             Controls.Add(Playlist);
             Controls.Add(MediaPlayer);
-            MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
-            Name = "Form6";
+            Name = "MediaPlayerForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MP4 Player";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)MediaPlayer).EndInit();
             fLP1Sidebar.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -368,22 +362,18 @@
             panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
+            menuStrip2.ResumeLayout(false);
+            menuStrip2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem loadFolderToolStripMenuItem;
         private AxWMPLib.AxWindowsMediaPlayer MediaPlayer;
         private ListBox Playlist;
         private Label FileName;
         private Label durationLbl;
         private System.Windows.Forms.Timer timer1;
-        private ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Timer timer1SidebarTransition;
         private FlowLayoutPanel fLP1Sidebar;
         private Panel panel1;
         private PictureBox pictureBox1;
@@ -397,6 +387,10 @@
         private Panel panel4;
         private Button btn3Converter;
         private Panel panel6;
-        private Button btn5Settings;
+        private Button btn5MediaPlayer;
+        private ContextMenuStrip contextMenuStrip1;
+        private MenuStrip menuStrip2;
+        private ToolStripMenuItem fileToolStripMenuItem1;
+        private ToolStripMenuItem loadFolderToolStripMenuItem1;
     }
 }

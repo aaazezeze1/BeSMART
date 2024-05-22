@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace NotesApp
 {
-    public partial class Form4 : Form
+    public partial class FormulaForm : Form
     {
 
-        public Form4()
+        public FormulaForm()
         {
             InitializeComponent();
         }
@@ -71,14 +71,14 @@ namespace NotesApp
 
         private void btn1Schedule_Click(object sender, EventArgs e)
         {
-            var SchedForm3 = new Form3();
+            var SchedForm3 = new ScheduleForm();
             SchedForm3.Show();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
 
         private void btn2ToDoList_Click(object sender, EventArgs e)
         {
-            var ToDoListForm5 = new Form5();
+            var ToDoListForm5 = new ToDoForm();
             ToDoListForm5.Show();
             ToDoListForm5.FormClosed += (s, args) => this.Show();
         }
@@ -92,14 +92,14 @@ namespace NotesApp
 
         private void btn3Converter_Click(object sender, EventArgs e)
         {
-            var ConverterForm7 = new Form7();
+            var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
         private void btn5Settings_Click(object sender, EventArgs e)
         {
-            var MediaPlayerForm6 = new Form6();
+            var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
@@ -122,6 +122,46 @@ namespace NotesApp
         private void button7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn1Schedule_Click_1(object sender, EventArgs e)
+        {
+            var SchedForm3 = new ScheduleForm();
+            SchedForm3.Show();
+            this.Hide();
+            SchedForm3.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn2ToDoList_Click_1(object sender, EventArgs e)
+        {
+            var ToDolistForm5 = new ToDoForm();
+            ToDolistForm5.Show();
+            this.Hide();
+            ToDolistForm5.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn4Formula_Click_1(object sender, EventArgs e)
+        {
+            var FormulaForm4 = new FormulaForm();
+            FormulaForm4.Show();
+            this.Hide();
+            FormulaForm4.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn3Converter_Click_1(object sender, EventArgs e)
+        {
+            var ConverterForm7 = new ConverterForm();
+            ConverterForm7.Show();
+            this.Hide();
+            ConverterForm7.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn5MediaPlayer_Click(object sender, EventArgs e)
+        {
+            var MediaPlayerForm6 = new MediaPlayerForm();
+            MediaPlayerForm6.Show();
+            this.Hide();
+            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
     }
 }

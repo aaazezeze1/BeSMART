@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("NotesApp")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("BeSMART")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f18e27ff3ff68cac9b0bac8dd2251fa1cc884aa7")]
-[assembly: System.Reflection.AssemblyProductAttribute("NotesApp")]
-[assembly: System.Reflection.AssemblyTitleAttribute("NotesApp")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d116063b39d71872adcb76b814d5087e3700222")]
+[assembly: System.Reflection.AssemblyProductAttribute("BeSMART")]
+[assembly: System.Reflection.AssemblyTitleAttribute("BeSMART")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

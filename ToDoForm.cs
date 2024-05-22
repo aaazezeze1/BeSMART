@@ -10,60 +10,13 @@ using System.Windows.Forms;
 
 namespace NotesApp
 {
-    public partial class Form5 : Form
+    public partial class ToDoForm : Form
     {
-        public Form5()
+        public ToDoForm()
         {
             InitializeComponent();
         }
 
-        bool sidebarExpand = false; //collapsed sidebar
-
-        private void timer1SidebarTransition_Tick(object sender, EventArgs e)
-        {
-            if (sidebarExpand) //expanding sidebar
-            {
-                if (fLP1Sidebar.Width < 190)
-                {
-                    fLP1Sidebar.Width += 10;
-                    //fLP1CalendarContent.Width -= 10;
-                    //fLP1CalendarContent.Left += 10;
-
-                    //fLP2Days.Width -= 10;
-                    //fLP2Days.Left += 10;
-                }
-                else
-                {
-                    //make sure sidebar does not go below min width
-                    fLP1Sidebar.Width = 190;
-                    sidebarExpand = false;
-                    timer1SidebarTransition.Stop();
-                }
-            }
-            else //collapse seidebar
-            {
-                if (fLP1Sidebar.Width > 72)
-                {
-                    fLP1Sidebar.Width -= 10;
-                    //fLP1CalendarContent.Width += 10;
-                    //fLP1CalendarContent.Left -= 10;
-
-                    //fLP2Days.Width += 10;
-                    //fLP2Days.Left -= 10;
-                }
-                else
-                {
-                    //make sure sidebar does not exceed the max width
-                    fLP1Sidebar.Width = 72;
-                    sidebarExpand = true;
-                    timer1SidebarTransition.Stop();
-                }
-            }
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            timer1SidebarTransition.Start();
-        }
 
         DataTable todoList = new DataTable();
         bool isEditing = false;
@@ -73,7 +26,7 @@ namespace NotesApp
             todoList.Columns.Add("Title");
             todoList.Columns.Add("Description");
             ToDoListView.DataSource = todoList;
-            ToDoListView.Rows[0].DefaultCellStyle.BackColor = Color.FromArgb(114, 137, 218);
+            ToDoListView.Rows[0].DefaultCellStyle.BackColor = Color.DarkSlateGray;
         }
 
         private void NewButton_Click(object sender, EventArgs e)
@@ -120,51 +73,51 @@ namespace NotesApp
 
         private void NewButton_MouseHover(object sender, EventArgs e)
         {
-            NewButton.BackColor = Color.FromArgb(114, 137, 218);
+            NewButton.BackColor = Color.DarkSlateGray;
         }
 
         private void NewButton_MouseLeave(object sender, EventArgs e)
         {
             NewButton.ResetBackColor();
-            NewButton.UseVisualStyleBackColor = true;
+            NewButton.BackColor = Color.DimGray;
         }
 
         private void EditButton_MouseHover(object sender, EventArgs e)
         {
-            EditButton.BackColor = Color.FromArgb(114, 137, 218);
+            EditButton.BackColor = Color.DarkSlateGray;
         }
 
         private void EditButton_MouseLeave(object sender, EventArgs e)
         {
             EditButton.ResetBackColor();
-            EditButton.UseVisualStyleBackColor = true;
+            EditButton.BackColor = Color.DimGray;
         }
 
         private void DeleteButton_MouseHover(object sender, EventArgs e)
         {
-            DeleteButton.BackColor = Color.FromArgb(114, 137, 218);
+            DeleteButton.BackColor = Color.DarkSlateGray;
         }
 
         private void DeleteButton_MouseLeave(object sender, EventArgs e)
         {
             DeleteButton.ResetBackColor();
-            DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.BackColor = Color.DimGray;
         }
 
         private void SaveButton_MouseHover(object sender, EventArgs e)
         {
-            SaveButton.BackColor = Color.FromArgb(114, 137, 218);
+            SaveButton.BackColor = Color.DarkSlateGray;
         }
 
         private void SaveButton_MouseLeave(object sender, EventArgs e)
         {
             SaveButton.ResetBackColor();
-            SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.BackColor = Color.DimGray;
         }
 
         private void btn1Schedule_Click(object sender, EventArgs e)
         {
-            var SchedForm3 = new Form3();
+            var SchedForm3 = new ScheduleForm();
             SchedForm3.Show();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
@@ -178,22 +131,62 @@ namespace NotesApp
 
         private void btn4Formula_Click(object sender, EventArgs e)
         {
-            var FormulaForm4 = new Form4();
+            var FormulaForm4 = new FormulaForm();
             FormulaForm4.Show();
             FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
         private void btn3Converter_Click(object sender, EventArgs e)
         {
-            var ConverterForm7 = new Form7();
+            var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
         private void btn5Settings_Click(object sender, EventArgs e)
         {
-            var MediaPlayerForm6 = new Form6();
+            var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
+            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn1Schedule_Click_1(object sender, EventArgs e)
+        {
+            var SchedForm3 = new ScheduleForm();
+            SchedForm3.Show();
+            this.Hide();
+            SchedForm3.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn2ToDoList_Click_1(object sender, EventArgs e)
+        {
+            var ToDolistForm5 = new ToDoForm();
+            ToDolistForm5.Show();
+            this.Hide();
+            ToDolistForm5.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn4Formula_Click_1(object sender, EventArgs e)
+        {
+            var FormulaForm4 = new FormulaForm();
+            FormulaForm4.Show();
+            this.Hide();
+            FormulaForm4.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn3Converter_Click_1(object sender, EventArgs e)
+        {
+            var ConverterForm7 = new ConverterForm();
+            ConverterForm7.Show();
+            this.Hide();
+            ConverterForm7.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn5MediaPlayer_Click(object sender, EventArgs e)
+        {
+            var MediaPlayerForm6 = new MediaPlayerForm();
+            MediaPlayerForm6.Show();
+            this.Hide();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
     }
