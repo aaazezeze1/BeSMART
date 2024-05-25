@@ -142,10 +142,10 @@ namespace NotesApp
 
         private void btn4Formula_Click_1(object sender, EventArgs e)
         {
-            var FormulaForm4 = new FormulaForm();
-            FormulaForm4.Show();
-            this.Hide();
-            FormulaForm4.FormClosed += (s, args) => this.Show();
+            //var FormulaForm4 = new FormulaForm();
+            //FormulaForm4.Show();
+            //this.Hide();
+            //FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
         private void btn3Converter_Click_1(object sender, EventArgs e)
