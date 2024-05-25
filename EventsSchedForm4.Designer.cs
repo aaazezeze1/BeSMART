@@ -228,6 +228,7 @@
             Controls.Add(txtBoxEventsTitle);
             Controls.Add(label3);
             Name = "EventsSchedForm4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Make Events";
             Load += EventsSchedForm4_Load;
             ResumeLayout(false);

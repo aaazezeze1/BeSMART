@@ -72,7 +72,7 @@
             Playlist.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Playlist.FormattingEnabled = true;
             Playlist.ItemHeight = 28;
-            Playlist.Location = new Point(-1, -3);
+            Playlist.Location = new Point(3, 4);
             Playlist.Margin = new Padding(3, 4, 3, 4);
             Playlist.Name = "Playlist";
             Playlist.Size = new Size(208, 536);
@@ -84,7 +84,7 @@
             FileName.AutoSize = true;
             FileName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FileName.ForeColor = Color.White;
-            FileName.Location = new Point(393, 576);
+            FileName.Location = new Point(216, 554);
             FileName.Name = "FileName";
             FileName.Size = new Size(64, 28);
             FileName.TabIndex = 3;
@@ -95,7 +95,7 @@
             durationLbl.AutoSize = true;
             durationLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             durationLbl.ForeColor = Color.White;
-            durationLbl.Location = new Point(192, 576);
+            durationLbl.Location = new Point(3, 554);
             durationLbl.Name = "durationLbl";
             durationLbl.Size = new Size(109, 28);
             durationLbl.TabIndex = 4;
@@ -300,7 +300,7 @@
             menuStrip2.Location = new Point(187, 0);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Padding = new Padding(7, 3, 0, 3);
-            menuStrip2.Size = new Size(1005, 38);
+            menuStrip2.Size = new Size(1026, 38);
             menuStrip2.TabIndex = 8;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -322,7 +322,7 @@
             // VideoPlayer
             // 
             VideoPlayer.Enabled = true;
-            VideoPlayer.Location = new Point(205, -4);
+            VideoPlayer.Location = new Point(207, 4);
             VideoPlayer.Margin = new Padding(3, 4, 3, 4);
             VideoPlayer.Name = "VideoPlayer";
             VideoPlayer.OcxState = (AxHost.State)resources.GetObject("VideoPlayer.OcxState");
@@ -334,9 +334,11 @@
             // 
             panel7.Controls.Add(Playlist);
             panel7.Controls.Add(VideoPlayer);
-            panel7.Location = new Point(188, 41);
+            panel7.Controls.Add(durationLbl);
+            panel7.Controls.Add(FileName);
+            panel7.Location = new Point(188, 38);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1003, 595);
+            panel7.Size = new Size(1023, 598);
             panel7.TabIndex = 10;
             // 
             // MediaPlayerForm
@@ -344,11 +346,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(54, 57, 62);
-            ClientSize = new Size(1192, 636);
+            ClientSize = new Size(1213, 636);
             Controls.Add(menuStrip2);
             Controls.Add(fLP1Sidebar);
-            Controls.Add(durationLbl);
-            Controls.Add(FileName);
             Controls.Add(panel7);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
@@ -369,6 +369,7 @@
             menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)VideoPlayer).EndInit();
             panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
