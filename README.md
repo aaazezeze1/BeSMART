@@ -2,8 +2,8 @@
 BeSMART is a simple notes application for Windows that has a few extra features intended to be used offline and for
 students.
 
-Final Project in ITEC 103 (Intermediate Programming). 
-Made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.
+This application is our Final Project in ITEC 103 (Intermediate Programming). 
+Project made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.
 
 # What we used for the project
 1. Visual Studio Community 2022 (17.9.5)
@@ -13,9 +13,8 @@ Made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.
 5. System.Windows.Extensions by Microsoft (version 8.0.0)
 
 # Important Notes
-1. The alarm sound will not work if the operating system used is not Windows or the wav file included in Windows OS 
-is not found in the computer. 
-2. The project may not work on older .NET versions or older versions of the software or libraries used.
+1. The alarm sound will not work if the wav file included in the Windows OS is not found in the computer. 
+2. The project may not work on older .NET versions or newer versions of the software or libraries used.
 3. The library used for playing music (Sound Player) is made by Microsoft and used to be built in by default. However in 
 Visual Studio 2022 the System.Media library has to be installed using the NuGet package manager.
 4. Newtonsoft.Json has to be installed or else te currency converter will not work.
@@ -47,11 +46,10 @@ theres a chance that we would have to code the project all over again because th
 the image back. I had a copy of the screenshot and would rather not go through the pain of redoing the project for 
 just renaming one image" - Amaze*
 
-3. Find a way to keep the history of the created notes and display it in the data grid view.  
+3. Keep the history of the created notes and display it in the data grid view.  
 Once the application is reloaded again, the history or previous txt files created will be gone from the data grid view. 
 
 *The saved txt files can still be found on the users machine where they stored it. Only the history disappears upon reload.*
 
-4. Add an extra music file for the timer notification incase the user runs the app in other OS's.
-5. Make the delete button in the notes app also delete the actual file created. The delete button only deletes the notes 
+4. Make the delete button in the notes app also delete the actual file created. The delete button only deletes the notes 
 entry (sort of like a history tab of the created notes) not the note itself so the user has to delete the notes manually.
