@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class UserControl1Week
+    partial class UserControlDay
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblDays = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblDays
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(12, 17);
-            label1.TabIndex = 0;
-            label1.Text = " ";
+            lblDays.AutoSize = true;
+            lblDays.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDays.Location = new Point(0, 0);
+            lblDays.Name = "lblDays";
+            lblDays.Size = new Size(25, 20);
+            lblDays.TabIndex = 0;
+            lblDays.Text = "00";
             // 
-            // UserControl1Week
+            // UserControlDay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Name = "UserControl1Week";
-            Size = new Size(90, 66);
+            BackColor = Color.White;
+            Controls.Add(lblDays);
+            Name = "UserControlDay";
+            Size = new Size(123, 90);
+            Click += UserControlDay_Click;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblDays;
     }
 }

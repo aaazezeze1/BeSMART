@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AKbqQ9uIwYY=",
+  "dgSpecHash": "wAgn2POVv6E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\acer\\Source\\Repos\\Be_SMART\\NotesApp.csproj",
+  "projectFilePath": "C:\\Users\\acer\\source\\repos\\Be_SMART\\NotesApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\documentformat.openxml\\3.0.2\\documentformat.openxml.3.0.2.nupkg.sha512",

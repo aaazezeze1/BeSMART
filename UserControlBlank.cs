@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NotesApp
 {
-    public partial class UserControl1Week : UserControl
+    public partial class UserControlBlank : UserControl
     {
-        public UserControl1Week()
+        public UserControlBlank()
         {
             InitializeComponent();
         }

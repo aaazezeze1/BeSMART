@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static NotesApp.UserControlDay;
 
 
 
@@ -18,263 +20,158 @@ namespace NotesApp
     public partial class ScheduleForm : Form
     {
         int month, year;
-        //private List<EventStorageClass2> events = new List<EventStorageClass2>();
-
-        public class EventAddedEventArgs : EventArgs
-        {
-            public EventStorageClass2 Event { get; set; }
-
-            public EventAddedEventArgs(EventStorageClass2 @event)
-            {
-                Event = @event;
-            }
-        }
-
-
+        Dictionary<DateTime, List<UserControlDay.Event>> eventsDict = new Dictionary<DateTime, List<UserControlDay.Event>>(); // Changed from EventData to UserControlDay.Event
         public ScheduleForm()
         {
             InitializeComponent();
-            // LoadEventsForCurrentMonth();
-        }
-
-        bool sidebarExpand = false; //collapsed sidebar
-        private void timer1SidebarTransition_Tick(object sender, EventArgs e)
-        {
-            if (sidebarExpand) //expanding sidebar
-            {
-                if (fLP1Sidebar.Width < 190)
-                {
-                    fLP1Sidebar.Width += 10;
-                    //fLP1CalendarContent.Width -= 10;
-                    //fLP1CalendarContent.Left += 10;
-
-                    //fLP2Days.Width -= 10;
-                    //fLP2Days.Left += 10;
-                }
-                else
-                {
-                    //make sure sidebar does not go below min width
-                    fLP1Sidebar.Width = 190;
-                    sidebarExpand = false;
-                    timer1SidebarTransition.Stop();
-                }
-            }
-            else //collapse seidebar
-            {
-                if (fLP1Sidebar.Width > 72)
-                {
-                    fLP1Sidebar.Width -= 10;
-                    //fLP1CalendarContent.Width += 10;
-                    //fLP1CalendarContent.Left -= 10;
-
-                    //fLP2Days.Width += 10;
-                    //fLP2Days.Left -= 10;
-                }
-                else
-                {
-                    //make sure sidebar does not exceed the max width
-                    fLP1Sidebar.Width = 72;
-                    sidebarExpand = true;
-                    timer1SidebarTransition.Stop();
-                }
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            timer1SidebarTransition.Start();
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            displayDays();
-        }
-
-        private void displayDays()
-        {
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
+            displayDays(month, year);
+        }
 
-            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            LBDATE.Text = monthname + "" + year;
+        private void displayDays(int month, int year)
+        {
+            string monthname = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDATE.Text = monthname + " " + year;
 
-
-            //get the first days of the month
+            //first date of the month
             DateTime startofthemonth = new DateTime(year, month, 1);
-            //get the count of days of the month
-            int days = DateTime.DaysInMonth(year, month);
-            //convert the startofthemonth to int
-            int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
 
-            //usercontrol
-            for (int i = 1; i <= dayoftheweek; i++)
+            //count of the days of the month
+            int days = DateTime.DaysInMonth(year, month);
+
+            //convert startoftthemonth to integer
+            int daysoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
+
+            // UserControlBlank for the empty days at the start of the month
+            flp1DayContainer.Controls.Clear();
+            for (int i = 1; i < daysoftheweek; i++)
             {
-                UserControl1Week ucWeek = new UserControl1Week();
-                fLP1CalendarContent.Controls.Add(ucWeek);
+                UserControlBlank ucBlank = new UserControlBlank();
+                flp1DayContainer.Controls.Add(ucBlank);
             }
-            //usercontrol for days
-            //for (int i = 1; i <= days; i++)
-            //{
-            //    UserControlDays ucdays = new UserControlDays();
-            //    ucdays.days(i);
-            //    fLP1CalendarContent.Controls.Add(ucdays);
-            //}
+
+            DateTime today = DateTime.Now;
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays ucdays = new UserControlDays();
-                DateTime date = new DateTime(year, month, i);
-                //ucdays.SetDay(i, date);
-                ucdays.DayClicked += Ucdays_DayClicked;
-                fLP1CalendarContent.Controls.Add(ucdays);
-            }
+                UserControlDay ucDay = new UserControlDay(new DateTime(year, month, i));
+                ucDay.SetDay(i);
 
-            //month--;
-            //if (month < 1)
-            //{
-            //    month = 12;
-            //    year--;
-            //}
-
-            // LoadEventsForCurrentMonth();
-        }
-
-        private void Ucdays_DayClicked(object sender, DateTime e)
-        {
-            EventsSchedForm4 eventForm = new EventsSchedForm4(e);
-            eventForm.EventAdded += EventForm_EventAdded;
-            eventForm.ShowDialog();
-        }
-
-        private void EventForm_EventAdded(object sender, EventAddedEventArgs e)
-        {
-            //foreach (UserControlDays ucd in fLP1CalendarContent.Controls.OfType<UserControlDays>())
-            //{
-            //    if (ucd.Date == e.Event.Date)
-            //    {
-            //        ucd.BackColor = Color.LightBlue; // Change to distinguish days with events
-            //        ucd.ToolTipText = $"{e.Event.Title} at {e.Event.Time}"; // Or any other way to display event
-            //    }
-            //}
-
-            //foreach (UserControlDays ucd in fLP1CalendarContent.Controls.OfType<UserControlDays>())
-            //{
-            //    if (ucd.Date == e.Event.Date)
-            //    {
-            //        ucd.BackColor = System.Drawing.Color.LightBlue; // Change to distinguish days with events
-            //        ToolTip toolTip = new ToolTip();
-            //        toolTip.SetToolTip(ucd, $"{e.Event.Title} at {e.Event.Time}"); // Display event info
-            //    }
-            //}
-
-            foreach (UserControlDays ucd in fLP1CalendarContent.Controls.OfType<UserControlDays>())
-            {
-                if (ucd.Date == e.Event.Date)
+                DateTime currentDate = new DateTime(year, month, i);
+                if (eventsDict.ContainsKey(currentDate))
                 {
-                    ToolTip toolTip = new ToolTip();
-                    toolTip.SetToolTip(ucd, $"{e.Event.Title} at {e.Event.Time}");
-
-                    switch (e.Event.EventType)
+                    foreach (var eventItem in eventsDict[currentDate])
                     {
-                        case "Personal":
-                            ucd.BackColor = System.Drawing.Color.Pink;
-                            break;
-                        case "School":
-                            ucd.BackColor = System.Drawing.Color.Blue;
-                            break;
-                        case "Work":
-                            ucd.BackColor = System.Drawing.Color.Yellow;
-                            break;
-                        default:
-                            ucd.BackColor = System.Drawing.Color.LightGray;
-                            break;
+                        ucDay.AddEvent(eventItem); // Add events to the day
                     }
                 }
-            }
-        }
 
+                if (year == today.Year && month == today.Month && i == today.Day)
+                {
+                    ucDay.HighlightToday(); // Highlight today's date
+                }
+
+                ucDay.DayClicked += (s, e) => ShowEventForm(currentDate, ucDay); // Event handler for day click
+                flp1DayContainer.Controls.Add(ucDay);
+            }
+
+        }
         private void btn2Next_Click(object sender, EventArgs e)
         {
-            ////clear container
-            //fLP1CalendarContent.Controls.Clear();
+            //clear container
+            //flp1DayContainer.Controls.Clear();
 
-            ////increment month to go to the next month
-            //month++;
-
-            //DateTime startofthemonth = new DateTime(year, month, 1);
-            ////get the count of days of the month
-            //int days = DateTime.DaysInMonth(year, month);
-            ////convert the startofthemonth to int
-            //int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
-
-            ////usercontrol
-            //for (int i = 1; i <= dayoftheweek; i++)
-            //{
-            //    UserControl1Week ucWeek = new UserControl1Week();
-            //    fLP1CalendarContent.Controls.Add(ucWeek);
-            //}
-            ////usercontrol for days
-            //for (int i = 1; i <= days; i++)
-            //{
-            //    UserControlDays ucdays = new UserControlDays();
-            //    ucdays.days(i);
-            //    fLP1CalendarContent.Controls.Add(ucdays);
-            //}
-
-            fLP1CalendarContent.Controls.Clear();
+            //increment month
             month++;
             if (month > 12)
             {
                 month = 1;
                 year++;
             }
-            displayDays();
-        }
 
+            displayDays(month, year);
+        }
         private void btn1Previous_Click(object sender, EventArgs e)
         {
-            //fLP1CalendarContent.Controls.Clear();
+            //clear container
+            //flp1DayContainer.Controls.Clear();
 
-            ////decrement month to go to the previous month
-            //month--;
-
-            //DateTime startofthemonth = new DateTime(year, month, 1);
-            ////get the count of days of the month
-            //int days = DateTime.DaysInMonth(year, month);
-            ////convert the startofthemonth to int
-            //int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
-
-            ////usercontrol
-            //for (int i = 1; i <= dayoftheweek; i++)
-            //{
-            //    UserControl1Week ucWeek = new UserControl1Week();
-            //    fLP1CalendarContent.Controls.Add(ucWeek);
-            //}
-            ////usercontrol for days
-            //for (int i = 1; i <= days; i++)
-            //{
-            //    UserControlDays ucdays = new UserControlDays();
-            //    ucdays.days(i);
-            //    fLP1CalendarContent.Controls.Add(ucdays);
-            //}
-
-            //month--;
-            //if (month < 1)
-            //{
-            //    month = 12;
-            //    year--;
-            //}
-
-            //LoadEventsForCurrentMonth();
-
-            fLP1CalendarContent.Controls.Clear();
+            //decrement month
             month--;
             if (month < 1)
             {
                 month = 12;
                 year--;
             }
-            displayDays();
+
+            displayDays(month, year);
+        }
+        public void ShowEventForm(DateTime date, UserControlDay ucDay)
+        {
+            // Check if the event count is already at the limit
+            if (eventsDict.ContainsKey(date) && eventsDict[date].Count >= 3)
+            {
+                MessageBox.Show("You can only add up to 3 events for this day.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using (EventsSchedForm4 eventForm = new EventsSchedForm4())
+            {
+                // Show the event form
+                if (eventForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Add the event only if all conditions are met
+                    UserControlDay.Event newEvent = new UserControlDay.Event
+                    {
+                        Title = eventForm.EventTitle,
+                        Description = eventForm.EventDescription,
+                        EventColor = eventForm.EventColor,
+                        EventType = eventForm.EventType,
+                        StartTime = eventForm.StartTime,
+                        EndTime = eventForm.EndTime,
+                        StartTimePeriod = eventForm.StartTimePeriod,
+                        EndTimePeriod = eventForm.EndTimePeriod,
+                    };
+
+                    if (!eventsDict.ContainsKey(date))
+                    {
+                        eventsDict[date] = new List<UserControlDay.Event>();
+                    }
+                    eventsDict[date].Add(newEvent);
+                    ucDay.AddEvent(newEvent);
+                }
+            }
+        }
+        public void EditEvent(DateTime date, UserControlDay.Event eventItem, UserControlDay ucDay)
+        {
+            using (EventsSchedForm4 eventForm = new EventsSchedForm4())
+            {
+                eventForm.SetEventData(eventItem);
+
+                if (eventForm.ShowDialog() == DialogResult.OK)
+                {
+                    eventItem.Title = eventForm.EventTitle;
+                    eventItem.Description = eventForm.EventDescription;
+                    eventItem.EventColor = eventForm.EventColor;
+                    eventItem.EventType = eventForm.EventType;
+
+                    ucDay.UpdateEvent(eventItem);
+                }
+            }
+        }
+
+        public void DeleteEvent(DateTime date, UserControlDay.Event eventItem, UserControlDay ucDay)
+        {
+            if (eventsDict.ContainsKey(date))
+            {
+                eventsDict[date].Remove(eventItem);
+                ucDay.RemoveEvent(eventItem);
+            }
         }
 
         private void btn1Schedule_Click(object sender, EventArgs e)

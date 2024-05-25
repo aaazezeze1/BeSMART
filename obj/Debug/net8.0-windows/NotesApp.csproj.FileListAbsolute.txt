@@ -196,8 +196,6 @@ C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.NotesForm.
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.Properties.Resources.resources
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.ScheduleForm.resources
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.ToDoForm.resources
-C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.UserControl1Week.resources
-C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.UserControlDays.resources
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.csproj.GenerateResource.cache
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.AssemblyInfoInputs.cache
@@ -210,3 +208,5 @@ C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\refint\BeSMART.dll
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\BeSMART.pdb
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\ref\BeSMART.dll
+C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.UserControlBlank.resources
+C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.UserControlDay.resources

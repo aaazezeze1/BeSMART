@@ -111,9 +111,9 @@
             label1.BackColor = Color.DimGray;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(5, 2);
+            label1.Location = new Point(6, 3);
             label1.Name = "label1";
-            label1.Size = new Size(75, 19);
+            label1.Size = new Size(91, 23);
             label1.TabIndex = 7;
             label1.Text = "Categories";
             // 
@@ -135,19 +135,17 @@
             panel7.Controls.Add(panel15);
             panel7.Controls.Add(panel13);
             panel7.Controls.Add(panel14);
-            panel7.Location = new Point(166, 0);
-            panel7.Margin = new Padding(3, 2, 3, 2);
+            panel7.Location = new Point(190, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(173, 477);
+            panel7.Size = new Size(198, 636);
             panel7.TabIndex = 8;
             // 
             // panel21
             // 
             panel21.Controls.Add(btnLogarithms);
-            panel21.Location = new Point(3, 446);
-            panel21.Margin = new Padding(3, 2, 3, 2);
+            panel21.Location = new Point(3, 595);
             panel21.Name = "panel21";
-            panel21.Size = new Size(268, 26);
+            panel21.Size = new Size(306, 35);
             panel21.TabIndex = 23;
             // 
             // btnLogarithms
@@ -155,11 +153,10 @@
             btnLogarithms.BackColor = Color.DimGray;
             btnLogarithms.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogarithms.ForeColor = SystemColors.ButtonHighlight;
-            btnLogarithms.Location = new Point(-16, -20);
-            btnLogarithms.Margin = new Padding(3, 2, 3, 2);
+            btnLogarithms.Location = new Point(-18, -27);
             btnLogarithms.Name = "btnLogarithms";
-            btnLogarithms.Padding = new Padding(22, 0, 0, 0);
-            btnLogarithms.Size = new Size(281, 70);
+            btnLogarithms.Padding = new Padding(25, 0, 0, 0);
+            btnLogarithms.Size = new Size(321, 93);
             btnLogarithms.TabIndex = 10;
             btnLogarithms.Text = "Logarithms";
             btnLogarithms.TextAlign = ContentAlignment.MiddleLeft;
@@ -168,10 +165,9 @@
             // panel20
             // 
             panel20.Controls.Add(btnProbability);
-            panel20.Location = new Point(3, 413);
-            panel20.Margin = new Padding(3, 2, 3, 2);
+            panel20.Location = new Point(3, 551);
             panel20.Name = "panel20";
-            panel20.Size = new Size(268, 26);
+            panel20.Size = new Size(306, 35);
             panel20.TabIndex = 22;
             // 
             // btnProbability
@@ -179,11 +175,10 @@
             btnProbability.BackColor = Color.DimGray;
             btnProbability.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProbability.ForeColor = SystemColors.ButtonHighlight;
-            btnProbability.Location = new Point(-16, -20);
-            btnProbability.Margin = new Padding(3, 2, 3, 2);
+            btnProbability.Location = new Point(-18, -27);
             btnProbability.Name = "btnProbability";
-            btnProbability.Padding = new Padding(22, 0, 0, 0);
-            btnProbability.Size = new Size(284, 70);
+            btnProbability.Padding = new Padding(25, 0, 0, 0);
+            btnProbability.Size = new Size(325, 93);
             btnProbability.TabIndex = 10;
             btnProbability.Text = "Probability and Sets";
             btnProbability.TextAlign = ContentAlignment.MiddleLeft;
@@ -192,10 +187,9 @@
             // panel8
             // 
             panel8.Controls.Add(btnAreas);
-            panel8.Location = new Point(3, 17);
-            panel8.Margin = new Padding(3, 2, 3, 2);
+            panel8.Location = new Point(3, 23);
             panel8.Name = "panel8";
-            panel8.Size = new Size(268, 26);
+            panel8.Size = new Size(306, 35);
             panel8.TabIndex = 11;
             // 
             // btnAreas
@@ -203,11 +197,10 @@
             btnAreas.BackColor = Color.DimGray;
             btnAreas.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAreas.ForeColor = SystemColors.ButtonHighlight;
-            btnAreas.Location = new Point(-16, -17);
-            btnAreas.Margin = new Padding(3, 2, 3, 2);
+            btnAreas.Location = new Point(-18, -23);
             btnAreas.Name = "btnAreas";
-            btnAreas.Padding = new Padding(22, 0, 0, 0);
-            btnAreas.Size = new Size(284, 72);
+            btnAreas.Padding = new Padding(25, 0, 0, 0);
+            btnAreas.Size = new Size(325, 96);
             btnAreas.TabIndex = 10;
             btnAreas.Text = "Areas";
             btnAreas.TextAlign = ContentAlignment.MiddleLeft;
@@ -217,10 +210,9 @@
             // panel19
             // 
             panel19.Controls.Add(btnDerivatives);
-            panel19.Location = new Point(3, 380);
-            panel19.Margin = new Padding(3, 2, 3, 2);
+            panel19.Location = new Point(3, 507);
             panel19.Name = "panel19";
-            panel19.Size = new Size(268, 26);
+            panel19.Size = new Size(306, 35);
             panel19.TabIndex = 21;
             // 
             // btnDerivatives
@@ -228,11 +220,10 @@
             btnDerivatives.BackColor = Color.DimGray;
             btnDerivatives.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDerivatives.ForeColor = SystemColors.ButtonHighlight;
-            btnDerivatives.Location = new Point(-16, -20);
-            btnDerivatives.Margin = new Padding(3, 2, 3, 2);
+            btnDerivatives.Location = new Point(-18, -27);
             btnDerivatives.Name = "btnDerivatives";
-            btnDerivatives.Padding = new Padding(22, 0, 0, 0);
-            btnDerivatives.Size = new Size(281, 70);
+            btnDerivatives.Padding = new Padding(25, 0, 0, 0);
+            btnDerivatives.Size = new Size(321, 93);
             btnDerivatives.TabIndex = 10;
             btnDerivatives.Text = "Derivatives";
             btnDerivatives.TextAlign = ContentAlignment.MiddleLeft;
@@ -241,10 +232,9 @@
             // panel9
             // 
             panel9.Controls.Add(btnVolumes);
-            panel9.Location = new Point(3, 50);
-            panel9.Margin = new Padding(3, 2, 3, 2);
+            panel9.Location = new Point(3, 67);
             panel9.Name = "panel9";
-            panel9.Size = new Size(268, 26);
+            panel9.Size = new Size(306, 35);
             panel9.TabIndex = 12;
             // 
             // btnVolumes
@@ -252,11 +242,10 @@
             btnVolumes.BackColor = Color.DimGray;
             btnVolumes.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVolumes.ForeColor = SystemColors.ButtonHighlight;
-            btnVolumes.Location = new Point(-16, -18);
-            btnVolumes.Margin = new Padding(3, 2, 3, 2);
+            btnVolumes.Location = new Point(-18, -24);
             btnVolumes.Name = "btnVolumes";
-            btnVolumes.Padding = new Padding(22, 0, 0, 0);
-            btnVolumes.Size = new Size(281, 64);
+            btnVolumes.Padding = new Padding(25, 0, 0, 0);
+            btnVolumes.Size = new Size(321, 85);
             btnVolumes.TabIndex = 10;
             btnVolumes.Text = "Volumes";
             btnVolumes.TextAlign = ContentAlignment.MiddleLeft;
@@ -265,10 +254,9 @@
             // panel18
             // 
             panel18.Controls.Add(btnSequences);
-            panel18.Location = new Point(3, 347);
-            panel18.Margin = new Padding(3, 2, 3, 2);
+            panel18.Location = new Point(3, 463);
             panel18.Name = "panel18";
-            panel18.Size = new Size(268, 26);
+            panel18.Size = new Size(306, 35);
             panel18.TabIndex = 20;
             // 
             // btnSequences
@@ -276,11 +264,10 @@
             btnSequences.BackColor = Color.DimGray;
             btnSequences.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSequences.ForeColor = SystemColors.ButtonHighlight;
-            btnSequences.Location = new Point(-16, -20);
-            btnSequences.Margin = new Padding(3, 2, 3, 2);
+            btnSequences.Location = new Point(-18, -27);
             btnSequences.Name = "btnSequences";
-            btnSequences.Padding = new Padding(22, 0, 0, 0);
-            btnSequences.Size = new Size(284, 70);
+            btnSequences.Padding = new Padding(25, 0, 0, 0);
+            btnSequences.Size = new Size(325, 93);
             btnSequences.TabIndex = 10;
             btnSequences.Text = "Sequences";
             btnSequences.TextAlign = ContentAlignment.MiddleLeft;
@@ -289,10 +276,9 @@
             // panel10
             // 
             panel10.Controls.Add(btnFunctionsEquations);
-            panel10.Location = new Point(3, 83);
-            panel10.Margin = new Padding(3, 2, 3, 2);
+            panel10.Location = new Point(3, 111);
             panel10.Name = "panel10";
-            panel10.Size = new Size(268, 26);
+            panel10.Size = new Size(306, 35);
             panel10.TabIndex = 13;
             // 
             // btnFunctionsEquations
@@ -300,11 +286,10 @@
             btnFunctionsEquations.BackColor = Color.DimGray;
             btnFunctionsEquations.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFunctionsEquations.ForeColor = SystemColors.ButtonHighlight;
-            btnFunctionsEquations.Location = new Point(-16, -16);
-            btnFunctionsEquations.Margin = new Padding(3, 2, 3, 2);
+            btnFunctionsEquations.Location = new Point(-18, -21);
             btnFunctionsEquations.Name = "btnFunctionsEquations";
-            btnFunctionsEquations.Padding = new Padding(22, 0, 0, 0);
-            btnFunctionsEquations.Size = new Size(284, 60);
+            btnFunctionsEquations.Padding = new Padding(25, 0, 0, 0);
+            btnFunctionsEquations.Size = new Size(325, 80);
             btnFunctionsEquations.TabIndex = 10;
             btnFunctionsEquations.Text = "Functions and Equations";
             btnFunctionsEquations.TextAlign = ContentAlignment.MiddleLeft;
@@ -313,10 +298,9 @@
             // panel17
             // 
             panel17.Controls.Add(btnStats);
-            panel17.Location = new Point(3, 314);
-            panel17.Margin = new Padding(3, 2, 3, 2);
+            panel17.Location = new Point(3, 419);
             panel17.Name = "panel17";
-            panel17.Size = new Size(268, 26);
+            panel17.Size = new Size(306, 35);
             panel17.TabIndex = 20;
             // 
             // btnStats
@@ -324,11 +308,10 @@
             btnStats.BackColor = Color.DimGray;
             btnStats.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStats.ForeColor = SystemColors.ButtonHighlight;
-            btnStats.Location = new Point(-16, -20);
-            btnStats.Margin = new Padding(3, 2, 3, 2);
+            btnStats.Location = new Point(-18, -27);
             btnStats.Name = "btnStats";
-            btnStats.Padding = new Padding(22, 0, 0, 0);
-            btnStats.Size = new Size(281, 70);
+            btnStats.Padding = new Padding(25, 0, 0, 0);
+            btnStats.Size = new Size(321, 93);
             btnStats.TabIndex = 10;
             btnStats.Text = "Statistics";
             btnStats.TextAlign = ContentAlignment.MiddleLeft;
@@ -337,10 +320,9 @@
             // panel11
             // 
             panel11.Controls.Add(btnExponents);
-            panel11.Location = new Point(3, 116);
-            panel11.Margin = new Padding(3, 2, 3, 2);
+            panel11.Location = new Point(3, 155);
             panel11.Name = "panel11";
-            panel11.Size = new Size(268, 26);
+            panel11.Size = new Size(306, 35);
             panel11.TabIndex = 14;
             // 
             // btnExponents
@@ -348,11 +330,10 @@
             btnExponents.BackColor = Color.DimGray;
             btnExponents.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExponents.ForeColor = SystemColors.ButtonHighlight;
-            btnExponents.Location = new Point(-16, -19);
-            btnExponents.Margin = new Padding(3, 2, 3, 2);
+            btnExponents.Location = new Point(-18, -25);
             btnExponents.Name = "btnExponents";
-            btnExponents.Padding = new Padding(22, 0, 0, 0);
-            btnExponents.Size = new Size(284, 71);
+            btnExponents.Padding = new Padding(25, 0, 0, 0);
+            btnExponents.Size = new Size(325, 95);
             btnExponents.TabIndex = 10;
             btnExponents.Text = "Exponents";
             btnExponents.TextAlign = ContentAlignment.MiddleLeft;
@@ -361,10 +342,9 @@
             // panel16
             // 
             panel16.Controls.Add(btnVector);
-            panel16.Location = new Point(3, 281);
-            panel16.Margin = new Padding(3, 2, 3, 2);
+            panel16.Location = new Point(3, 375);
             panel16.Name = "panel16";
-            panel16.Size = new Size(268, 26);
+            panel16.Size = new Size(306, 35);
             panel16.TabIndex = 19;
             // 
             // btnVector
@@ -372,11 +352,10 @@
             btnVector.BackColor = Color.DimGray;
             btnVector.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVector.ForeColor = SystemColors.ButtonHighlight;
-            btnVector.Location = new Point(-16, -20);
-            btnVector.Margin = new Padding(3, 2, 3, 2);
+            btnVector.Location = new Point(-18, -27);
             btnVector.Name = "btnVector";
-            btnVector.Padding = new Padding(22, 0, 0, 0);
-            btnVector.Size = new Size(281, 70);
+            btnVector.Padding = new Padding(25, 0, 0, 0);
+            btnVector.Size = new Size(321, 93);
             btnVector.TabIndex = 10;
             btnVector.Text = "Vector";
             btnVector.TextAlign = ContentAlignment.MiddleLeft;
@@ -385,10 +364,9 @@
             // panel12
             // 
             panel12.Controls.Add(btnRadicals);
-            panel12.Location = new Point(3, 149);
-            panel12.Margin = new Padding(3, 2, 3, 2);
+            panel12.Location = new Point(3, 199);
             panel12.Name = "panel12";
-            panel12.Size = new Size(268, 26);
+            panel12.Size = new Size(306, 35);
             panel12.TabIndex = 15;
             // 
             // btnRadicals
@@ -396,11 +374,10 @@
             btnRadicals.BackColor = Color.DimGray;
             btnRadicals.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRadicals.ForeColor = SystemColors.ButtonHighlight;
-            btnRadicals.Location = new Point(-16, -19);
-            btnRadicals.Margin = new Padding(3, 2, 3, 2);
+            btnRadicals.Location = new Point(-18, -25);
             btnRadicals.Name = "btnRadicals";
-            btnRadicals.Padding = new Padding(22, 0, 0, 0);
-            btnRadicals.Size = new Size(284, 68);
+            btnRadicals.Padding = new Padding(25, 0, 0, 0);
+            btnRadicals.Size = new Size(325, 91);
             btnRadicals.TabIndex = 10;
             btnRadicals.Text = "Radicals";
             btnRadicals.TextAlign = ContentAlignment.MiddleLeft;
@@ -409,10 +386,9 @@
             // panel15
             // 
             panel15.Controls.Add(btnLogic);
-            panel15.Location = new Point(3, 248);
-            panel15.Margin = new Padding(3, 2, 3, 2);
+            panel15.Location = new Point(3, 331);
             panel15.Name = "panel15";
-            panel15.Size = new Size(268, 26);
+            panel15.Size = new Size(306, 35);
             panel15.TabIndex = 18;
             // 
             // btnLogic
@@ -420,11 +396,10 @@
             btnLogic.BackColor = Color.DimGray;
             btnLogic.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogic.ForeColor = SystemColors.ButtonHighlight;
-            btnLogic.Location = new Point(-16, -18);
-            btnLogic.Margin = new Padding(3, 2, 3, 2);
+            btnLogic.Location = new Point(-18, -24);
             btnLogic.Name = "btnLogic";
-            btnLogic.Padding = new Padding(22, 0, 0, 0);
-            btnLogic.Size = new Size(284, 66);
+            btnLogic.Padding = new Padding(25, 0, 0, 0);
+            btnLogic.Size = new Size(325, 88);
             btnLogic.TabIndex = 10;
             btnLogic.Text = "Logic";
             btnLogic.TextAlign = ContentAlignment.MiddleLeft;
@@ -433,10 +408,9 @@
             // panel13
             // 
             panel13.Controls.Add(btnTrigo);
-            panel13.Location = new Point(3, 182);
-            panel13.Margin = new Padding(3, 2, 3, 2);
+            panel13.Location = new Point(3, 243);
             panel13.Name = "panel13";
-            panel13.Size = new Size(268, 26);
+            panel13.Size = new Size(306, 35);
             panel13.TabIndex = 16;
             // 
             // btnTrigo
@@ -444,11 +418,10 @@
             btnTrigo.BackColor = Color.DimGray;
             btnTrigo.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTrigo.ForeColor = SystemColors.ButtonHighlight;
-            btnTrigo.Location = new Point(-16, -17);
-            btnTrigo.Margin = new Padding(3, 2, 3, 2);
+            btnTrigo.Location = new Point(-18, -23);
             btnTrigo.Name = "btnTrigo";
-            btnTrigo.Padding = new Padding(22, 0, 0, 0);
-            btnTrigo.Size = new Size(281, 63);
+            btnTrigo.Padding = new Padding(25, 0, 0, 0);
+            btnTrigo.Size = new Size(321, 84);
             btnTrigo.TabIndex = 10;
             btnTrigo.Text = "Trigonometry";
             btnTrigo.TextAlign = ContentAlignment.MiddleLeft;
@@ -457,10 +430,9 @@
             // panel14
             // 
             panel14.Controls.Add(btnGeometry);
-            panel14.Location = new Point(3, 215);
-            panel14.Margin = new Padding(3, 2, 3, 2);
+            panel14.Location = new Point(3, 287);
             panel14.Name = "panel14";
-            panel14.Size = new Size(268, 26);
+            panel14.Size = new Size(306, 35);
             panel14.TabIndex = 17;
             // 
             // btnGeometry
@@ -468,11 +440,10 @@
             btnGeometry.BackColor = Color.DimGray;
             btnGeometry.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGeometry.ForeColor = SystemColors.ButtonHighlight;
-            btnGeometry.Location = new Point(-16, -16);
-            btnGeometry.Margin = new Padding(3, 2, 3, 2);
+            btnGeometry.Location = new Point(-18, -21);
             btnGeometry.Name = "btnGeometry";
-            btnGeometry.Padding = new Padding(22, 0, 0, 0);
-            btnGeometry.Size = new Size(281, 64);
+            btnGeometry.Padding = new Padding(25, 0, 0, 0);
+            btnGeometry.Size = new Size(321, 85);
             btnGeometry.TabIndex = 10;
             btnGeometry.Text = "Geometry";
             btnGeometry.TextAlign = ContentAlignment.MiddleLeft;
@@ -490,9 +461,8 @@
             fLP1Sidebar.Controls.Add(panel6);
             fLP1Sidebar.Dock = DockStyle.Left;
             fLP1Sidebar.Location = new Point(0, 0);
-            fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
             fLP1Sidebar.Name = "fLP1Sidebar";
-            fLP1Sidebar.Size = new Size(164, 477);
+            fLP1Sidebar.Size = new Size(190, 636);
             fLP1Sidebar.TabIndex = 9;
             // 
             // panel1
@@ -500,20 +470,18 @@
             panel1.BackColor = Color.DarkSlateGray;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(labl1BeSMART);
-            panel1.Location = new Point(3, 2);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(159, 65);
+            panel1.Size = new Size(182, 87);
             panel1.TabIndex = 15;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DarkSlateGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(8, 15);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(9, 20);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(49, 41);
+            pictureBox1.Size = new Size(56, 55);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -523,9 +491,9 @@
             labl1BeSMART.AutoSize = true;
             labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labl1BeSMART.ForeColor = Color.White;
-            labl1BeSMART.Location = new Point(62, 26);
+            labl1BeSMART.Location = new Point(71, 35);
             labl1BeSMART.Name = "labl1BeSMART";
-            labl1BeSMART.Size = new Size(83, 21);
+            labl1BeSMART.Size = new Size(105, 28);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
             // 
@@ -533,10 +501,9 @@
             // 
             panel2.BackColor = Color.DarkSlateGray;
             panel2.Controls.Add(btn1Schedule);
-            panel2.Location = new Point(3, 71);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(3, 96);
             panel2.Name = "panel2";
-            panel2.Size = new Size(157, 74);
+            panel2.Size = new Size(179, 99);
             panel2.TabIndex = 2;
             // 
             // btn1Schedule
@@ -547,11 +514,10 @@
             btn1Schedule.ForeColor = Color.White;
             btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
             btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1Schedule.Location = new Point(-8, -9);
-            btn1Schedule.Margin = new Padding(3, 2, 3, 2);
+            btn1Schedule.Location = new Point(-9, -12);
             btn1Schedule.Name = "btn1Schedule";
-            btn1Schedule.Padding = new Padding(26, 0, 0, 0);
-            btn1Schedule.Size = new Size(198, 91);
+            btn1Schedule.Padding = new Padding(30, 0, 0, 0);
+            btn1Schedule.Size = new Size(226, 121);
             btn1Schedule.TabIndex = 3;
             btn1Schedule.Text = "         Schedule";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
@@ -562,10 +528,9 @@
             // 
             panel3.BackColor = Color.DarkSlateGray;
             panel3.Controls.Add(btn2ToDoList);
-            panel3.Location = new Point(3, 149);
-            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Location = new Point(3, 201);
             panel3.Name = "panel3";
-            panel3.Size = new Size(157, 74);
+            panel3.Size = new Size(179, 99);
             panel3.TabIndex = 3;
             // 
             // btn2ToDoList
@@ -576,11 +541,10 @@
             btn2ToDoList.ForeColor = Color.White;
             btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
             btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2ToDoList.Location = new Point(-17, -8);
-            btn2ToDoList.Margin = new Padding(3, 2, 3, 2);
+            btn2ToDoList.Location = new Point(-19, -11);
             btn2ToDoList.Name = "btn2ToDoList";
-            btn2ToDoList.Padding = new Padding(31, 0, 0, 0);
-            btn2ToDoList.Size = new Size(206, 91);
+            btn2ToDoList.Padding = new Padding(35, 0, 0, 0);
+            btn2ToDoList.Size = new Size(235, 121);
             btn2ToDoList.TabIndex = 3;
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
@@ -591,10 +555,9 @@
             // 
             panel5.BackColor = Color.DarkSlateGray;
             panel5.Controls.Add(btn4Formula);
-            panel5.Location = new Point(3, 227);
-            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Location = new Point(3, 306);
             panel5.Name = "panel5";
-            panel5.Size = new Size(157, 74);
+            panel5.Size = new Size(179, 99);
             panel5.TabIndex = 5;
             // 
             // btn4Formula
@@ -605,11 +568,10 @@
             btn4Formula.ForeColor = Color.White;
             btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
             btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
-            btn4Formula.Location = new Point(-8, -8);
-            btn4Formula.Margin = new Padding(3, 2, 3, 2);
+            btn4Formula.Location = new Point(-9, -11);
             btn4Formula.Name = "btn4Formula";
-            btn4Formula.Padding = new Padding(26, 0, 0, 0);
-            btn4Formula.Size = new Size(198, 91);
+            btn4Formula.Padding = new Padding(30, 0, 0, 0);
+            btn4Formula.Size = new Size(226, 121);
             btn4Formula.TabIndex = 3;
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
@@ -620,10 +582,9 @@
             // 
             panel4.BackColor = Color.DarkSlateGray;
             panel4.Controls.Add(btn3Converter);
-            panel4.Location = new Point(3, 305);
-            panel4.Margin = new Padding(3, 2, 3, 2);
+            panel4.Location = new Point(3, 411);
             panel4.Name = "panel4";
-            panel4.Size = new Size(162, 74);
+            panel4.Size = new Size(185, 99);
             panel4.TabIndex = 4;
             // 
             // btn3Converter
@@ -634,11 +595,10 @@
             btn3Converter.ForeColor = Color.White;
             btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
             btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3Converter.Location = new Point(-8, -10);
-            btn3Converter.Margin = new Padding(3, 2, 3, 2);
+            btn3Converter.Location = new Point(-9, -13);
             btn3Converter.Name = "btn3Converter";
-            btn3Converter.Padding = new Padding(26, 0, 0, 0);
-            btn3Converter.Size = new Size(181, 91);
+            btn3Converter.Padding = new Padding(30, 0, 0, 0);
+            btn3Converter.Size = new Size(207, 121);
             btn3Converter.TabIndex = 3;
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
@@ -649,10 +609,9 @@
             // 
             panel6.BackColor = Color.DarkSlateGray;
             panel6.Controls.Add(btn5MediaPlayer);
-            panel6.Location = new Point(3, 383);
-            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Location = new Point(3, 516);
             panel6.Name = "panel6";
-            panel6.Size = new Size(164, 74);
+            panel6.Size = new Size(187, 99);
             panel6.TabIndex = 6;
             // 
             // btn5MediaPlayer
@@ -663,11 +622,10 @@
             btn5MediaPlayer.ForeColor = Color.White;
             btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
             btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.Location = new Point(-7, -10);
-            btn5MediaPlayer.Margin = new Padding(3, 2, 3, 2);
+            btn5MediaPlayer.Location = new Point(-8, -13);
             btn5MediaPlayer.Name = "btn5MediaPlayer";
-            btn5MediaPlayer.Padding = new Padding(26, 0, 0, 0);
-            btn5MediaPlayer.Size = new Size(205, 90);
+            btn5MediaPlayer.Padding = new Padding(30, 0, 0, 0);
+            btn5MediaPlayer.Size = new Size(234, 120);
             btn5MediaPlayer.TabIndex = 3;
             btn5MediaPlayer.Text = "         Media Player";
             btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
@@ -676,14 +634,13 @@
             // 
             // FormulaForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(956, 477);
+            ClientSize = new Size(1093, 636);
             Controls.Add(panel7);
             Controls.Add(fLP1Sidebar);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "FormulaForm";
             StartPosition = FormStartPosition.CenterScreen;

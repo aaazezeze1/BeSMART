@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class UserControlDays
+    partial class UserControlBlank
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,34 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblDays = new Label();
             SuspendLayout();
             // 
-            // lblDays
-            // 
-            lblDays.AutoSize = true;
-            lblDays.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDays.Location = new Point(0, 0);
-            lblDays.Name = "lblDays";
-            lblDays.Size = new Size(28, 23);
-            lblDays.TabIndex = 0;
-            lblDays.Text = "00";
-            // 
-            // UserControlDays
+            // UserControlBlank
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            Controls.Add(lblDays);
-            Name = "UserControlDays";
-            Size = new Size(90, 66);
-            DoubleClick += UserControlDays_DoubleClick;
+            Name = "UserControlBlank";
+            Size = new Size(123, 90);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label lblDays;
     }
 }
