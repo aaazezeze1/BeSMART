@@ -30,20 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScheduleForm));
-            fLP1Sidebar = new FlowLayoutPanel();
-            panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            labl1BeSMART = new Label();
-            panel2 = new Panel();
-            btn1Schedule = new Button();
-            panel3 = new Panel();
-            btn2ToDoList = new Button();
-            panel5 = new Panel();
-            btn4Formula = new Button();
-            panel4 = new Panel();
-            btn3Converter = new Button();
-            panel6 = new Panel();
-            btn5Settings = new Button();
             timer1SidebarTransition = new System.Windows.Forms.Timer(components);
             panel8 = new Panel();
             label7 = new Label();
@@ -58,6 +44,22 @@
             btn1Previous = new Button();
             fLP2Days = new FlowLayoutPanel();
             LBDATE = new Label();
+            fLP1Sidebar = new FlowLayoutPanel();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            labl1BeSMART = new Label();
+            panel2 = new Panel();
+            btn1Schedule = new Button();
+            panel3 = new Panel();
+            btn2ToDoList = new Button();
+            panel5 = new Panel();
+            btn4Formula = new Button();
+            panel4 = new Panel();
+            btn3Converter = new Button();
+            panel6 = new Panel();
+            btn5MediaPlayer = new Button();
+            panel8.SuspendLayout();
+            fLP2Days.SuspendLayout();
             fLP1Sidebar.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -66,205 +68,7 @@
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
-            panel8.SuspendLayout();
-            fLP2Days.SuspendLayout();
             SuspendLayout();
-            // 
-            // fLP1Sidebar
-            // 
-            fLP1Sidebar.BackColor = Color.DarkSlateGray;
-            fLP1Sidebar.Controls.Add(panel1);
-            fLP1Sidebar.Controls.Add(panel2);
-            fLP1Sidebar.Controls.Add(panel3);
-            fLP1Sidebar.Controls.Add(panel5);
-            fLP1Sidebar.Controls.Add(panel4);
-            fLP1Sidebar.Controls.Add(panel6);
-            fLP1Sidebar.Dock = DockStyle.Left;
-            fLP1Sidebar.Location = new Point(0, 0);
-            fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
-            fLP1Sidebar.Name = "fLP1Sidebar";
-            fLP1Sidebar.Size = new Size(67, 477);
-            fLP1Sidebar.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.DarkSlateGray;
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(labl1BeSMART);
-            panel1.Location = new Point(3, 2);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(157, 65);
-            panel1.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.DarkSlateGray;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(8, 15);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(49, 41);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // labl1BeSMART
-            // 
-            labl1BeSMART.AutoSize = true;
-            labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labl1BeSMART.ForeColor = Color.White;
-            labl1BeSMART.Location = new Point(62, 26);
-            labl1BeSMART.Name = "labl1BeSMART";
-            labl1BeSMART.Size = new Size(83, 21);
-            labl1BeSMART.TabIndex = 2;
-            labl1BeSMART.Text = "BeSMART";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.DarkSlateGray;
-            panel2.Controls.Add(btn1Schedule);
-            panel2.Location = new Point(3, 71);
-            panel2.Margin = new Padding(3, 2, 3, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(157, 74);
-            panel2.TabIndex = 2;
-            // 
-            // btn1Schedule
-            // 
-            btn1Schedule.BackColor = Color.DarkSlateGray;
-            btn1Schedule.FlatStyle = FlatStyle.Flat;
-            btn1Schedule.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn1Schedule.ForeColor = Color.White;
-            btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
-            btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
-            btn1Schedule.Location = new Point(-8, -9);
-            btn1Schedule.Margin = new Padding(3, 2, 3, 2);
-            btn1Schedule.Name = "btn1Schedule";
-            btn1Schedule.Padding = new Padding(26, 0, 0, 0);
-            btn1Schedule.Size = new Size(198, 91);
-            btn1Schedule.TabIndex = 3;
-            btn1Schedule.Text = "         Schedule";
-            btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
-            btn1Schedule.UseVisualStyleBackColor = false;
-            btn1Schedule.Click += btn1Schedule_Click;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.DarkSlateGray;
-            panel3.Controls.Add(btn2ToDoList);
-            panel3.Location = new Point(3, 149);
-            panel3.Margin = new Padding(3, 2, 3, 2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(157, 74);
-            panel3.TabIndex = 3;
-            // 
-            // btn2ToDoList
-            // 
-            btn2ToDoList.BackColor = Color.DarkSlateGray;
-            btn2ToDoList.FlatStyle = FlatStyle.Flat;
-            btn2ToDoList.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn2ToDoList.ForeColor = Color.White;
-            btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
-            btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
-            btn2ToDoList.Location = new Point(-17, -8);
-            btn2ToDoList.Margin = new Padding(3, 2, 3, 2);
-            btn2ToDoList.Name = "btn2ToDoList";
-            btn2ToDoList.Padding = new Padding(31, 0, 0, 0);
-            btn2ToDoList.Size = new Size(206, 91);
-            btn2ToDoList.TabIndex = 3;
-            btn2ToDoList.Text = "          To Do List";
-            btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
-            btn2ToDoList.UseVisualStyleBackColor = false;
-            btn2ToDoList.Click += btn2ToDoList_Click;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.DarkSlateGray;
-            panel5.Controls.Add(btn4Formula);
-            panel5.Location = new Point(3, 227);
-            panel5.Margin = new Padding(3, 2, 3, 2);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(157, 74);
-            panel5.TabIndex = 5;
-            // 
-            // btn4Formula
-            // 
-            btn4Formula.BackColor = Color.DarkSlateGray;
-            btn4Formula.FlatStyle = FlatStyle.Flat;
-            btn4Formula.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn4Formula.ForeColor = Color.White;
-            btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
-            btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
-            btn4Formula.Location = new Point(-8, -8);
-            btn4Formula.Margin = new Padding(3, 2, 3, 2);
-            btn4Formula.Name = "btn4Formula";
-            btn4Formula.Padding = new Padding(26, 0, 0, 0);
-            btn4Formula.Size = new Size(198, 91);
-            btn4Formula.TabIndex = 3;
-            btn4Formula.Text = "         Formula";
-            btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
-            btn4Formula.UseVisualStyleBackColor = false;
-            btn4Formula.Click += btn4Formula_Click;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.DarkSlateGray;
-            panel4.Controls.Add(btn3Converter);
-            panel4.Location = new Point(3, 305);
-            panel4.Margin = new Padding(3, 2, 3, 2);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(162, 74);
-            panel4.TabIndex = 4;
-            // 
-            // btn3Converter
-            // 
-            btn3Converter.BackColor = Color.DarkSlateGray;
-            btn3Converter.FlatStyle = FlatStyle.Flat;
-            btn3Converter.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn3Converter.ForeColor = Color.White;
-            btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
-            btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
-            btn3Converter.Location = new Point(-8, -10);
-            btn3Converter.Margin = new Padding(3, 2, 3, 2);
-            btn3Converter.Name = "btn3Converter";
-            btn3Converter.Padding = new Padding(26, 0, 0, 0);
-            btn3Converter.Size = new Size(181, 91);
-            btn3Converter.TabIndex = 3;
-            btn3Converter.Text = "         Converter";
-            btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
-            btn3Converter.UseVisualStyleBackColor = false;
-            btn3Converter.Click += btn3Converter_Click;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.DarkSlateGray;
-            panel6.Controls.Add(btn5Settings);
-            panel6.Location = new Point(3, 383);
-            panel6.Margin = new Padding(3, 2, 3, 2);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(164, 67);
-            panel6.TabIndex = 6;
-            // 
-            // btn5Settings
-            // 
-            btn5Settings.BackColor = Color.DarkSlateGray;
-            btn5Settings.FlatStyle = FlatStyle.Flat;
-            btn5Settings.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5Settings.ForeColor = Color.White;
-            btn5Settings.Image = (Image)resources.GetObject("btn5Settings.Image");
-            btn5Settings.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.Location = new Point(-8, -10);
-            btn5Settings.Margin = new Padding(3, 2, 3, 2);
-            btn5Settings.Name = "btn5Settings";
-            btn5Settings.Padding = new Padding(26, 0, 0, 0);
-            btn5Settings.Size = new Size(205, 94);
-            btn5Settings.TabIndex = 3;
-            btn5Settings.Text = "         Settings";
-            btn5Settings.TextAlign = ContentAlignment.MiddleLeft;
-            btn5Settings.UseVisualStyleBackColor = false;
-            btn5Settings.Click += btn5Settings_Click;
             // 
             // timer1SidebarTransition
             // 
@@ -374,7 +178,7 @@
             // fLP1CalendarContent
             // 
             fLP1CalendarContent.BackColor = Color.LightGray;
-            fLP1CalendarContent.Location = new Point(91, 98);
+            fLP1CalendarContent.Location = new Point(182, 97);
             fLP1CalendarContent.Margin = new Padding(3, 2, 3, 2);
             fLP1CalendarContent.Name = "fLP1CalendarContent";
             fLP1CalendarContent.Size = new Size(588, 328);
@@ -386,7 +190,7 @@
             btn2Next.FlatStyle = FlatStyle.Flat;
             btn2Next.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn2Next.ForeColor = Color.White;
-            btn2Next.Location = new Point(594, 441);
+            btn2Next.Location = new Point(687, 439);
             btn2Next.Margin = new Padding(3, 2, 3, 2);
             btn2Next.Name = "btn2Next";
             btn2Next.Size = new Size(85, 27);
@@ -401,7 +205,7 @@
             btn1Previous.FlatStyle = FlatStyle.Flat;
             btn1Previous.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn1Previous.ForeColor = Color.White;
-            btn1Previous.Location = new Point(499, 441);
+            btn1Previous.Location = new Point(596, 439);
             btn1Previous.Margin = new Padding(3, 2, 3, 2);
             btn1Previous.Name = "btn1Previous";
             btn1Previous.Size = new Size(85, 27);
@@ -414,7 +218,7 @@
             // 
             fLP2Days.BackColor = Color.DimGray;
             fLP2Days.Controls.Add(panel8);
-            fLP2Days.Location = new Point(91, 63);
+            fLP2Days.Location = new Point(184, 53);
             fLP2Days.Margin = new Padding(3, 2, 3, 2);
             fLP2Days.Name = "fLP2Days";
             fLP2Days.Size = new Size(588, 31);
@@ -424,19 +228,210 @@
             // 
             LBDATE.BackColor = Color.Transparent;
             LBDATE.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LBDATE.ForeColor = Color.Black;
-            LBDATE.Location = new Point(145, 20);
+            LBDATE.ForeColor = Color.DarkSlateGray;
+            LBDATE.Location = new Point(246, 17);
             LBDATE.Name = "LBDATE";
             LBDATE.Size = new Size(454, 32);
             LBDATE.TabIndex = 14;
             LBDATE.Text = "MONTH YEAR";
             LBDATE.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // fLP1Sidebar
+            // 
+            fLP1Sidebar.BackColor = Color.DarkSlateGray;
+            fLP1Sidebar.Controls.Add(panel1);
+            fLP1Sidebar.Controls.Add(panel2);
+            fLP1Sidebar.Controls.Add(panel3);
+            fLP1Sidebar.Controls.Add(panel5);
+            fLP1Sidebar.Controls.Add(panel4);
+            fLP1Sidebar.Controls.Add(panel6);
+            fLP1Sidebar.Dock = DockStyle.Left;
+            fLP1Sidebar.Location = new Point(0, 0);
+            fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
+            fLP1Sidebar.Name = "fLP1Sidebar";
+            fLP1Sidebar.Size = new Size(164, 477);
+            fLP1Sidebar.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DarkSlateGray;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(labl1BeSMART);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(159, 65);
+            panel1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.DarkSlateGray;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(8, 15);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(49, 41);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // labl1BeSMART
+            // 
+            labl1BeSMART.AutoSize = true;
+            labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labl1BeSMART.ForeColor = Color.White;
+            labl1BeSMART.Location = new Point(62, 26);
+            labl1BeSMART.Name = "labl1BeSMART";
+            labl1BeSMART.Size = new Size(83, 21);
+            labl1BeSMART.TabIndex = 2;
+            labl1BeSMART.Text = "BeSMART";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.DarkSlateGray;
+            panel2.Controls.Add(btn1Schedule);
+            panel2.Location = new Point(3, 71);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(157, 74);
+            panel2.TabIndex = 2;
+            // 
+            // btn1Schedule
+            // 
+            btn1Schedule.BackColor = Color.DarkSlateGray;
+            btn1Schedule.FlatStyle = FlatStyle.Flat;
+            btn1Schedule.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1Schedule.ForeColor = Color.White;
+            btn1Schedule.Image = (Image)resources.GetObject("btn1Schedule.Image");
+            btn1Schedule.ImageAlign = ContentAlignment.MiddleLeft;
+            btn1Schedule.Location = new Point(-8, -9);
+            btn1Schedule.Margin = new Padding(3, 2, 3, 2);
+            btn1Schedule.Name = "btn1Schedule";
+            btn1Schedule.Padding = new Padding(26, 0, 0, 0);
+            btn1Schedule.Size = new Size(198, 91);
+            btn1Schedule.TabIndex = 3;
+            btn1Schedule.Text = "         Schedule";
+            btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
+            btn1Schedule.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.DarkSlateGray;
+            panel3.Controls.Add(btn2ToDoList);
+            panel3.Location = new Point(3, 149);
+            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(157, 74);
+            panel3.TabIndex = 3;
+            // 
+            // btn2ToDoList
+            // 
+            btn2ToDoList.BackColor = Color.DarkSlateGray;
+            btn2ToDoList.FlatStyle = FlatStyle.Flat;
+            btn2ToDoList.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn2ToDoList.ForeColor = Color.White;
+            btn2ToDoList.Image = (Image)resources.GetObject("btn2ToDoList.Image");
+            btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
+            btn2ToDoList.Location = new Point(-17, -8);
+            btn2ToDoList.Margin = new Padding(3, 2, 3, 2);
+            btn2ToDoList.Name = "btn2ToDoList";
+            btn2ToDoList.Padding = new Padding(31, 0, 0, 0);
+            btn2ToDoList.Size = new Size(206, 91);
+            btn2ToDoList.TabIndex = 3;
+            btn2ToDoList.Text = "          To Do List";
+            btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
+            btn2ToDoList.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.DarkSlateGray;
+            panel5.Controls.Add(btn4Formula);
+            panel5.Location = new Point(3, 227);
+            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(157, 74);
+            panel5.TabIndex = 5;
+            // 
+            // btn4Formula
+            // 
+            btn4Formula.BackColor = Color.DarkSlateGray;
+            btn4Formula.FlatStyle = FlatStyle.Flat;
+            btn4Formula.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn4Formula.ForeColor = Color.White;
+            btn4Formula.Image = (Image)resources.GetObject("btn4Formula.Image");
+            btn4Formula.ImageAlign = ContentAlignment.MiddleLeft;
+            btn4Formula.Location = new Point(-8, -8);
+            btn4Formula.Margin = new Padding(3, 2, 3, 2);
+            btn4Formula.Name = "btn4Formula";
+            btn4Formula.Padding = new Padding(26, 0, 0, 0);
+            btn4Formula.Size = new Size(198, 91);
+            btn4Formula.TabIndex = 3;
+            btn4Formula.Text = "         Formula";
+            btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
+            btn4Formula.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.DarkSlateGray;
+            panel4.Controls.Add(btn3Converter);
+            panel4.Location = new Point(3, 305);
+            panel4.Margin = new Padding(3, 2, 3, 2);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(162, 74);
+            panel4.TabIndex = 4;
+            // 
+            // btn3Converter
+            // 
+            btn3Converter.BackColor = Color.DarkSlateGray;
+            btn3Converter.FlatStyle = FlatStyle.Flat;
+            btn3Converter.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn3Converter.ForeColor = Color.White;
+            btn3Converter.Image = (Image)resources.GetObject("btn3Converter.Image");
+            btn3Converter.ImageAlign = ContentAlignment.MiddleLeft;
+            btn3Converter.Location = new Point(-8, -10);
+            btn3Converter.Margin = new Padding(3, 2, 3, 2);
+            btn3Converter.Name = "btn3Converter";
+            btn3Converter.Padding = new Padding(26, 0, 0, 0);
+            btn3Converter.Size = new Size(181, 91);
+            btn3Converter.TabIndex = 3;
+            btn3Converter.Text = "         Converter";
+            btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
+            btn3Converter.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.DarkSlateGray;
+            panel6.Controls.Add(btn5MediaPlayer);
+            panel6.Location = new Point(3, 383);
+            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(164, 74);
+            panel6.TabIndex = 6;
+            // 
+            // btn5MediaPlayer
+            // 
+            btn5MediaPlayer.BackColor = Color.DarkSlateGray;
+            btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
+            btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn5MediaPlayer.ForeColor = Color.White;
+            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
+            btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
+            btn5MediaPlayer.Location = new Point(-7, -10);
+            btn5MediaPlayer.Margin = new Padding(3, 2, 3, 2);
+            btn5MediaPlayer.Name = "btn5MediaPlayer";
+            btn5MediaPlayer.Padding = new Padding(26, 0, 0, 0);
+            btn5MediaPlayer.Size = new Size(205, 90);
+            btn5MediaPlayer.TabIndex = 3;
+            btn5MediaPlayer.Text = "         Media Player";
+            btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
+            btn5MediaPlayer.UseVisualStyleBackColor = false;
+            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
+            // 
             // ScheduleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(956, 477);
+            ClientSize = new Size(797, 477);
             Controls.Add(fLP1Sidebar);
             Controls.Add(LBDATE);
             Controls.Add(btn2Next);
@@ -445,10 +440,14 @@
             Controls.Add(fLP1CalendarContent);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "ScheduleForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Schedule";
             Load += Form3_Load;
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            fLP2Days.ResumeLayout(false);
             fLP1Sidebar.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -458,28 +457,10 @@
             panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            fLP2Days.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FlowLayoutPanel fLP1Sidebar;
-        private Panel panel1;
-        private PictureBox pictureBox1;
-        private Label labl1BeSMART;
-        private Panel panel2;
-        private Button btn1Schedule;
-        private Panel panel3;
-        private Button btn2ToDoList;
-        private Panel panel5;
-        private Button btn4Formula;
-        private Panel panel4;
-        private Button btn3Converter;
-        private Panel panel6;
-        private Button btn5Settings;
         private System.Windows.Forms.Timer timer1SidebarTransition;
         private FlowLayoutPanel fLP1CalendarContent;
         private Button button1;
@@ -497,5 +478,19 @@
         private Button btn2Next;
         private Button btn1Previous;
         private Label LBDATE;
+        private FlowLayoutPanel fLP1Sidebar;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Label labl1BeSMART;
+        private Panel panel2;
+        private Button btn1Schedule;
+        private Panel panel3;
+        private Button btn2ToDoList;
+        private Panel panel5;
+        private Button btn4Formula;
+        private Panel panel4;
+        private Button btn3Converter;
+        private Panel panel6;
+        private Button btn5MediaPlayer;
     }
 }

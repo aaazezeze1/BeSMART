@@ -142,46 +142,7 @@ namespace NotesApp
             ConverterForm7.Show();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
-
-        private void btn5Settings_Click(object sender, EventArgs e)
-        {
-            var MediaPlayerForm6 = new MediaPlayerForm();
-            MediaPlayerForm6.Show();
-            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn1Schedule_Click_1(object sender, EventArgs e)
-        {
-            var SchedForm3 = new ScheduleForm();
-            SchedForm3.Show();
-            this.Hide();
-            SchedForm3.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn2ToDoList_Click_1(object sender, EventArgs e)
-        {
-            var ToDolistForm5 = new ToDoForm();
-            ToDolistForm5.Show();
-            this.Hide();
-            ToDolistForm5.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn4Formula_Click_1(object sender, EventArgs e)
-        {
-            var FormulaForm4 = new FormulaForm();
-            FormulaForm4.Show();
-            this.Hide();
-            FormulaForm4.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn3Converter_Click_1(object sender, EventArgs e)
-        {
-            var ConverterForm7 = new ConverterForm();
-            ConverterForm7.Show();
-            this.Hide();
-            ConverterForm7.FormClosed += (s, args) => this.Show();
-        }
-
+        
         private void btn5MediaPlayer_Click(object sender, EventArgs e)
         {
             var MediaPlayerForm6 = new MediaPlayerForm();

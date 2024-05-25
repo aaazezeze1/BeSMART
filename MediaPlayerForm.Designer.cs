@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MediaPlayerForm));
-            MediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             Playlist = new ListBox();
             FileName = new Label();
             durationLbl = new Label();
@@ -53,7 +52,7 @@
             menuStrip2 = new MenuStrip();
             fileToolStripMenuItem1 = new ToolStripMenuItem();
             loadFolderToolStripMenuItem1 = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)MediaPlayer).BeginInit();
+            VideoPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             fLP1Sidebar.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,17 +62,8 @@
             panel4.SuspendLayout();
             panel6.SuspendLayout();
             menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)VideoPlayer).BeginInit();
             SuspendLayout();
-            // 
-            // MediaPlayer
-            // 
-            MediaPlayer.Enabled = true;
-            MediaPlayer.Location = new Point(359, 46);
-            MediaPlayer.Name = "MediaPlayer";
-            MediaPlayer.OcxState = (AxHost.State)resources.GetObject("MediaPlayer.OcxState");
-            MediaPlayer.Size = new Size(723, 416);
-            MediaPlayer.TabIndex = 1;
-            MediaPlayer.PlayStateChange += MediaPlayer_PlayStateChange;
             // 
             // Playlist
             // 
@@ -122,10 +112,10 @@
             fLP1Sidebar.Controls.Add(panel4);
             fLP1Sidebar.Controls.Add(panel6);
             fLP1Sidebar.Dock = DockStyle.Left;
-            fLP1Sidebar.Location = new Point(0, 29);
+            fLP1Sidebar.Location = new Point(0, 0);
             fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
             fLP1Sidebar.Name = "fLP1Sidebar";
-            fLP1Sidebar.Size = new Size(164, 468);
+            fLP1Sidebar.Size = new Size(164, 497);
             fLP1Sidebar.TabIndex = 6;
             // 
             // panel1
@@ -315,9 +305,9 @@
             // menuStrip2
             // 
             menuStrip2.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1 });
-            menuStrip2.Location = new Point(0, 0);
+            menuStrip2.Location = new Point(164, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(1095, 29);
+            menuStrip2.Size = new Size(931, 29);
             menuStrip2.TabIndex = 8;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -336,23 +326,33 @@
             loadFolderToolStripMenuItem1.Text = "Load Folder";
             loadFolderToolStripMenuItem1.Click += LoadFolderEvent;
             // 
+            // VideoPlayer
+            // 
+            VideoPlayer.Enabled = true;
+            VideoPlayer.Location = new Point(359, 59);
+            VideoPlayer.Name = "VideoPlayer";
+            VideoPlayer.OcxState = (AxHost.State)resources.GetObject("VideoPlayer.OcxState");
+            VideoPlayer.Size = new Size(724, 404);
+            VideoPlayer.TabIndex = 9;
+            VideoPlayer.PlayStateChange += MediaPlayer_PlayStateChange;
+            // 
             // MediaPlayerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(54, 57, 62);
             ClientSize = new Size(1095, 497);
-            Controls.Add(fLP1Sidebar);
+            Controls.Add(VideoPlayer);
             Controls.Add(menuStrip2);
+            Controls.Add(Playlist);
+            Controls.Add(fLP1Sidebar);
             Controls.Add(durationLbl);
             Controls.Add(FileName);
-            Controls.Add(Playlist);
-            Controls.Add(MediaPlayer);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "MediaPlayerForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MP4 Player";
-            ((System.ComponentModel.ISupportInitialize)MediaPlayer).EndInit();
+            Text = "Media Player";
             fLP1Sidebar.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -364,6 +364,7 @@
             panel6.ResumeLayout(false);
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)VideoPlayer).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -392,5 +393,7 @@
         private MenuStrip menuStrip2;
         private ToolStripMenuItem fileToolStripMenuItem1;
         private ToolStripMenuItem loadFolderToolStripMenuItem1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer VideoPlayer;
     }
 }

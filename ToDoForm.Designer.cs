@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToDoForm));
             TitleTxtBox = new TextBox();
             DescTxtBox = new TextBox();
@@ -155,31 +155,31 @@
             // 
             // ToDoListView
             // 
-            dataGridViewCellStyle16.BackColor = Color.White;
-            dataGridViewCellStyle16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle16.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle16.SelectionBackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
-            ToDoListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle1.SelectionBackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            ToDoListView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             ToDoListView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ToDoListView.BackgroundColor = Color.White;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle17.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle17.ForeColor = Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
-            ToDoListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            ToDoListView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             ToDoListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = Color.White;
-            dataGridViewCellStyle18.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle18.ForeColor = Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
-            ToDoListView.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            ToDoListView.DefaultCellStyle = dataGridViewCellStyle3;
             ToDoListView.GridColor = Color.FromArgb(66, 69, 73);
             ToDoListView.Location = new Point(184, 152);
             ToDoListView.Name = "ToDoListView";
@@ -265,7 +265,6 @@
             btn1Schedule.Text = "         Schedule";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
-            btn1Schedule.Click += btn1Schedule_Click_1;
             // 
             // panel3
             // 
@@ -294,7 +293,6 @@
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
             btn2ToDoList.UseVisualStyleBackColor = false;
-            btn2ToDoList.Click += btn2ToDoList_Click_1;
             // 
             // panel5
             // 
@@ -323,7 +321,6 @@
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
             btn4Formula.UseVisualStyleBackColor = false;
-            btn4Formula.Click += btn4Formula_Click_1;
             // 
             // panel4
             // 
@@ -352,7 +349,6 @@
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
             btn3Converter.UseVisualStyleBackColor = false;
-            btn3Converter.Click += btn3Converter_Click_1;
             // 
             // panel6
             // 
@@ -398,6 +394,7 @@
             Controls.Add(DescTxtBox);
             Controls.Add(TitleTxtBox);
             ForeColor = Color.Black;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "ToDoForm";
             StartPosition = FormStartPosition.CenterScreen;

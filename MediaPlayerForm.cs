@@ -25,11 +25,9 @@ namespace NotesApp
             InitializeComponent();
         }
 
-        bool sidebarExpand = false; //collapsed sidebar
-
         private void LoadFolderEvent(object sender, EventArgs e)
         {
-            MediaPlayer.Ctlcontrols.stop();
+            VideoPlayer.Ctlcontrols.stop();
 
             if (filteredFiles.Count > 1)
             {
@@ -70,7 +68,7 @@ namespace NotesApp
             else if (e.newState == 3)
             {
                 // Play media
-                durationLbl.Text = "Duration: " + MediaPlayer.currentMedia.durationString;
+                durationLbl.Text = "Duration: " + VideoPlayer.currentMedia.durationString;
             }
             else if (e.newState == 8)
             {
@@ -107,17 +105,17 @@ namespace NotesApp
 
         private void TimerEvent(object sender, EventArgs e)
         {
-            MediaPlayer.Ctlcontrols.play();
+            VideoPlayer.Ctlcontrols.play();
             timer1.Stop();
         }
 
         private void LoadPlayList()
         {
-            MediaPlayer.currentPlaylist = MediaPlayer.newPlaylist("Playlist", " ");
+            VideoPlayer.currentPlaylist = VideoPlayer.newPlaylist("Playlist", " ");
 
             foreach (string videos in filteredFiles)
             {
-                MediaPlayer.currentPlaylist.appendItem(MediaPlayer.newMedia(videos));
+                VideoPlayer.currentPlaylist.appendItem(VideoPlayer.newMedia(videos));
                 Playlist.Items.Add(videos);
             }
 
@@ -135,7 +133,7 @@ namespace NotesApp
 
         private void PlayFile(string url)
         {
-            MediaPlayer.URL = url;
+            VideoPlayer.URL = url;
         }
 
         private void ShowFileName(Label name)
@@ -147,41 +145,6 @@ namespace NotesApp
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
-        }
-
-        private void btn1Schedule_Click(object sender, EventArgs e)
-        {
-            var SchedForm3 = new ScheduleForm();
-            SchedForm3.Show();
-            SchedForm3.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn2ToDoList_Click(object sender, EventArgs e)
-        {
-            var ToDoListForm5 = new ToDoForm();
-            ToDoListForm5.Show();
-            ToDoListForm5.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn4Formula_Click(object sender, EventArgs e)
-        {
-            var FormulaForm4 = new FormulaForm();
-            FormulaForm4.Show();
-            FormulaForm4.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn3Converter_Click(object sender, EventArgs e)
-        {
-            var ConverterForm7 = new ConverterForm();
-            ConverterForm7.Show();
-            ConverterForm7.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn5Settings_Click(object sender, EventArgs e)
-        {
-            //var MediaPlayerForm6 = new Form6();
-            //MediaPlayerForm6.Show();
-            //MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
         private void btn1Schedule_Click_1(object sender, EventArgs e)
@@ -218,10 +181,10 @@ namespace NotesApp
 
         private void btn5MediaPlayer_Click(object sender, EventArgs e)
         {
-            var MediaPlayerForm6 = new MediaPlayerForm();
-            MediaPlayerForm6.Show();
-            this.Hide();
-            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
+            //var MediaPlayerForm6 = new MediaPlayerForm();
+            //MediaPlayerForm6.Show();
+            //this.Hide();
+            //MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
     }
 }

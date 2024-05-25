@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConverterForm));
             panel1 = new Panel();
             ConvertTempButton = new Button();
             ToCurrencyCombo = new ComboBox();
@@ -414,6 +415,7 @@
             Controls.Add(UnitAmountTxtBox);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "ConverterForm";
             StartPosition = FormStartPosition.CenterScreen;
