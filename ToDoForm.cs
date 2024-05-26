@@ -15,16 +15,24 @@ namespace NotesApp
         public ToDoForm()
         {
             InitializeComponent();
+            comboBox1taskType.Items.AddRange(new string[] { "Personal Tasks", "School Tasks", "Work Tasks", "Other Tasks" });
         }
 
+        private DateTimePicker DueDateTimePicker;
+        private ComboBox TaskTypeComboBox;
 
         DataTable todoList = new DataTable();
         bool isEditing = false;
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            TaskTypeComboBox = comboBox1taskType;
+
             todoList.Columns.Add("Title");
             todoList.Columns.Add("Description");
+            todoList.Columns.Add("Due Date", typeof(DateTime));
+            todoList.Columns.Add("Task Type");
+
             ToDoListView.DataSource = todoList;
             ToDoListView.Rows[0].DefaultCellStyle.BackColor = Color.DarkSlateGray;
         }
@@ -60,10 +68,12 @@ namespace NotesApp
             {
                 todoList.Rows[ToDoListView.CurrentCell.RowIndex]["Title"] = TitleTxtBox.Text;
                 todoList.Rows[ToDoListView.CurrentCell.RowIndex]["Description"] = DescTxtBox.Text;
+                todoList.Rows[ToDoListView.CurrentCell.RowIndex]["DueDate"] = dtpDueDate.Value; // Save due date
+                todoList.Rows[ToDoListView.CurrentCell.RowIndex]["TaskType"] = TaskTypeComboBox.Text; // Save task type
             }
             else
             {
-                todoList.Rows.Add(TitleTxtBox.Text, DescTxtBox.Text);
+                todoList.Rows.Add(TitleTxtBox.Text, DescTxtBox.Text, dtpDueDate.Value, TaskTypeComboBox.Text);
             }
 
             TitleTxtBox.Text = "";

@@ -210,3 +210,21 @@ C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.genruntime
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\ref\BeSMART.dll
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.UserControlBlank.resources
 C:\Users\acer\Source\Repos\Be_SMART\obj\Debug\net8.0-windows\NotesApp.UserControlDay.resources
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Exponents.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Functions and equations\1.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Functions and equations\2.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Logic\1.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Logic\2.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Logic\3.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\NoSelectedCategory.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Prob&Sets\1.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Prob&Sets\2.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Radicals.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Sequences.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Stats\1.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Stats\2.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Stats\3.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\1.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\2.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\3.png
+C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\4.png

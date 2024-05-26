@@ -15,58 +15,116 @@ namespace NotesApp
 {
     public partial class FormulaForm : Form
     {
+        private Dictionary<string, List<string>> categoryImages;
+        private string currentCategory;
+        private int currentImageIndex;
 
         public FormulaForm()
         {
             InitializeComponent();
+            InitializeCategoryImages();
+            ShowDefaultImage();
+
+            btnFunctionsEquations.Click += btnCategory_Click;
+            btnExponents.Click += btnCategory_Click;
+            btnRadicals.Click += btnCategory_Click;
+            btnLogic.Click += btnCategory_Click;
+            btnStats.Click += btnCategory_Click;
+            btnSequences.Click += btnCategory_Click;
+            btnProbability.Click += btnCategory_Click;
+            btnTrigo.Click += btnCategory_Click;
+
+            label1.Click += btnCategory_Click;
+
+
+            btnFunctionsEquations.Tag = "FunctionsEquations";
+            btnExponents.Tag = "Exponents";
+            btnRadicals.Tag = "Radicals";
+            btnLogic.Tag = "Logic";
+            btnStats.Tag = "Statistics";
+            btnSequences.Tag = "Sequences";
+            btnProbability.Tag = "ProbabilitySets";
+            btnTrigo.Tag = "Trigonometry";
+
+            label1.Tag = "label1";
         }
-
-        bool sidebarExpand = false; //collapsed sidebar
-        private void timer1SidebarTransition_Tick(object sender, EventArgs e)
+        private void InitializeCategoryImages()
         {
-            if (sidebarExpand) //expanding sidebar
+            categoryImages = new Dictionary<string, List<string>>()
             {
-                if (fLP1Sidebar.Width < 190)
-                {
-                    fLP1Sidebar.Width += 10;
-                    //fLP1CalendarContent.Width -= 10;
-                    //fLP1CalendarContent.Left += 10;
+                { "FunctionsEquations", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Functions and equations\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Functions and equations\\2.png" } },
+                { "Exponents", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Exponents.png" } },
+                { "Radicals", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Radicals.png" } },
+                { "Logic", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Logic\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Logic\\2.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Logic\\3.png" } },
+                { "Statistics", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Stats\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Stats\\2.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Stats\\3.png" } },
+                { "Sequences", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Sequences.png" } },
+                { "ProbabilitySets", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Prob&Sets\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Prob&Sets\\2.png" } },
+                { "Trigonometry", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\2.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\3.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\4.png" } }
+            };
 
-                    //fLP2Days.Width -= 10;
-                    //fLP2Days.Left += 10;
+            currentCategory = string.Empty;
+            currentImageIndex = -1;
+        }
+        private void ShowDefaultImage()
+        {
+            pictureBoxFormula.ImageLocation = "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\NoSelectedCategory.png";
+            btnprevious.Visible = false;
+            btnnext.Visible = false;
+        }
+        private void ShowImage()
+        {
+            if (string.IsNullOrEmpty(currentCategory) || !categoryImages.ContainsKey(currentCategory) || categoryImages[currentCategory].Count == 0)
+            {
+                // Show default image or clear the picture box
+                pictureBoxFormula.Image = null; // Clear the picture box
+                btnprevious.Visible = false;
+                btnnext.Visible = false;
+                return;
+            }
+
+            // Show the current image of the current category
+            pictureBoxFormula.ImageLocation = categoryImages[currentCategory][currentImageIndex];
+
+            // Show or hide previous and next buttons based on the number of images in the category
+            btnprevious.Visible = categoryImages[currentCategory].Count > 1;
+            btnnext.Visible = categoryImages[currentCategory].Count > 1;
+        }
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                // Check if the clicked control is the label, if yes, reset the current category
+                if (control == label1)
+                {
+                    currentCategory = null;
+                    ShowDefaultImage();
                 }
                 else
                 {
-                    //make sure sidebar does not go below min width
-                    fLP1Sidebar.Width = 190;
-                    sidebarExpand = false;
-                    timer1SidebarTransition.Stop();
+                    // Get the category from the clicked button's Tag property
+                    currentCategory = control.Tag?.ToString();
+                    currentImageIndex = 0;
                 }
-            }
-            else //collapse seidebar
-            {
-                if (fLP1Sidebar.Width > 72)
-                {
-                    fLP1Sidebar.Width -= 10;
-                    //fLP1CalendarContent.Width += 10;
-                    //fLP1CalendarContent.Left -= 10;
-
-                    //fLP2Days.Width += 10;
-                    //fLP2Days.Left -= 10;
-                }
-                else
-                {
-                    //make sure sidebar does not exceed the max width
-                    fLP1Sidebar.Width = 72;
-                    sidebarExpand = true;
-                    timer1SidebarTransition.Stop();
-                }
+                ShowImage();
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnprevious_Click(object sender, EventArgs e)
         {
-            timer1SidebarTransition.Start();
+            if (currentImageIndex > 0)
+            {
+                currentImageIndex--;
+                ShowImage();
+            }
+        }
+
+        private void btnnext_Click(object sender, EventArgs e)
+        {
+            if (currentImageIndex < categoryImages[currentCategory].Count - 1)
+            {
+                currentImageIndex++;
+                ShowImage();
+            }
         }
 
         private void btn1Schedule_Click(object sender, EventArgs e)
@@ -102,26 +160,6 @@ namespace NotesApp
             var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form4_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn1Schedule_Click_1(object sender, EventArgs e)
@@ -163,5 +201,7 @@ namespace NotesApp
             this.Hide();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
+
+        
     }
 }
