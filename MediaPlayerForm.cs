@@ -187,14 +187,6 @@ namespace NotesApp
             //MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
-        private void panel1_Click(object sender, EventArgs e)
-        {
-            var NotesApp = new NotesApp();
-            NotesApp.Show();
-            this.Hide();
-            NotesApp.FormClosed += (s, args) => this.Show();
-        }
-
         private void labl1BeSMART_Click(object sender, EventArgs e)
         {
             var NotesApp = new NotesApp();
