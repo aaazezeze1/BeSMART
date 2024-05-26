@@ -120,7 +120,6 @@ C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\Microsoft.Extensi
 C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
-C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\ReaLTaiizor.dll
 C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\Interop.WMPLib.dll
 C:\Users\Amazing\source\repos\BeSMART\bin\Debug\net8.0-windows\AxInterop.WMPLib.dll
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.csproj.AssemblyReference.cache
@@ -323,3 +322,4 @@ C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\refint\BeSMART.dll
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\BeSMART.pdb
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\ref\BeSMART.dll
+C:\Users\Amazing\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.AboutForm.resources

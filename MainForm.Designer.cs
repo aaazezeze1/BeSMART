@@ -194,6 +194,7 @@
             btnAbout.Text = "         About";
             btnAbout.TextAlign = ContentAlignment.MiddleLeft;
             btnAbout.UseVisualStyleBackColor = false;
+            btnAbout.Click += btnAbout_Click;
             // 
             // panel1
             // 

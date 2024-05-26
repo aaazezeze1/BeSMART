@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>C:\Users\Amazing\source\repos\BeSMART\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ConverterForm.cs">
       <SubType>Form</SubType>
     </Compile>

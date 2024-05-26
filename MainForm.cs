@@ -68,5 +68,13 @@ namespace NotesApp
         {
 
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            var AboutForm = new AboutForm();
+            AboutForm.Show();
+            this.Hide();
+            AboutForm.FormClosed += (s, args) => this.Show();
+        }
     }
 }
