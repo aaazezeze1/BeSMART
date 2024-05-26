@@ -37,9 +37,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(60, 223);
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(93, 228);
             label1.Name = "label1";
-            label1.Size = new Size(465, 84);
+            label1.Size = new Size(406, 69);
             label1.TabIndex = 0;
             label1.Text = "Created by: Amazing Cabiles and Cyrelle Gapit\r\n\r\nGithub Link: www.github.com/aaazezeze1/BeSMART";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -47,10 +48,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(201, 28);
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(179, 31);
             label2.Name = "label2";
-            label2.Size = new Size(169, 28);
+            label2.Size = new Size(236, 38);
             label2.TabIndex = 1;
             label2.Text = "About BeSMART";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -58,11 +59,12 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(60, 84);
+            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(81, 101);
             label3.Name = "label3";
-            label3.Size = new Size(477, 112);
+            label3.Size = new Size(418, 92);
             label3.TabIndex = 2;
-            label3.Text = "A user-friendly notes application that allows the users\r\nto take notes efficiently, manage their schedule and \r\ntasks, as well as review their educational materials\r\n(audio/video files).";
+            label3.Text = "A user-friendly notes application that allows the users\r\nto take notes efficiently, manage their events and \r\ntasks, as well as review their educational materials\r\n(audio/video files).\r\n";
             label3.TextAlign = ContentAlignment.TopCenter;
             // 
             // AboutForm

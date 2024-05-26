@@ -176,7 +176,7 @@
             btn1Schedule.Padding = new Padding(30, 0, 0, 0);
             btn1Schedule.Size = new Size(226, 121);
             btn1Schedule.TabIndex = 3;
-            btn1Schedule.Text = "         Schedule";
+            btn1Schedule.Text = "         Calendar";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
             btn1Schedule.Click += btn1Schedule_Click_1;

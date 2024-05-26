@@ -68,8 +68,8 @@ namespace NotesApp
             {
                 todoList.Rows[ToDoListView.CurrentCell.RowIndex]["Title"] = TitleTxtBox.Text;
                 todoList.Rows[ToDoListView.CurrentCell.RowIndex]["Description"] = DescTxtBox.Text;
-                todoList.Rows[ToDoListView.CurrentCell.RowIndex]["DueDate"] = dtpDueDate.Value; // Save due date
-                todoList.Rows[ToDoListView.CurrentCell.RowIndex]["TaskType"] = TaskTypeComboBox.Text; // Save task type
+                todoList.Rows[ToDoListView.CurrentCell.RowIndex]["Due Date"] = dtpDueDate.Value; // Save due date
+                todoList.Rows[ToDoListView.CurrentCell.RowIndex]["Task Type"] = TaskTypeComboBox.Text; // Save task type
             }
             else
             {
@@ -127,7 +127,7 @@ namespace NotesApp
 
         private void btn1Schedule_Click(object sender, EventArgs e)
         {
-            var SchedForm3 = new ScheduleForm();
+            var SchedForm3 = new CalendarForm();
             SchedForm3.Show();
             this.Hide();
             SchedForm3.FormClosed += (s, args) => this.Show();

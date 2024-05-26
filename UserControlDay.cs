@@ -61,7 +61,7 @@ namespace NotesApp
         {
             if (selectedEvent != null)
             {
-                var parent = (ScheduleForm)FindForm();
+                var parent = (CalendarForm)FindForm();
                 parent.EditEvent(currentDate, selectedEvent, this);
             }
         }
@@ -70,7 +70,7 @@ namespace NotesApp
         {
             if (selectedEvent != null)
             {
-                var parent = (ScheduleForm)FindForm();
+                var parent = (CalendarForm)FindForm();
                 parent.DeleteEvent(currentDate, selectedEvent, this);
             }
         }
@@ -93,7 +93,7 @@ namespace NotesApp
 
         public void HighlightToday()
         {
-            this.BackColor = Color.Yellow; // or any other color/style
+            this.BackColor = Color.DimGray; // or any other color/style
         }
         public void AddEvent(Event eventItem)
         {

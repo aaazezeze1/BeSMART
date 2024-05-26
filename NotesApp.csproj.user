@@ -25,7 +25,7 @@
     <Compile Update="MediaPlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ScheduleForm.cs">
+    <Compile Update="CalendarForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ToDoForm.cs">

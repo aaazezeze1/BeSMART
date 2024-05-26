@@ -306,7 +306,6 @@ C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.NotesApp.re
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.MediaPlayerForm.resources
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.NotesForm.resources
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.Properties.Resources.resources
-C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ScheduleForm.resources
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ToDoForm.resources
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.UserControlBlank.resources
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.UserControlDay.resources
@@ -323,3 +322,5 @@ C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\BeSMART.pdb
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\ref\BeSMART.dll
 C:\Users\Amazing\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.AboutForm.resources
+C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.AboutForm.resources
+C:\Users\acer\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.CalendarForm.resources

@@ -114,7 +114,7 @@ namespace NotesApp
 
         private void btn1Schedule_Click(object sender, EventArgs e)
         {
-            var SchedForm3 = new ScheduleForm();
+            var SchedForm3 = new CalendarForm();
             SchedForm3.Show();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
@@ -149,7 +149,7 @@ namespace NotesApp
 
         private void btn1Schedule_Click_1(object sender, EventArgs e)
         {
-            var SchedForm3 = new ScheduleForm();
+            var SchedForm3 = new CalendarForm();
             SchedForm3.Show();
             this.Hide();
             SchedForm3.FormClosed += (s, args) => this.Show();

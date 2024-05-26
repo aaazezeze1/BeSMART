@@ -171,7 +171,6 @@
             maskedTextBoxStartTime.Size = new Size(82, 27);
             maskedTextBoxStartTime.TabIndex = 15;
             maskedTextBoxStartTime.ValidatingType = typeof(DateTime);
-            maskedTextBoxStartTime.MaskInputRejected += maskedTextBoxStartTime_MaskInputRejected;
             // 
             // label4
             // 
@@ -191,7 +190,6 @@
             comboBoxStartTimePeriod.Name = "comboBoxStartTimePeriod";
             comboBoxStartTimePeriod.Size = new Size(50, 28);
             comboBoxStartTimePeriod.TabIndex = 18;
-            comboBoxStartTimePeriod.SelectedIndexChanged += comboBoxStartTimePeriod_SelectedIndexChanged;
             // 
             // comboBoxEndTimePeriod
             // 

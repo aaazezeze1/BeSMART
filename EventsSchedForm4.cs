@@ -105,21 +105,6 @@ namespace NotesApp
             comboBoxEndTimePeriod.SelectedIndex = 0;   // Set default to "AM"
         }
 
-        private void maskedTextBoxStartTime_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void comboBoxStartTimePeriod_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBoxEndTime_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         private void saveEventButton_MouseHover(object sender, EventArgs e)
         {
             saveEventButton.BackColor = Color.DarkSlateGray;

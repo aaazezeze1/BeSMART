@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotesForm));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             rTxtBoxNotes = new RichTextBox();
             panel7 = new Panel();
             btn10BulletList = new Button();
@@ -301,30 +301,30 @@
             // 
             // dGR1previousNotes
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle4.SelectionBackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dGR1previousNotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle1.SelectionBackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dGR1previousNotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dGR1previousNotes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dGR1previousNotes.BackgroundColor = Color.White;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.SeaGreen;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dGR1previousNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dGR1previousNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dGR1previousNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dGR1previousNotes.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dGR1previousNotes.DefaultCellStyle = dataGridViewCellStyle3;
             dGR1previousNotes.GridColor = Color.FromArgb(66, 69, 73);
             dGR1previousNotes.Location = new Point(1034, 35);
             dGR1previousNotes.Name = "dGR1previousNotes";
@@ -591,7 +591,7 @@
             btn1Schedule.Padding = new Padding(30, 0, 0, 0);
             btn1Schedule.Size = new Size(226, 121);
             btn1Schedule.TabIndex = 17;
-            btn1Schedule.Text = "         Schedule";
+            btn1Schedule.Text = "         Calendar";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
             btn1Schedule.Click += btn1Schedule_Click;

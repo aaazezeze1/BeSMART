@@ -51,7 +51,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label1.Location = new Point(230, 642);
+            label1.Location = new Point(235, 644);
             label1.Name = "label1";
             label1.Size = new Size(120, 23);
             label1.TabIndex = 1;
@@ -60,7 +60,7 @@
             // pbtn2AddNotes
             // 
             pbtn2AddNotes.Image = (Image)resources.GetObject("pbtn2AddNotes.Image");
-            pbtn2AddNotes.Location = new Point(266, 590);
+            pbtn2AddNotes.Location = new Point(271, 592);
             pbtn2AddNotes.Name = "pbtn2AddNotes";
             pbtn2AddNotes.Size = new Size(55, 60);
             pbtn2AddNotes.TabIndex = 0;
@@ -91,7 +91,7 @@
             btn1Schedule.Padding = new Padding(30, 0, 0, 0);
             btn1Schedule.Size = new Size(226, 97);
             btn1Schedule.TabIndex = 3;
-            btn1Schedule.Text = "         Schedule";
+            btn1Schedule.Text = "         Calendar";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
             btn1Schedule.Click += btn1Schedule_Click;

@@ -17,11 +17,12 @@ using static NotesApp.UserControlDay;
 
 namespace NotesApp
 {
-    public partial class ScheduleForm : Form
+    public partial class CalendarForm : Form
     {
         int month, year;
-        Dictionary<DateTime, List<UserControlDay.Event>> eventsDict = new Dictionary<DateTime, List<UserControlDay.Event>>(); // Changed from EventData to UserControlDay.Event
-        public ScheduleForm()
+        Dictionary<DateTime, List<UserControlDay.Event>> eventsDict = new Dictionary<DateTime, List<UserControlDay.Event>>();
+       
+        public CalendarForm()
         {
             InitializeComponent();
         }
@@ -81,6 +82,7 @@ namespace NotesApp
             }
 
         }
+
         private void btn2Next_Click(object sender, EventArgs e)
         {
             //clear container

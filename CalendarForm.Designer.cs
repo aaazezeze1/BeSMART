@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class ScheduleForm
+    partial class CalendarForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScheduleForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             timer1SidebarTransition = new System.Windows.Forms.Timer(components);
             panel8 = new Panel();
             label6 = new Label();
@@ -309,7 +309,7 @@
             btn1Schedule.Padding = new Padding(30, 0, 0, 0);
             btn1Schedule.Size = new Size(229, 144);
             btn1Schedule.TabIndex = 3;
-            btn1Schedule.Text = "         Schedule";
+            btn1Schedule.Text = "         Calendar";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
             btn1Schedule.Click += btn1Schedule_Click;
@@ -430,11 +430,11 @@
             btn5MediaPlayer.UseVisualStyleBackColor = false;
             btn5MediaPlayer.Click += btn5MediaPlayer_Click;
             // 
-            // ScheduleForm
+            // CalendarForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1169, 760);
+            ClientSize = new Size(1173, 760);
             Controls.Add(fLP1Sidebar);
             Controls.Add(LBDATE);
             Controls.Add(btn2Next);
@@ -444,7 +444,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            Name = "ScheduleForm";
+            Name = "CalendarForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Schedule";
             Load += Form3_Load;
