@@ -136,8 +136,6 @@ C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.NotesFor
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.Properties.Resources.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ScheduleForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ToDoForm.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.UserControl1Week.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.UserControlDays.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.csproj.GenerateResource.cache
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.AssemblyInfoInputs.cache
@@ -228,3 +226,23 @@ C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry
 C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\2.png
 C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\3.png
 C:\Users\acer\source\repos\Be_SMART\bin\Debug\net8.0-windows\Images\Trigonometry\4.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Exponents.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Functions and equations\1.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Functions and equations\2.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Logic\1.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Logic\2.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Logic\3.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\NoSelectedCategory.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Prob&Sets\1.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Prob&Sets\2.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Radicals.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Sequences.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Stats\1.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Stats\2.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Stats\3.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Trigonometry\1.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Trigonometry\2.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Trigonometry\3.png
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\Images\Trigonometry\4.png
+C:\Users\Amazing\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.UserControlBlank.resources
+C:\Users\Amazing\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.UserControlDay.resources

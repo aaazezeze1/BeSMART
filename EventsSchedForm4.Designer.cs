@@ -75,6 +75,8 @@
             saveEventButton.Text = "Save";
             saveEventButton.UseVisualStyleBackColor = false;
             saveEventButton.Click += saveEventButton_Click;
+            saveEventButton.MouseLeave += saveEventButton_MouseLeave;
+            saveEventButton.MouseHover += saveEventButton_MouseHover;
             // 
             // backToCalendarButton
             // 
@@ -88,6 +90,8 @@
             backToCalendarButton.Text = "Back";
             backToCalendarButton.UseVisualStyleBackColor = false;
             backToCalendarButton.Click += backToCalendarButton_Click;
+            backToCalendarButton.MouseLeave += backToCalendarButton_MouseLeave;
+            backToCalendarButton.MouseHover += backToCalendarButton_MouseHover;
             // 
             // rdBtn1PersonalEvents
             // 

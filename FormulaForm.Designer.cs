@@ -317,7 +317,7 @@
             panel1.Controls.Add(labl1BeSMART);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(182, 87);
+            panel1.Size = new Size(187, 87);
             panel1.TabIndex = 15;
             // 
             // pictureBox1
@@ -341,6 +341,7 @@
             labl1BeSMART.Size = new Size(105, 28);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
+            labl1BeSMART.Click += labl1BeSMART_Click;
             // 
             // panel2
             // 
@@ -496,8 +497,10 @@
             // btnprevious
             // 
             btnprevious.BackColor = Color.Gray;
+            btnprevious.FlatAppearance.BorderSize = 0;
             btnprevious.FlatStyle = FlatStyle.Flat;
             btnprevious.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnprevious.ForeColor = Color.White;
             btnprevious.Location = new Point(440, 589);
             btnprevious.Name = "btnprevious";
             btnprevious.Size = new Size(89, 35);
@@ -505,12 +508,16 @@
             btnprevious.Text = "Previous";
             btnprevious.UseVisualStyleBackColor = false;
             btnprevious.Click += btnprevious_Click;
+            btnprevious.MouseLeave += btnprevious_MouseLeave;
+            btnprevious.MouseHover += btnprevious_MouseHover;
             // 
             // btnnext
             // 
             btnnext.BackColor = Color.Gray;
+            btnnext.FlatAppearance.BorderSize = 0;
             btnnext.FlatStyle = FlatStyle.Flat;
             btnnext.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnnext.ForeColor = Color.White;
             btnnext.Location = new Point(565, 589);
             btnnext.Name = "btnnext";
             btnnext.Size = new Size(89, 35);
@@ -518,6 +525,8 @@
             btnnext.Text = "Next";
             btnnext.UseVisualStyleBackColor = false;
             btnnext.Click += btnnext_Click;
+            btnnext.MouseLeave += btnnext_MouseLeave;
+            btnnext.MouseHover += btnnext_MouseHover;
             // 
             // FormulaForm
             // 

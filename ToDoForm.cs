@@ -129,6 +129,7 @@ namespace NotesApp
         {
             var SchedForm3 = new ScheduleForm();
             SchedForm3.Show();
+            this.Hide();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
 
@@ -143,6 +144,7 @@ namespace NotesApp
         {
             var FormulaForm4 = new FormulaForm();
             FormulaForm4.Show();
+            this.Hide();
             FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
@@ -150,15 +152,32 @@ namespace NotesApp
         {
             var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
+            this.Hide();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
-        
+
         private void btn5MediaPlayer_Click(object sender, EventArgs e)
         {
             var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
             this.Hide();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
+
+        private void labl1BeSMART_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
         }
     }
 }

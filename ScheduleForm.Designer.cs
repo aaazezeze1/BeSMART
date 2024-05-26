@@ -257,7 +257,7 @@
             panel1.Location = new Point(3, 2);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(159, 65);
+            panel1.Size = new Size(182, 87);
             panel1.TabIndex = 15;
             // 
             // pictureBox1
@@ -282,12 +282,13 @@
             labl1BeSMART.Size = new Size(105, 28);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
+            labl1BeSMART.Click += labl1BeSMART_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.DarkSlateGray;
             panel2.Controls.Add(btn1Schedule);
-            panel2.Location = new Point(3, 71);
+            panel2.Location = new Point(3, 93);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(157, 74);
@@ -316,7 +317,7 @@
             // 
             panel3.BackColor = Color.DarkSlateGray;
             panel3.Controls.Add(btn2ToDoList);
-            panel3.Location = new Point(3, 149);
+            panel3.Location = new Point(3, 171);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
             panel3.Size = new Size(157, 74);
@@ -345,7 +346,7 @@
             // 
             panel5.BackColor = Color.DarkSlateGray;
             panel5.Controls.Add(btn4Formula);
-            panel5.Location = new Point(3, 227);
+            panel5.Location = new Point(3, 249);
             panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
             panel5.Size = new Size(157, 74);
@@ -374,7 +375,7 @@
             // 
             panel4.BackColor = Color.DarkSlateGray;
             panel4.Controls.Add(btn3Converter);
-            panel4.Location = new Point(3, 305);
+            panel4.Location = new Point(3, 327);
             panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
             panel4.Size = new Size(162, 74);
@@ -403,7 +404,7 @@
             // 
             panel6.BackColor = Color.DarkSlateGray;
             panel6.Controls.Add(btn5MediaPlayer);
-            panel6.Location = new Point(3, 383);
+            panel6.Location = new Point(3, 405);
             panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
             panel6.Size = new Size(189, 74);

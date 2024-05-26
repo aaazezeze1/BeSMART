@@ -151,6 +151,7 @@
             labl1BeSMART.Size = new Size(105, 28);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
+            labl1BeSMART.Click += labl1BeSMART_Click;
             // 
             // panel2
             // 

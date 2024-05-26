@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acer\\source\\repos\\Be_SMART\\NotesApp.csproj": {}
+    "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acer\\source\\repos\\Be_SMART\\NotesApp.csproj": {
+    "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acer\\source\\repos\\Be_SMART\\NotesApp.csproj",
+        "projectUniqueName": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj",
         "projectName": "BeSMART",
-        "projectPath": "C:\\Users\\acer\\source\\repos\\Be_SMART\\NotesApp.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acer\\source\\repos\\Be_SMART\\obj\\",
+        "projectPath": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj",
+        "packagesPath": "C:\\Users\\Amazing\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amazing\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

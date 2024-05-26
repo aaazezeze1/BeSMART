@@ -119,5 +119,27 @@ namespace NotesApp
         {
 
         }
+
+        private void saveEventButton_MouseHover(object sender, EventArgs e)
+        {
+            saveEventButton.BackColor = Color.DarkSlateGray;
+        }
+
+        private void saveEventButton_MouseLeave(object sender, EventArgs e)
+        {
+            saveEventButton.ResetBackColor();
+            saveEventButton.BackColor = Color.DimGray;
+        }
+
+        private void backToCalendarButton_MouseHover(object sender, EventArgs e)
+        {
+            backToCalendarButton.BackColor = Color.DarkSlateGray;
+        }
+
+        private void backToCalendarButton_MouseLeave(object sender, EventArgs e)
+        {
+            backToCalendarButton.ResetBackColor();
+            backToCalendarButton.BackColor = Color.DimGray;
+        }
     }
 }

@@ -202,6 +202,42 @@ namespace NotesApp
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
-        
+        private void btnprevious_MouseHover(object sender, EventArgs e)
+        {
+            btnprevious.BackColor = Color.DarkSlateGray;
+        }
+
+        private void btnprevious_MouseLeave(object sender, EventArgs e)
+        {
+            btnprevious.ResetBackColor();
+            btnprevious.BackColor = Color.DimGray;
+        }
+
+        private void btnnext_MouseHover(object sender, EventArgs e)
+        {
+            btnnext.BackColor = Color.DarkSlateGray;
+        }
+
+        private void btnnext_MouseLeave(object sender, EventArgs e)
+        {
+            btnnext.ResetBackColor();
+            btnnext.BackColor = Color.DimGray;
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
+
+        private void labl1BeSMART_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
     }
 }

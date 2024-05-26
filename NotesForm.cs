@@ -162,10 +162,10 @@ namespace NotesApp
                         File.WriteAllText(filename, rTxtBoxNotes.Text);
                         break;
                     case ".pdf":
-                        SaveAsPdf(filename, rTxtBoxNotes.Text);  
+                        SaveAsPdf(filename, rTxtBoxNotes.Text);
                         break;
                     case ".docx":
-                        SaveAsDocx(filename, rTxtBoxNotes.Text);  
+                        SaveAsDocx(filename, rTxtBoxNotes.Text);
                         break;
                     default:
                         MessageBox.Show("Unsupported file type.");
@@ -359,6 +359,7 @@ namespace NotesApp
         {
             var SchedForm3 = new ScheduleForm();
             SchedForm3.Show();
+            this.Hide();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
 
@@ -366,6 +367,7 @@ namespace NotesApp
         {
             var ToDoListForm5 = new ToDoForm();
             ToDoListForm5.Show();
+            this.Hide();
             ToDoListForm5.FormClosed += (s, args) => this.Show();
         }
 
@@ -373,6 +375,7 @@ namespace NotesApp
         {
             var FormulaForm4 = new FormulaForm();
             FormulaForm4.Show();
+            this.Hide();
             FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
@@ -380,6 +383,7 @@ namespace NotesApp
         {
             var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
+            this.Hide();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
@@ -387,6 +391,7 @@ namespace NotesApp
         {
             var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
+            this.Hide();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
@@ -412,6 +417,22 @@ namespace NotesApp
         private void StopButton_Click(object sender, EventArgs e)
         {
             mp3.stop();
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
+
+        private void labl1BeSMART_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
         }
     }
 }
