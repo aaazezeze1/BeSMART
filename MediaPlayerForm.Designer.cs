@@ -72,7 +72,7 @@
             Playlist.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Playlist.FormattingEnabled = true;
             Playlist.ItemHeight = 28;
-            Playlist.Location = new Point(3, 4);
+            Playlist.Location = new Point(-1, 0);
             Playlist.Margin = new Padding(3, 4, 3, 4);
             Playlist.Name = "Playlist";
             Playlist.Size = new Size(208, 536);
@@ -140,6 +140,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // labl1BeSMART
             // 
@@ -159,7 +160,7 @@
             panel2.Controls.Add(btn1Schedule);
             panel2.Location = new Point(3, 96);
             panel2.Name = "panel2";
-            panel2.Size = new Size(179, 99);
+            panel2.Size = new Size(196, 99);
             panel2.TabIndex = 2;
             // 
             // btn1Schedule
@@ -186,7 +187,7 @@
             panel3.Controls.Add(btn2ToDoList);
             panel3.Location = new Point(3, 201);
             panel3.Name = "panel3";
-            panel3.Size = new Size(179, 99);
+            panel3.Size = new Size(204, 99);
             panel3.TabIndex = 3;
             // 
             // btn2ToDoList
@@ -213,7 +214,7 @@
             panel5.Controls.Add(btn4Formula);
             panel5.Location = new Point(3, 306);
             panel5.Name = "panel5";
-            panel5.Size = new Size(179, 99);
+            panel5.Size = new Size(212, 99);
             panel5.TabIndex = 5;
             // 
             // btn4Formula
@@ -240,7 +241,7 @@
             panel4.Controls.Add(btn3Converter);
             panel4.Location = new Point(3, 411);
             panel4.Name = "panel4";
-            panel4.Size = new Size(185, 99);
+            panel4.Size = new Size(210, 99);
             panel4.TabIndex = 4;
             // 
             // btn3Converter
@@ -254,7 +255,7 @@
             btn3Converter.Location = new Point(-9, -13);
             btn3Converter.Name = "btn3Converter";
             btn3Converter.Padding = new Padding(30, 0, 0, 0);
-            btn3Converter.Size = new Size(207, 121);
+            btn3Converter.Size = new Size(205, 121);
             btn3Converter.TabIndex = 3;
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
@@ -267,7 +268,7 @@
             panel6.Controls.Add(btn5MediaPlayer);
             panel6.Location = new Point(3, 516);
             panel6.Name = "panel6";
-            panel6.Size = new Size(187, 99);
+            panel6.Size = new Size(192, 99);
             panel6.TabIndex = 6;
             // 
             // btn5MediaPlayer
@@ -281,7 +282,7 @@
             btn5MediaPlayer.Location = new Point(-8, -13);
             btn5MediaPlayer.Name = "btn5MediaPlayer";
             btn5MediaPlayer.Padding = new Padding(30, 0, 0, 0);
-            btn5MediaPlayer.Size = new Size(234, 120);
+            btn5MediaPlayer.Size = new Size(225, 120);
             btn5MediaPlayer.TabIndex = 3;
             btn5MediaPlayer.Text = "         Media Player";
             btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
@@ -323,11 +324,11 @@
             // VideoPlayer
             // 
             VideoPlayer.Enabled = true;
-            VideoPlayer.Location = new Point(207, 4);
+            VideoPlayer.Location = new Point(207, 0);
             VideoPlayer.Margin = new Padding(3, 4, 3, 4);
             VideoPlayer.Name = "VideoPlayer";
             VideoPlayer.OcxState = (AxHost.State)resources.GetObject("VideoPlayer.OcxState");
-            VideoPlayer.Size = new Size(809, 535);
+            VideoPlayer.Size = new Size(809, 536);
             VideoPlayer.TabIndex = 9;
             VideoPlayer.PlayStateChange += MediaPlayer_PlayStateChange;
             // 

@@ -113,17 +113,17 @@
             panel7.Controls.Add(panel12);
             panel7.Controls.Add(panel10);
             panel7.Controls.Add(panel11);
-            panel7.Location = new Point(887, 0);
+            panel7.Location = new Point(894, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(206, 636);
+            panel7.Size = new Size(199, 636);
             panel7.TabIndex = 8;
             // 
             // panel22
             // 
             panel22.Controls.Add(btnTrigo);
-            panel22.Location = new Point(7, 548);
+            panel22.Location = new Point(0, 548);
             panel22.Name = "panel22";
-            panel22.Size = new Size(227, 53);
+            panel22.Size = new Size(234, 53);
             panel22.TabIndex = 18;
             // 
             // btnTrigo
@@ -131,21 +131,23 @@
             btnTrigo.BackColor = Color.DimGray;
             btnTrigo.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTrigo.ForeColor = SystemColors.ButtonHighlight;
-            btnTrigo.Location = new Point(-6, -14);
+            btnTrigo.Location = new Point(-17, -14);
             btnTrigo.Name = "btnTrigo";
             btnTrigo.Padding = new Padding(25, 0, 0, 0);
-            btnTrigo.Size = new Size(321, 84);
+            btnTrigo.Size = new Size(332, 84);
             btnTrigo.TabIndex = 10;
+            btnTrigo.Tag = "Trigonometry";
             btnTrigo.Text = "Trigonometry";
             btnTrigo.TextAlign = ContentAlignment.MiddleLeft;
             btnTrigo.UseVisualStyleBackColor = false;
+            btnTrigo.Click += btnCategory_Click;
             // 
             // panel21
             // 
             panel21.Controls.Add(btnProbability);
-            panel21.Location = new Point(7, 480);
+            panel21.Location = new Point(0, 480);
             panel21.Name = "panel21";
-            panel21.Size = new Size(227, 53);
+            panel21.Size = new Size(234, 53);
             panel21.TabIndex = 17;
             // 
             // btnProbability
@@ -153,22 +155,23 @@
             btnProbability.BackColor = Color.DimGray;
             btnProbability.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProbability.ForeColor = SystemColors.ButtonHighlight;
-            btnProbability.Location = new Point(-10, -19);
+            btnProbability.Location = new Point(-17, -19);
             btnProbability.Name = "btnProbability";
             btnProbability.Padding = new Padding(25, 0, 0, 0);
-            btnProbability.Size = new Size(325, 93);
+            btnProbability.Size = new Size(332, 93);
             btnProbability.TabIndex = 10;
-            btnProbability.Tag = "Probability";
+            btnProbability.Tag = "ProbabilitySets";
             btnProbability.Text = "Probability and Sets";
             btnProbability.TextAlign = ContentAlignment.MiddleLeft;
             btnProbability.UseVisualStyleBackColor = false;
+            btnProbability.Click += btnCategory_Click;
             // 
             // panel8
             // 
             panel8.Controls.Add(btnFunctionsEquations);
-            panel8.Location = new Point(7, 84);
+            panel8.Location = new Point(0, 84);
             panel8.Name = "panel8";
-            panel8.Size = new Size(227, 51);
+            panel8.Size = new Size(234, 51);
             panel8.TabIndex = 11;
             // 
             // btnFunctionsEquations
@@ -176,21 +179,23 @@
             btnFunctionsEquations.BackColor = Color.DimGray;
             btnFunctionsEquations.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFunctionsEquations.ForeColor = SystemColors.ButtonHighlight;
-            btnFunctionsEquations.Location = new Point(-10, -15);
+            btnFunctionsEquations.Location = new Point(-17, -15);
             btnFunctionsEquations.Name = "btnFunctionsEquations";
             btnFunctionsEquations.Padding = new Padding(25, 0, 0, 0);
-            btnFunctionsEquations.Size = new Size(325, 80);
+            btnFunctionsEquations.Size = new Size(332, 80);
             btnFunctionsEquations.TabIndex = 10;
+            btnFunctionsEquations.Tag = "FunctionsEquations";
             btnFunctionsEquations.Text = "Functions and Equations";
             btnFunctionsEquations.TextAlign = ContentAlignment.MiddleLeft;
             btnFunctionsEquations.UseVisualStyleBackColor = false;
+            btnFunctionsEquations.Click += btnCategory_Click;
             // 
             // panel16
             // 
             panel16.Controls.Add(btnSequences);
-            panel16.Location = new Point(7, 411);
+            panel16.Location = new Point(0, 411);
             panel16.Name = "panel16";
-            panel16.Size = new Size(227, 53);
+            panel16.Size = new Size(234, 53);
             panel16.TabIndex = 16;
             // 
             // btnSequences
@@ -198,21 +203,23 @@
             btnSequences.BackColor = Color.DimGray;
             btnSequences.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSequences.ForeColor = SystemColors.ButtonHighlight;
-            btnSequences.Location = new Point(-10, -23);
+            btnSequences.Location = new Point(-17, -23);
             btnSequences.Name = "btnSequences";
             btnSequences.Padding = new Padding(25, 0, 0, 0);
-            btnSequences.Size = new Size(325, 93);
+            btnSequences.Size = new Size(332, 93);
             btnSequences.TabIndex = 10;
+            btnSequences.Tag = "Sequences";
             btnSequences.Text = "Sequences";
             btnSequences.TextAlign = ContentAlignment.MiddleLeft;
             btnSequences.UseVisualStyleBackColor = false;
+            btnSequences.Click += btnCategory_Click;
             // 
             // panel9
             // 
             panel9.Controls.Add(btnExponents);
-            panel9.Location = new Point(7, 149);
+            panel9.Location = new Point(0, 149);
             panel9.Name = "panel9";
-            panel9.Size = new Size(227, 43);
+            panel9.Size = new Size(234, 43);
             panel9.TabIndex = 12;
             // 
             // btnExponents
@@ -220,21 +227,23 @@
             btnExponents.BackColor = Color.DimGray;
             btnExponents.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExponents.ForeColor = SystemColors.ButtonHighlight;
-            btnExponents.Location = new Point(-10, -26);
+            btnExponents.Location = new Point(-17, -26);
             btnExponents.Name = "btnExponents";
             btnExponents.Padding = new Padding(25, 0, 0, 0);
-            btnExponents.Size = new Size(325, 104);
+            btnExponents.Size = new Size(332, 104);
             btnExponents.TabIndex = 10;
+            btnExponents.Tag = "Exponents";
             btnExponents.Text = "Exponents";
             btnExponents.TextAlign = ContentAlignment.MiddleLeft;
             btnExponents.UseVisualStyleBackColor = false;
+            btnExponents.Click += btnCategory_Click;
             // 
             // panel12
             // 
             panel12.Controls.Add(btnStats);
-            panel12.Location = new Point(7, 344);
+            panel12.Location = new Point(0, 344);
             panel12.Name = "panel12";
-            panel12.Size = new Size(227, 53);
+            panel12.Size = new Size(234, 53);
             panel12.TabIndex = 15;
             // 
             // btnStats
@@ -242,21 +251,23 @@
             btnStats.BackColor = Color.DimGray;
             btnStats.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStats.ForeColor = SystemColors.ButtonHighlight;
-            btnStats.Location = new Point(-6, -25);
+            btnStats.Location = new Point(-17, -25);
             btnStats.Name = "btnStats";
             btnStats.Padding = new Padding(25, 0, 0, 0);
-            btnStats.Size = new Size(321, 102);
+            btnStats.Size = new Size(332, 102);
             btnStats.TabIndex = 10;
+            btnStats.Tag = "Statistics";
             btnStats.Text = "Statistics";
             btnStats.TextAlign = ContentAlignment.MiddleLeft;
             btnStats.UseVisualStyleBackColor = false;
+            btnStats.Click += btnCategory_Click;
             // 
             // panel10
             // 
             panel10.Controls.Add(btnRadicals);
-            panel10.Location = new Point(7, 212);
+            panel10.Location = new Point(0, 212);
             panel10.Name = "panel10";
-            panel10.Size = new Size(227, 46);
+            panel10.Size = new Size(234, 46);
             panel10.TabIndex = 13;
             // 
             // btnRadicals
@@ -264,21 +275,23 @@
             btnRadicals.BackColor = Color.DimGray;
             btnRadicals.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRadicals.ForeColor = SystemColors.ButtonHighlight;
-            btnRadicals.Location = new Point(-10, -20);
+            btnRadicals.Location = new Point(-17, -20);
             btnRadicals.Name = "btnRadicals";
             btnRadicals.Padding = new Padding(25, 0, 0, 0);
-            btnRadicals.Size = new Size(325, 91);
+            btnRadicals.Size = new Size(332, 91);
             btnRadicals.TabIndex = 10;
+            btnRadicals.Tag = "Radicals";
             btnRadicals.Text = "Radicals";
             btnRadicals.TextAlign = ContentAlignment.MiddleLeft;
             btnRadicals.UseVisualStyleBackColor = false;
+            btnRadicals.Click += btnCategory_Click;
             // 
             // panel11
             // 
             panel11.Controls.Add(btnLogic);
-            panel11.Location = new Point(7, 275);
+            panel11.Location = new Point(0, 275);
             panel11.Name = "panel11";
-            panel11.Size = new Size(227, 53);
+            panel11.Size = new Size(234, 53);
             panel11.TabIndex = 14;
             // 
             // btnLogic
@@ -286,14 +299,16 @@
             btnLogic.BackColor = Color.DimGray;
             btnLogic.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogic.ForeColor = SystemColors.ButtonHighlight;
-            btnLogic.Location = new Point(-10, -17);
+            btnLogic.Location = new Point(-17, -17);
             btnLogic.Name = "btnLogic";
             btnLogic.Padding = new Padding(25, 0, 0, 0);
-            btnLogic.Size = new Size(325, 88);
+            btnLogic.Size = new Size(332, 88);
             btnLogic.TabIndex = 10;
+            btnLogic.Tag = "Logic";
             btnLogic.Text = "Logic";
             btnLogic.TextAlign = ContentAlignment.MiddleLeft;
             btnLogic.UseVisualStyleBackColor = false;
+            btnLogic.Click += btnCategory_Click;
             // 
             // fLP1Sidebar
             // 
@@ -330,6 +345,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // labl1BeSMART
             // 

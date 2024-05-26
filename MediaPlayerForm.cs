@@ -194,5 +194,13 @@ namespace NotesApp
             this.Hide();
             NotesApp.FormClosed += (s, args) => this.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
     }
 }

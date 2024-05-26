@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventsSchedForm4));
             label3 = new Label();
             txtBoxEventsTitle = new TextBox();
             saveEventButton = new Button();
@@ -231,6 +232,7 @@
             Controls.Add(saveEventButton);
             Controls.Add(txtBoxEventsTitle);
             Controls.Add(label3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EventsSchedForm4";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Make Events";

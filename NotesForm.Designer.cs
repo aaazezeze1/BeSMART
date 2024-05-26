@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotesForm));
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             rTxtBoxNotes = new RichTextBox();
             panel7 = new Panel();
             btn10BulletList = new Button();
@@ -70,6 +70,9 @@
             startButton = new Button();
             pomodoroButton = new Button();
             flowLayoutPanel2 = new FlowLayoutPanel();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            labl1BeSMART = new Label();
             btn1Schedule = new Button();
             btn2ToDoList = new Button();
             btn4Formula = new Button();
@@ -78,15 +81,11 @@
             btnSearch = new Button();
             btn2Play = new Button();
             btn3Stop = new Button();
-            labl1BeSMART = new Label();
-            pictureBox1 = new PictureBox();
-            panel1 = new Panel();
-            button1 = new Button();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGR1previousNotes).BeginInit();
             flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // rTxtBoxNotes
@@ -302,30 +301,30 @@
             // 
             // dGR1previousNotes
             // 
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.ForeColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle10.SelectionBackColor = Color.DarkSlateGray;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dGR1previousNotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle4.SelectionBackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dGR1previousNotes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dGR1previousNotes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dGR1previousNotes.BackgroundColor = Color.White;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.SeaGreen;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(54, 57, 62);
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dGR1previousNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.SeaGreen;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(54, 57, 62);
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dGR1previousNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dGR1previousNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle12.ForeColor = Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = Color.SeaGreen;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            dGR1previousNotes.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dGR1previousNotes.DefaultCellStyle = dataGridViewCellStyle6;
             dGR1previousNotes.GridColor = Color.FromArgb(66, 69, 73);
             dGR1previousNotes.Location = new Point(1034, 35);
             dGR1previousNotes.Name = "dGR1previousNotes";
@@ -538,12 +537,45 @@
             flowLayoutPanel2.Controls.Add(btn4Formula);
             flowLayoutPanel2.Controls.Add(btn3Converter);
             flowLayoutPanel2.Controls.Add(btn5MediaPlayer);
-            flowLayoutPanel2.Controls.Add(button1);
             flowLayoutPanel2.Location = new Point(-3, -4);
             flowLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(187, 741);
+            flowLayoutPanel2.Size = new Size(206, 741);
             flowLayoutPanel2.TabIndex = 25;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DarkSlateGray;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(labl1BeSMART);
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(203, 87);
+            panel1.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.DarkSlateGray;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(22, 31);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(56, 55);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // labl1BeSMART
+            // 
+            labl1BeSMART.AutoSize = true;
+            labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labl1BeSMART.ForeColor = Color.White;
+            labl1BeSMART.Location = new Point(84, 45);
+            labl1BeSMART.Name = "labl1BeSMART";
+            labl1BeSMART.Size = new Size(105, 28);
+            labl1BeSMART.TabIndex = 2;
+            labl1BeSMART.Text = "BeSMART";
+            labl1BeSMART.Click += labl1BeSMART_Click;
             // 
             // btn1Schedule
             // 
@@ -575,7 +607,7 @@
             btn2ToDoList.ImageAlign = ContentAlignment.MiddleLeft;
             btn2ToDoList.Location = new Point(3, 223);
             btn2ToDoList.Name = "btn2ToDoList";
-            btn2ToDoList.Padding = new Padding(35, 0, 0, 0);
+            btn2ToDoList.Padding = new Padding(30, 0, 0, 0);
             btn2ToDoList.Size = new Size(235, 121);
             btn2ToDoList.TabIndex = 18;
             btn2ToDoList.Text = "          To Do List";
@@ -685,57 +717,6 @@
             btn3Stop.UseVisualStyleBackColor = false;
             btn3Stop.Click += StopButton_Click;
             // 
-            // labl1BeSMART
-            // 
-            labl1BeSMART.AutoSize = true;
-            labl1BeSMART.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labl1BeSMART.ForeColor = Color.White;
-            labl1BeSMART.Location = new Point(71, 35);
-            labl1BeSMART.Name = "labl1BeSMART";
-            labl1BeSMART.Size = new Size(105, 28);
-            labl1BeSMART.TabIndex = 2;
-            labl1BeSMART.Text = "BeSMART";
-            labl1BeSMART.Click += labl1BeSMART_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.DarkSlateGray;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(9, 20);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(56, 55);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.DarkSlateGray;
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(labl1BeSMART);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(182, 87);
-            panel1.TabIndex = 16;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.DarkSlateGray;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(3, 730);
-            button1.Name = "button1";
-            button1.Padding = new Padding(30, 0, 0, 0);
-            button1.Size = new Size(226, 121);
-            button1.TabIndex = 22;
-            button1.Text = "         Schedule";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            // 
             // NotesForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -773,9 +754,9 @@
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dGR1previousNotes).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -829,6 +810,5 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label labl1BeSMART;
-        private Button button1;
     }
 }

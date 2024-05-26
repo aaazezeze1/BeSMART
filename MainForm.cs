@@ -21,6 +21,7 @@ namespace NotesApp
             var NotesForm2 = new NotesForm();
             NotesForm2.Show();
             this.Hide();
+            NotesForm2.FormClosed += (s, args) => this.Show();
         }
 
         private void btn1Schedule_Click(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace NotesApp
             MediaPlayerForm6.Show();
             this.Hide();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
+        }
+
+        private void NotesApp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

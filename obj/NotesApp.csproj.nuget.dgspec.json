@@ -53,10 +53,6 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "ReaLTaiizor": {
-              "target": "Package",
-              "version": "[3.8.0.5, )"
-            },
             "itext7": {
               "target": "Package",
               "version": "[8.0.4, )"

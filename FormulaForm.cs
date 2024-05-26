@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using ReaLTaiizor.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,42 +23,19 @@ namespace NotesApp
             InitializeComponent();
             InitializeCategoryImages();
             ShowDefaultImage();
-
-            btnFunctionsEquations.Click += btnCategory_Click;
-            btnExponents.Click += btnCategory_Click;
-            btnRadicals.Click += btnCategory_Click;
-            btnLogic.Click += btnCategory_Click;
-            btnStats.Click += btnCategory_Click;
-            btnSequences.Click += btnCategory_Click;
-            btnProbability.Click += btnCategory_Click;
-            btnTrigo.Click += btnCategory_Click;
-
-            label1.Click += btnCategory_Click;
-
-
-            btnFunctionsEquations.Tag = "FunctionsEquations";
-            btnExponents.Tag = "Exponents";
-            btnRadicals.Tag = "Radicals";
-            btnLogic.Tag = "Logic";
-            btnStats.Tag = "Statistics";
-            btnSequences.Tag = "Sequences";
-            btnProbability.Tag = "ProbabilitySets";
-            btnTrigo.Tag = "Trigonometry";
-
-            label1.Tag = "label1";
         }
         private void InitializeCategoryImages()
         {
             categoryImages = new Dictionary<string, List<string>>()
             {
-                { "FunctionsEquations", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Functions and equations\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Functions and equations\\2.png" } },
-                { "Exponents", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Exponents.png" } },
-                { "Radicals", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Radicals.png" } },
-                { "Logic", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Logic\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Logic\\2.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Logic\\3.png" } },
-                { "Statistics", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Stats\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Stats\\2.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Stats\\3.png" } },
-                { "Sequences", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Sequences.png" } },
-                { "ProbabilitySets", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Prob&Sets\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Prob&Sets\\2.png" } },
-                { "Trigonometry", new List<string> { "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\1.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\2.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\3.png", "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\Trigonometry\\4.png" } }
+                { "FunctionsEquations", new List<string> { "Images\\Functions and equations\\1.png", "Images\\Functions and equations\\2.png" } },
+                { "Exponents", new List<string> { "Images\\Exponents.png" } },
+                { "Radicals", new List<string> { "Images\\Radicals.png" } },
+                { "Logic", new List<string> { "Images\\Logic\\1.png", "Images\\Logic\\2.png", "Images\\Logic\\3.png" } },
+                { "Statistics", new List<string> { "Images\\Stats\\1.png", "Images\\Stats\\2.png", "Images\\Stats\\3.png" } },
+                { "Sequences", new List<string> { "Images\\Sequences.png" } },
+                { "ProbabilitySets", new List<string> { "Images\\Prob&Sets\\1.png", "Images\\Prob&Sets\\2.png" } },
+                { "Trigonometry", new List<string> { "Images\\Trigonometry\\1.png", "Images\\Trigonometry\\2.png", "Images\\Trigonometry\\3.png", "Images\\Trigonometry\\4.png" } }
             };
 
             currentCategory = string.Empty;
@@ -67,7 +43,7 @@ namespace NotesApp
         }
         private void ShowDefaultImage()
         {
-            pictureBoxFormula.ImageLocation = "C:\\Users\\acer\\source\\repos\\Be_SMART\\Images\\NoSelectedCategory.png";
+            pictureBoxFormula.ImageLocation = "Images\\NoSelectedCategory.png";
             btnprevious.Visible = false;
             btnnext.Visible = false;
         }
@@ -89,11 +65,11 @@ namespace NotesApp
             btnprevious.Visible = categoryImages[currentCategory].Count > 1;
             btnnext.Visible = categoryImages[currentCategory].Count > 1;
         }
+        private Button previouslyClickedButton = null;
         private void btnCategory_Click(object sender, EventArgs e)
         {
             if (sender is Control control)
             {
-                // Check if the clicked control is the label, if yes, reset the current category
                 if (control == label1)
                 {
                     currentCategory = null;
@@ -101,9 +77,18 @@ namespace NotesApp
                 }
                 else
                 {
-                    // Get the category from the clicked button's Tag property
                     currentCategory = control.Tag?.ToString();
                     currentImageIndex = 0;
+
+                    if (previouslyClickedButton != null && previouslyClickedButton != control)
+                    {
+                        previouslyClickedButton.BackColor = Color.DimGray;
+                        previouslyClickedButton.ForeColor = Color.White;
+                    }
+                    control.BackColor = Color.White;
+                    control.ForeColor = Color.Black;
+
+                    previouslyClickedButton = control as Button;
                 }
                 ShowImage();
             }
@@ -225,6 +210,14 @@ namespace NotesApp
         }
 
         private void labl1BeSMART_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             var NotesApp = new NotesApp();
             NotesApp.Show();
