@@ -136,13 +136,13 @@ namespace NotesApp
 
         private void ConvertCurrencyButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertCurrencyButton.BackColor = Color.FromArgb(66, 69, 73);
+            ConvertCurrencyButton.BackColor = Color.DarkSlateGray;
         }
 
         private void ConvertCurrencyButton_MouseLeave(object sender, EventArgs e)
         {
             ConvertCurrencyButton.ResetBackColor();
-            ConvertCurrencyButton.UseVisualStyleBackColor = true;
+            ConvertCurrencyButton.BackColor = Color.DimGray;
         }
 
         // Unit Conversion Code
@@ -199,13 +199,13 @@ namespace NotesApp
 
         private void ConvertUnitButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertUnitButton.BackColor = Color.FromArgb(114, 137, 218);
+            ConvertUnitButton.BackColor = Color.DarkSlateGray;
         }
 
         private void ConvertUnitButton_MouseLeave(object sender, EventArgs e)
         {
             ConvertUnitButton.ResetBackColor();
-            ConvertUnitButton.UseVisualStyleBackColor = true;
+            ConvertUnitButton.BackColor = Color.DimGray;
         }
 
         private void label12_Click(object sender, EventArgs e)
