@@ -166,6 +166,7 @@
             // 
             // ConvertTempButton
             // 
+            ConvertTempButton.BackColor = Color.DarkSlateGray;
             ConvertTempButton.FlatStyle = FlatStyle.Flat;
             ConvertTempButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertTempButton.ForeColor = Color.White;
@@ -175,7 +176,7 @@
             ConvertTempButton.Size = new Size(98, 45);
             ConvertTempButton.TabIndex = 19;
             ConvertTempButton.Text = "Convert";
-            ConvertTempButton.UseVisualStyleBackColor = true;
+            ConvertTempButton.UseVisualStyleBackColor = false;
             ConvertTempButton.Click += ConvertTempButton_Click;
             ConvertTempButton.MouseLeave += ConvertTempButton_MouseLeave;
             ConvertTempButton.MouseHover += ConvertTempButton_MouseHover;
@@ -284,6 +285,7 @@
             // 
             // TempResetButton
             // 
+            TempResetButton.BackColor = Color.DarkSlateGray;
             TempResetButton.FlatStyle = FlatStyle.Flat;
             TempResetButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TempResetButton.ForeColor = Color.White;
@@ -293,7 +295,7 @@
             TempResetButton.Size = new Size(86, 45);
             TempResetButton.TabIndex = 7;
             TempResetButton.Text = "Reset";
-            TempResetButton.UseVisualStyleBackColor = true;
+            TempResetButton.UseVisualStyleBackColor = false;
             TempResetButton.Click += TempResetButton_Click;
             TempResetButton.MouseLeave += TempResetButton_MouseLeave;
             TempResetButton.MouseHover += TempResetButton_MouseHover;
@@ -441,7 +443,7 @@
             ConvertUnitButton.FlatStyle = FlatStyle.Flat;
             ConvertUnitButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertUnitButton.ForeColor = Color.White;
-            ConvertUnitButton.Location = new Point(753, 348);
+            ConvertUnitButton.Location = new Point(753, 318);
             ConvertUnitButton.Margin = new Padding(3, 4, 3, 4);
             ConvertUnitButton.Name = "ConvertUnitButton";
             ConvertUnitButton.Size = new Size(126, 45);
@@ -457,7 +459,7 @@
             UnitResultTxtBox.BorderStyle = BorderStyle.FixedSingle;
             UnitResultTxtBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             UnitResultTxtBox.ForeColor = Color.Black;
-            UnitResultTxtBox.Location = new Point(886, 354);
+            UnitResultTxtBox.Location = new Point(886, 324);
             UnitResultTxtBox.Margin = new Padding(3, 4, 3, 4);
             UnitResultTxtBox.Name = "UnitResultTxtBox";
             UnitResultTxtBox.Size = new Size(153, 34);
@@ -468,7 +470,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(773, 425);
+            label10.Location = new Point(781, 408);
             label10.Name = "label10";
             label10.Size = new Size(248, 28);
             label10.TabIndex = 22;
@@ -479,7 +481,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(798, 471);
+            label11.Location = new Point(808, 453);
             label11.Name = "label11";
             label11.Size = new Size(185, 280);
             label11.TabIndex = 25;
