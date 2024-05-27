@@ -12,6 +12,7 @@ namespace NotesApp
 {
     public partial class UserControlBlank : UserControl
     {
+        //for the blank spces in the calendar
         public UserControlBlank()
         {
             InitializeComponent();

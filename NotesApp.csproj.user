@@ -10,7 +10,7 @@
     <Compile Update="ConverterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="EventsSchedForm4.cs">
+    <Compile Update="MakeEventsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainForm.cs">

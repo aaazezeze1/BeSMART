@@ -56,7 +56,7 @@ namespace NotesApp
                 UserControlBlank ucBlank = new UserControlBlank();
                 flp1DayContainer.Controls.Add(ucBlank);
             }
-
+            //UserControlDay for the days in the calendar
             DateTime today = DateTime.Now;
             for (int i = 1; i <= days; i++)
             {
@@ -85,9 +85,6 @@ namespace NotesApp
 
         private void btn2Next_Click(object sender, EventArgs e)
         {
-            //clear container
-            //flp1DayContainer.Controls.Clear();
-
             //increment month
             month++;
             if (month > 12)
@@ -100,9 +97,6 @@ namespace NotesApp
         }
         private void btn1Previous_Click(object sender, EventArgs e)
         {
-            //clear container
-            //flp1DayContainer.Controls.Clear();
-
             //decrement month
             month--;
             if (month < 1)
@@ -122,7 +116,7 @@ namespace NotesApp
                 return;
             }
 
-            using (EventsSchedForm4 eventForm = new EventsSchedForm4())
+            using (MakeEventsForm eventForm = new MakeEventsForm())
             {
                 // Show the event form
                 if (eventForm.ShowDialog() == DialogResult.OK)
@@ -151,7 +145,7 @@ namespace NotesApp
         }
         public void EditEvent(DateTime date, UserControlDay.Event eventItem, UserControlDay ucDay)
         {
-            using (EventsSchedForm4 eventForm = new EventsSchedForm4())
+            using (MakeEventsForm eventForm = new MakeEventsForm())
             {
                 eventForm.SetEventData(eventItem);
 

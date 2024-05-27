@@ -1,6 +1,6 @@
 ﻿namespace NotesApp
 {
-    partial class EventsSchedForm4
+    partial class MakeEventsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventsSchedForm4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MakeEventsForm));
             label3 = new Label();
             txtBoxEventsTitle = new TextBox();
             saveEventButton = new Button();

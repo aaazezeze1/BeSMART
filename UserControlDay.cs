@@ -16,8 +16,8 @@ namespace NotesApp
 {
     public partial class UserControlDay : UserControl
     {
-        private List<Event> events = new List<Event>();
-        private ContextMenuStrip eventContextMenu;
+        private List<Event> events = new List<Event>(); //for multiple events
+        private ContextMenuStrip eventContextMenu; //edit and delete option
         private DateTime currentDate;
         private Event selectedEvent;
 
@@ -46,6 +46,7 @@ namespace NotesApp
         }
         private Event GetEventAtMousePosition()
         {
+            // to know what the user clicked on the mouse (right or left)
             Point localMousePos = this.PointToClient(Control.MousePosition);
             foreach (Control control in this.Controls)
             {
@@ -59,6 +60,7 @@ namespace NotesApp
 
         private void OnEditEventClicked()
         {
+            //shows the MakeEventsForm with the recent data user will edit
             if (selectedEvent != null)
             {
                 var parent = (CalendarForm)FindForm();
@@ -68,6 +70,7 @@ namespace NotesApp
 
         private void OnDeleteEventClicked()
         {
+            //deletes the event
             if (selectedEvent != null)
             {
                 var parent = (CalendarForm)FindForm();
@@ -79,18 +82,18 @@ namespace NotesApp
         private void OnDayClicked()
         {
             DayClicked?.Invoke(this, EventArgs.Empty);
+            //shows the MakeEventsForm
         }
         private void UserControlDay_Click(object sender, EventArgs e)
         {
             OnDayClicked();
+            //shows the MakeEventsForm
         }
-
-
         public void SetDay(int day)
         {
             this.lblDays.Text = day.ToString();
+            //days in the calendar
         }
-
         public void HighlightToday()
         {
             this.ForeColor = Color.White;
@@ -98,6 +101,8 @@ namespace NotesApp
         }
         public void AddEvent(Event eventItem)
         {
+            //adding events have a limit of 3 events only since adding another 
+            //wouldn't show up in the box
             if (events.Count < 3)
             {
                 events.Add(eventItem);
@@ -107,10 +112,6 @@ namespace NotesApp
             {
                 MessageBox.Show("You can only add up to 3 events for this day.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-        public int GetEventCount()
-        {
-            return events.Count;
         }
 
         public void UpdateEvent(Event eventItem)
@@ -124,10 +125,9 @@ namespace NotesApp
             DisplayEvents();
         }
 
-        private Event SelectedEvent { get; set; }
-
         private void DisplayEvents()
         {
+            //shows the linklabel of the event's title
             for (int i = this.Controls.Count - 1; i >= 0; i--)
             {
                 if (this.Controls[i] is LinkLabel)
@@ -136,7 +136,7 @@ namespace NotesApp
                 }
             }
 
-            int yOffset = lblDays.Bottom + 5;
+            int yOffset = lblDays.Bottom + 5;//position
             foreach (var eventItem in events)
             {
                 LinkLabel eventLabel = new LinkLabel
@@ -144,7 +144,7 @@ namespace NotesApp
                     Text = eventItem.Title,
                     AutoSize = true,
                     Location = new Point(lblDays.Left, yOffset),
-                    BackColor = eventItem.EventColor,
+                    BackColor = eventItem.EventColor,//event type
                     LinkColor = Color.White
                 };
 
@@ -152,12 +152,12 @@ namespace NotesApp
                 {
                     if (e.Button == MouseButtons.Left)
                     {
-                        ShowEventDetails(eventItem);
+                        ShowEventDetails(eventItem);//left clicked
                     }
                     else if (e.Button == MouseButtons.Right)
                     {
                         selectedEvent = eventItem;
-                        eventContextMenu.Show(eventLabel, e.Location);
+                        eventContextMenu.Show(eventLabel, e.Location);//right clicked
                     }
                 };
 
@@ -167,6 +167,7 @@ namespace NotesApp
         }
         private void ShowEventDetails(Event eventItem)
         {
+            //display event's details
             string startTime = eventItem.StartTime + " " + eventItem.StartTimePeriod;
             string endTime = eventItem.EndTime + " " + eventItem.EndTimePeriod;
 

@@ -11,8 +11,11 @@ using System.Windows.Forms;
 
 namespace NotesApp
 {
-    public partial class EventsSchedForm4 : Form
+    public partial class MakeEventsForm : Form
     {
+
+        //Form for making events in the calendar
+        //storage of the user input data
         public string EventTitle { get; private set; }
         public string EventDescription { get; private set; }
         public Color EventColor { get; private set; }
@@ -22,7 +25,7 @@ namespace NotesApp
         public string StartTimePeriod { get; private set; }
         public string EndTimePeriod { get; private set; }
 
-        public EventsSchedForm4()
+        public MakeEventsForm()
         {
             InitializeComponent();
         }
@@ -45,6 +48,8 @@ namespace NotesApp
             }
             else
             {
+                //default color of the event, if the user didn't choose a radio button
+                //should be included to the choices, but forgot to do so
                 EventColor = Color.Gray;
                 EventType = "Other";
             }
@@ -75,6 +80,8 @@ namespace NotesApp
         }
         public void SetEventData(UserControlDay.Event eventItem)
         {
+            //
+
             txtBoxEventsTitle.Text = eventItem.Title;
             txtBoxEventDescription.Text = eventItem.Description;
             maskedTextBoxStartTime.Text = eventItem.StartTime;
