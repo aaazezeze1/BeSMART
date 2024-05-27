@@ -39,17 +39,18 @@ the background. Click on the application and click on End Task.
 
 # Things to Improve
 1. Get a new API key that shows the latest currency exchange rate. The API key that this project uses is outdated and not updated.
-2. Change the file name of the image formula. The reason why we didn't rename it is because if it gets renamed then 
-theres a chance that we would have to code the project all over again because that one error is almost impossible to fix.
 
-*"I accidentally permanently deleted the file while renaming it and had to clone the project all over again just to add
-the image back. I had a copy of the screenshot and would rather not go through the pain of redoing the project for 
-just renaming one image" - Amaze*
-
-3. Keep the history of the created notes and display it in the data grid view.  
+2. Keep the history of the created notes and display it in the data grid view.  
 Once the application is reloaded again, the history or previous txt files created will be gone from the data grid view. 
 
 *The saved txt files can still be found on the users machine where they stored it. Only the history disappears upon reload.*
 
-4. Make the delete button in the notes app also delete the actual file created. The delete button only deletes the notes 
+3. Make the delete button in the notes app also delete the actual file created. The delete button only deletes the notes 
 entry (sort of like a history tab of the created notes) not the note itself so the user has to delete the notes manually.
+
+4. Make the music player be able to play a playlist instead of just one song
+The media player library of Microsoft can only play one music so the user has to select another music file afterwards.
+Use the AxWMPLib instead to play a full playlist like in the media player of BeSMART.
+
+5. Add a Database
+Add a database to keep the "history" of the created entries of notes, to-do lists, and calendar events. 
