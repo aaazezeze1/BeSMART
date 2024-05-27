@@ -212,5 +212,15 @@ namespace NotesApp
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToUnitCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
