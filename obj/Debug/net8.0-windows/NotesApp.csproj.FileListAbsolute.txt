@@ -127,7 +127,6 @@ C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\Interop.WMPLib.dl
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\AxInterop.WMPLib.dll
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.csproj.ResolveComReference.cache
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ConverterForm.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.EventsSchedForm4.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.FormulaForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.NotesApp.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.MediaPlayerForm.resources
@@ -324,3 +323,4 @@ C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.AboutForm.r
 C:\Users\acer\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.CalendarForm.resources
 C:\Users\Amazing\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.CalendarForm.resources
 C:\Users\acer\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.MakeEventsForm.resources
+C:\Users\Amazing\Source\Repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.MakeEventsForm.resources

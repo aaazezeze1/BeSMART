@@ -54,3 +54,6 @@ Use the AxWMPLib instead to play a full playlist like in the media player of BeS
 
 5. Add a Database
 Add a database to keep the "history" of the created entries of notes, to-do lists, and calendar events. 
+
+6. Make the Rich Text Formatting style stay on the current session
+When a file is created, rich text formatting styles can be done by the user. When the file with rich text formatting is saved then reopened again the style will disappear. 
