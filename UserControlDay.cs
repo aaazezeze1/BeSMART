@@ -26,7 +26,10 @@ namespace NotesApp
             InitializeComponent();
             InitializeContextMenu();
             currentDate = date;
+
+            selectedEvent = new Event();
         }
+
         private void InitializeContextMenu()
         {
             eventContextMenu = new ContextMenuStrip();
@@ -38,13 +41,14 @@ namespace NotesApp
 
             eventContextMenu.Items.Add(editMenuItem);
             eventContextMenu.Items.Add(deleteMenuItem);
+
             // Hook up the ContextMenuStrip's Opening event
             eventContextMenu.Opening += (s, e) =>
             {
-                selectedEvent = GetEventAtMousePosition();
+                selectedEvent = GetEventAtMousePosition() ?? new Event();
             };
         }
-        private Event GetEventAtMousePosition()
+        private Event? GetEventAtMousePosition()
         {
             // to know what the user clicked on the mouse (right or left)
             Point localMousePos = this.PointToClient(Control.MousePosition);
@@ -78,7 +82,8 @@ namespace NotesApp
             }
         }
 
-        public event EventHandler DayClicked;
+        public event EventHandler DayClicked = delegate { };//avoid null checks
+
         private void OnDayClicked()
         {
             DayClicked?.Invoke(this, EventArgs.Empty);
@@ -152,12 +157,12 @@ namespace NotesApp
                 {
                     if (e.Button == MouseButtons.Left)
                     {
-                        ShowEventDetails(eventItem);//left clicked
+                        ShowEventDetails(eventItem); // left clicked
                     }
                     else if (e.Button == MouseButtons.Right)
                     {
                         selectedEvent = eventItem;
-                        eventContextMenu.Show(eventLabel, e.Location);//right clicked
+                        eventContextMenu.Show(eventLabel, e.Location); // right clicked
                     }
                 };
 
@@ -188,6 +193,17 @@ namespace NotesApp
             public string EndTime { get; set; }
             public string StartTimePeriod { get; set; }
             public string EndTimePeriod { get; set; }
+
+            public Event()
+            {
+                Title = string.Empty;
+                Description = string.Empty;
+                EventType = string.Empty;
+                StartTime = string.Empty;
+                EndTime = string.Empty;
+                StartTimePeriod = string.Empty;
+                EndTimePeriod = string.Empty;
+            }
         }
 
     }
