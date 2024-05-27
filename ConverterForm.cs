@@ -136,13 +136,13 @@ namespace NotesApp
 
         private void ConvertCurrencyButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertCurrencyButton.BackColor = Color.DarkSlateGray;
+            ConvertCurrencyButton.BackColor = Color.SeaGreen;
         }
 
         private void ConvertCurrencyButton_MouseLeave(object sender, EventArgs e)
         {
             ConvertCurrencyButton.ResetBackColor();
-            ConvertCurrencyButton.BackColor = Color.DimGray;
+            ConvertCurrencyButton.BackColor = Color.DarkSlateGray;
         }
 
         // Unit Conversion Code

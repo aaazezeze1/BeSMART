@@ -231,6 +231,7 @@
             Controls.Add(txtBoxEventsTitle);
             Controls.Add(label3);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "EventsSchedForm4";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Make Events";

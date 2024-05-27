@@ -204,7 +204,7 @@
             // 
             // ConvertCurrencyButton
             // 
-            ConvertCurrencyButton.BackColor = Color.DimGray;
+            ConvertCurrencyButton.BackColor = Color.DarkSlateGray;
             ConvertCurrencyButton.FlatAppearance.BorderSize = 0;
             ConvertCurrencyButton.FlatStyle = FlatStyle.Flat;
             ConvertCurrencyButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);

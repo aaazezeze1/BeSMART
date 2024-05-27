@@ -93,7 +93,8 @@ namespace NotesApp
 
         public void HighlightToday()
         {
-            this.BackColor = Color.DimGray; // or any other color/style
+            this.ForeColor = Color.White;
+            this.BackColor = Color.SeaGreen;
         }
         public void AddEvent(Event eventItem)
         {
@@ -188,6 +189,5 @@ namespace NotesApp
             public string EndTimePeriod { get; set; }
         }
 
-        
     }
 }
