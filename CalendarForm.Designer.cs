@@ -466,8 +466,6 @@
         #endregion
         private System.Windows.Forms.Timer timer1SidebarTransition;
         private FlowLayoutPanel flp1DayContainer;
-        private Button button1;
-        private Button button2;
         private Panel panel8;
         private Label label1;
         private Label label7;
@@ -477,7 +475,6 @@
         private Label label3;
         private Label label2;
         private FlowLayoutPanel fLP2Days;
-        private FlowLayoutPanel fLP3PreviousNext;
         private Button btn2Next;
         private Button btn1Previous;
         private Label LBDATE;

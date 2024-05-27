@@ -28,6 +28,14 @@ namespace NotesApp
         public MakeEventsForm()
         {
             InitializeComponent();
+            // Initialize properties with default values to remove warning
+            EventTitle = string.Empty;
+            EventDescription = string.Empty;
+            EventType = string.Empty;
+            StartTime = string.Empty;
+            EndTime = string.Empty;
+            StartTimePeriod = string.Empty;
+            EndTimePeriod = string.Empty;
         }
         private void saveEventButton_Click(object sender, EventArgs e)
         {
@@ -58,8 +66,24 @@ namespace NotesApp
             EventDescription = txtBoxEventDescription.Text;
             StartTime = maskedTextBoxStartTime.Text;
             EndTime = maskedTextBoxEndTime.Text;
-            StartTimePeriod = comboBoxStartTimePeriod.SelectedItem.ToString();
-            EndTimePeriod = comboBoxEndTimePeriod.SelectedItem.ToString();
+
+            if (comboBoxStartTimePeriod.SelectedItem != null)
+            {
+                StartTimePeriod = comboBoxStartTimePeriod.SelectedItem.ToString();
+            }
+            else
+            {
+                StartTimePeriod = string.Empty; // or handle as needed
+            }
+
+            if (comboBoxEndTimePeriod.SelectedItem != null)
+            {
+                EndTimePeriod = comboBoxEndTimePeriod.SelectedItem.ToString();
+            }
+            else
+            {
+                EndTimePeriod = string.Empty; // or handle as needed
+            }
 
             if (string.IsNullOrEmpty(EventTitle) || string.IsNullOrEmpty(EventDescription) ||
                 string.IsNullOrEmpty(StartTime) || string.IsNullOrEmpty(EndTime))

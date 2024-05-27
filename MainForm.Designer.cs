@@ -251,7 +251,6 @@
 
         #endregion
         private Label labl1BeSMART;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Button btn1Schedule;
         private Button btn2ToDoList;
         private Button btn3Converter;
