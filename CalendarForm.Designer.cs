@@ -446,7 +446,7 @@
             MaximizeBox = false;
             Name = "CalendarForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Schedule";
+            Text = "Calendar";
             Load += Form3_Load;
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
