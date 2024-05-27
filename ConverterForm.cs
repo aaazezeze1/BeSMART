@@ -59,24 +59,24 @@ namespace NotesApp
         // Change button color on hover or leave
         private void ConvertTempButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertTempButton.BackColor = Color.FromArgb(66, 69, 73);
+            ConvertTempButton.BackColor = Color.SeaGreen;
         }
 
         private void ConvertTempButton_MouseLeave(object sender, EventArgs e)
         {
             ConvertTempButton.ResetBackColor();
-            ConvertTempButton.UseVisualStyleBackColor = true;
+            ConvertTempButton.BackColor = Color.DarkSlateGray;
         }
 
         private void TempResetButton_MouseHover(object sender, EventArgs e)
         {
-            TempResetButton.BackColor = Color.FromArgb(66, 69, 73);
+            TempResetButton.BackColor = Color.SeaGreen;
         }
 
         private void TempResetButton_MouseLeave(object sender, EventArgs e)
         {
             TempResetButton.ResetBackColor();
-            TempResetButton.UseVisualStyleBackColor = true;
+            TempResetButton.BackColor = Color.DarkSlateGray;
         }
 
         // Currency Converter Code
