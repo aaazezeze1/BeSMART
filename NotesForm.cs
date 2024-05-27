@@ -359,7 +359,7 @@ namespace NotesApp
         {
             var SchedForm3 = new CalendarForm();
             SchedForm3.Show();
-            this.Hide();
+            //this.Hide();
             SchedForm3.FormClosed += (s, args) => this.Show();
         }
 
@@ -367,7 +367,7 @@ namespace NotesApp
         {
             var ToDoListForm5 = new ToDoForm();
             ToDoListForm5.Show();
-            this.Hide();
+            //this.Hide();
             ToDoListForm5.FormClosed += (s, args) => this.Show();
         }
 
@@ -375,7 +375,7 @@ namespace NotesApp
         {
             var FormulaForm4 = new FormulaForm();
             FormulaForm4.Show();
-            this.Hide();
+            //this.Hide();
             FormulaForm4.FormClosed += (s, args) => this.Show();
         }
 
@@ -383,7 +383,7 @@ namespace NotesApp
         {
             var ConverterForm7 = new ConverterForm();
             ConverterForm7.Show();
-            this.Hide();
+            //this.Hide();
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
@@ -391,7 +391,7 @@ namespace NotesApp
         {
             var MediaPlayerForm6 = new MediaPlayerForm();
             MediaPlayerForm6.Show();
-            this.Hide();
+            //this.Hide();
             MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
