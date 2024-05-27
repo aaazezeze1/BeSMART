@@ -222,5 +222,61 @@ namespace NotesApp
         {
 
         }
+
+        private void labl1BeSMART_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn1Schedule_Click(object sender, EventArgs e)
+        {
+            var SchedForm3 = new CalendarForm();
+            SchedForm3.Show();
+            this.Hide();
+            SchedForm3.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn2ToDoList_Click(object sender, EventArgs e)
+        {
+            var ToDolistForm5 = new ToDoForm();
+            ToDolistForm5.Show();
+            this.Hide();
+            ToDolistForm5.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn4Formula_Click(object sender, EventArgs e)
+        {
+            var FormulaForm4 = new FormulaForm();
+            FormulaForm4.Show();
+            this.Hide();
+            FormulaForm4.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn3Converter_Click(object sender, EventArgs e)
+        {
+            //var ConverterForm7 = new ConverterForm();
+            //ConverterForm7.Show();
+            //this.Hide();
+            //ConverterForm7.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btn5MediaPlayer_Click(object sender, EventArgs e)
+        {
+            var MediaPlayerForm6 = new MediaPlayerForm();
+            MediaPlayerForm6.Show();
+            this.Hide();
+            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var NotesApp = new NotesApp();
+            NotesApp.Show();
+            this.Hide();
+            NotesApp.FormClosed += (s, args) => this.Show();
+        }
     }
 }

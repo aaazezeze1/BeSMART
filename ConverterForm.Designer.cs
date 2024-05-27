@@ -535,6 +535,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // labl1BeSMART
             // 
@@ -546,6 +547,7 @@
             labl1BeSMART.Size = new Size(105, 28);
             labl1BeSMART.TabIndex = 2;
             labl1BeSMART.Text = "BeSMART";
+            labl1BeSMART.Click += labl1BeSMART_Click;
             // 
             // panel3
             // 
@@ -574,6 +576,7 @@
             btn1Schedule.Text = "         Calendar";
             btn1Schedule.TextAlign = ContentAlignment.MiddleLeft;
             btn1Schedule.UseVisualStyleBackColor = false;
+            btn1Schedule.Click += btn1Schedule_Click;
             // 
             // panel4
             // 
@@ -602,6 +605,7 @@
             btn2ToDoList.Text = "          To Do List";
             btn2ToDoList.TextAlign = ContentAlignment.MiddleLeft;
             btn2ToDoList.UseVisualStyleBackColor = false;
+            btn2ToDoList.Click += btn2ToDoList_Click;
             // 
             // panel5
             // 
@@ -630,6 +634,7 @@
             btn4Formula.Text = "         Formula";
             btn4Formula.TextAlign = ContentAlignment.MiddleLeft;
             btn4Formula.UseVisualStyleBackColor = false;
+            btn4Formula.Click += btn4Formula_Click;
             // 
             // panel6
             // 
@@ -658,6 +663,7 @@
             btn3Converter.Text = "         Converter";
             btn3Converter.TextAlign = ContentAlignment.MiddleLeft;
             btn3Converter.UseVisualStyleBackColor = false;
+            btn3Converter.Click += btn3Converter_Click;
             // 
             // panel7
             // 
@@ -686,6 +692,7 @@
             btn5MediaPlayer.Text = "         Media Player";
             btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
             btn5MediaPlayer.UseVisualStyleBackColor = false;
+            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
             // 
             // pictureBox4
             // 
