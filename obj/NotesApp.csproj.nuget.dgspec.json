@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\NotesApp.csproj": {}
+    "C:\\Users\\acer\\Source\\Repos\\Be_SMART\\NotesApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\NotesApp.csproj": {
+    "C:\\Users\\acer\\Source\\Repos\\Be_SMART\\NotesApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\NotesApp.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\Source\\Repos\\Be_SMART\\NotesApp.csproj",
         "projectName": "BeSMART",
-        "projectPath": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\NotesApp.csproj",
-        "packagesPath": "C:\\Users\\Amazing\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\obj\\",
+        "projectPath": "C:\\Users\\acer\\Source\\Repos\\Be_SMART\\NotesApp.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acer\\Source\\Repos\\Be_SMART\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Amazing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,6 +60,10 @@
             "itext7.bouncy-castle-adapter": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[5.0.4, )"
             }
           },
           "imports": [

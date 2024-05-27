@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-// Import for File Saving 
-using System.IO;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
 using DocumentFormat.OpenXml;
-using System.Media;
+using DocumentFormat.OpenXml.Packaging;
+using Wp = DocumentFormat.OpenXml.Wordprocessing;
+using iText.Html2pdf;
+using iText.Kernel.Pdf;
+using iTextLayout = iText.Layout;
+using iTextElement = iText.Layout.Element;
 
 
 namespace NotesApp
@@ -110,9 +109,13 @@ namespace NotesApp
 
         private void btn1Load_Click(object sender, EventArgs e)
         {
-            txtBoxTitle.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
-            rTxtBoxNotes.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
-            editing = true;
+            if (dGR1previousNotes.CurrentCell != null)
+            {
+                txtBoxTitle.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
+                rTxtBoxNotes.Rtf = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
+                editing = true;
+            }
+
         }
 
         private void btn3NewNote_Click(object sender, EventArgs e)
@@ -135,74 +138,107 @@ namespace NotesApp
 
         private void btn4Save_Click(object sender, EventArgs e)
         {
-            // Check if currently editing an existing note
             if (editing)
             {
                 notes.Rows[dGR1previousNotes.CurrentCell.RowIndex]["Title"] = txtBoxTitle.Text;
-                notes.Rows[dGR1previousNotes.CurrentCell.RowIndex]["Note"] = rTxtBoxNotes.Text;
+                notes.Rows[dGR1previousNotes.CurrentCell.RowIndex]["Note"] = rTxtBoxNotes.Rtf;
             }
             else
             {
-                notes.Rows.Add(txtBoxTitle.Text, rTxtBoxNotes.Text);
+                notes.Rows.Add(txtBoxTitle.Text, rTxtBoxNotes.Rtf);
             }
 
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Word Document (*.docx)|*.docx|PDF file (*.pdf)|*.pdf|Text file (*.txt)|*.txt";
-            saveFileDialog1.FilterIndex = 3;  // Default to text files
+            saveFileDialog1.Filter = "Word Document (*.docx)|*.docx|PDF file (*.pdf)|*.pdf|Rich Text Format (*.rtf)|*.rtf|Text file (*.txt)|*.txt";
+            saveFileDialog1.FilterIndex = 4;
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string filename = saveFileDialog1.FileName;
                 string extension = Path.GetExtension(filename).ToLower();
+                string rtfContent = rTxtBoxNotes.Rtf;
 
                 switch (extension)
                 {
-                    // Ensure text content is passed
-                    case ".txt":
-                        File.WriteAllText(filename, rTxtBoxNotes.Text);
+                    case ".rtf":
+                        rTxtBoxNotes.SaveFile(filename, RichTextBoxStreamType.RichText);
                         break;
                     case ".pdf":
-                        SaveAsPdf(filename, rTxtBoxNotes.Text);
+                        SaveAsPdf(filename, rtfContent);
                         break;
                     case ".docx":
-                        SaveAsDocx(filename, rTxtBoxNotes.Text);
+                        SaveAsDocx(filename, rtfContent);
+                        break;
+                    case ".txt":
+                        File.WriteAllText(filename, rTxtBoxNotes.Text);
                         break;
                     default:
                         MessageBox.Show("Unsupported file type.");
                         break;
                 }
 
-                // Clear the text fields and reset the editing state
                 txtBoxTitle.Clear();
                 rTxtBoxNotes.Clear();
                 editing = false;
             }
         }
 
-        private void SaveAsPdf(string filename, string textContent)
+        private void SaveAsPdf(string filename, string rtfContent)
         {
+            //saved as plain text, no styles
             using (FileStream writer = new FileStream(filename, FileMode.Create))
             {
-                iText.Kernel.Pdf.PdfWriter pdfWriter = new iText.Kernel.Pdf.PdfWriter(writer);
-                iText.Kernel.Pdf.PdfDocument pdf = new iText.Kernel.Pdf.PdfDocument(pdfWriter);
-                iText.Layout.Document document = new iText.Layout.Document(pdf);
-                document.Add(new iText.Layout.Element.Paragraph(textContent));
+                var pdfWriter = new PdfWriter(writer);
+                var pdf = new PdfDocument(pdfWriter);
+                var document = new iText.Layout.Document(pdf);
+
+                // Convert RTF content to HTML
+                string htmlContent = ConvertRtfToHtml(rtfContent);
+
+                // Add HTML content to PDF
+                document.Add(new iText.Layout.Element.Paragraph(htmlContent));
+
                 document.Close();
             }
         }
 
-        private void SaveAsDocx(string filename, string textContent)
+        private void SaveAsDocx(string filename, string rtfContent)
         {
-            using (DocumentFormat.OpenXml.Packaging.WordprocessingDocument doc = DocumentFormat.OpenXml.Packaging.WordprocessingDocument.Create(filename, DocumentFormat.OpenXml.WordprocessingDocumentType.Document))
+            // saved as plain text, no formatting
+            string plainText = ConvertRtfToPlainText(rtfContent);
+
+            using (var doc = WordprocessingDocument.Create(filename, WordprocessingDocumentType.Document))
             {
-                DocumentFormat.OpenXml.Packaging.MainDocumentPart mainPart = doc.AddMainDocumentPart();
-                mainPart.Document = new DocumentFormat.OpenXml.Wordprocessing.Document();
-                DocumentFormat.OpenXml.Wordprocessing.Body body = new DocumentFormat.OpenXml.Wordprocessing.Body();
-                body.Append(new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new DocumentFormat.OpenXml.Wordprocessing.Run(new DocumentFormat.OpenXml.Wordprocessing.Text(textContent))));
+                var mainPart = doc.AddMainDocumentPart();
+                mainPart.Document = new Wp.Document();
+                var body = new Wp.Body();
+
+                // Add plain text content to DOCX body
+                var paragraph = new Wp.Paragraph(new Wp.Run(new Wp.Text(plainText)));
+                body.Append(paragraph);
                 mainPart.Document.Append(body);
                 mainPart.Document.Save();
             }
         }
+
+        private string ConvertRtfToPlainText(string rtfContent)
+        {
+            using (var rtb = new System.Windows.Forms.RichTextBox())
+            {
+                rtb.Rtf = rtfContent;
+                return rtb.Text;
+            }
+        }
+
+        private string ConvertRtfToHtml(string rtfContent)
+        {
+            using (var rtb = new System.Windows.Forms.RichTextBox())
+            {
+                rtb.Rtf = rtfContent;
+                return rtb.Text;
+            }
+        }
+
         private void dGR1previousNotes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtBoxTitle.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
