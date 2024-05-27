@@ -1,9 +1,21 @@
 # BeSMART Notes App
-BeSMART is a simple notes application for Windows that has a few extra features intended to be used offline and for
-students.
+BeSMART is a user-friendly notes application that allows users to take notes efficiently, manage their schedule and tasks, as well as review their educational materials.  
 
-This application is our Final Project in ITEC 103 (Intermediate Programming). 
-Project made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.
+This application is our Final Project in ITEC 103 (Intermediate Programming). Project made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.  
+
+# Application Screenshots
+![uponload](https://github.com/aaazezeze1/BeSMART/assets/81816019/856a64d7-d06d-4da8-8d89-c8c4ce650697)
+![notetaking](https://github.com/aaazezeze1/BeSMART/assets/81816019/73e9f341-27a3-4d83-9969-eb404db3c87d)
+![calendarevent](https://github.com/aaazezeze1/BeSMART/assets/81816019/ff609a85-330e-4e2f-b3a1-6c4ff217b806)
+![eventdetails](https://github.com/aaazezeze1/BeSMART/assets/81816019/76922aae-3456-4037-85c2-746090ee9537)
+![todo](https://github.com/aaazezeze1/BeSMART/assets/81816019/1fc32066-2b19-41d8-90e6-89c8615e796f)
+![formulalist](https://github.com/aaazezeze1/BeSMART/assets/81816019/8229571d-3ea5-4095-9894-611ed27eee6e)
+![converter](https://github.com/aaazezeze1/BeSMART/assets/81816019/a6dafc07-a83d-44d9-a428-e04db27511aa)
+![mediaplayer](https://github.com/aaazezeze1/BeSMART/assets/81816019/299e1571-e044-4779-b794-5d5e4f2ab1b6)
+![about](https://github.com/aaazezeze1/BeSMART/assets/81816019/d32e3be1-1417-41b8-b9d3-38c9b5e8f40f)
+![pomodoro](https://github.com/aaazezeze1/BeSMART/assets/81816019/f2f20475-7256-4b26-9c75-704417c921b8)
+![longbreak](https://github.com/aaazezeze1/BeSMART/assets/81816019/b015294f-c2b6-499a-9822-d5a71bd388fe)
+![shortbreak](https://github.com/aaazezeze1/BeSMART/assets/81816019/a5759c4f-1174-4581-9dc5-3e6e3e2f06af)
 
 # What we used for the project
 1. Visual Studio Community 2022 (17.9.5)
@@ -24,13 +36,7 @@ Note: After installing Newtonsoft.Json using NuGet, go to the project's solution
 Newtonsoft can now be imported by typing using Newtonsoft.Json.Linq;
 
 # Bugs Encountered
-1. Visual Studio Bug - Form2.Designer.cs or the C# design file for the converter *sometimes* has a problem with running 
-due to the formula image that has to be loaded. Sometimes it works but there are times where the project is reloaded 
-or reopened in Visual Studio and the compiler will throw an error that NotesApp does not have "Properties". The solution
-for this is to simply go to Form2.Designer.cs and look for pictureBox1. Then replace pictureBox1.Image = 
-NotesApp.Properties.Resources.Screenshot_2024_04_21_1801342; with just pictureBox1.Image = Properties.Resources.Screenshot_2024_04_21_1801342;
-
-2. Visual Studio Bug - "Could not Copy" means the application did not close fully. Sometimes when the app is closed, it still runs in the 
+1. Visual Studio Bug - "Could not Copy" means the application did not close fully. Sometimes when the app is closed, it still runs in the 
 background (you can notice it on the task manager). This is a Visual Studio bug and unfortunaly the only solution is to 
 go open Task Manager, on the Processes tab click the Search bar. Type BeSMART and you will see the application running in 
 the background. Click on the application and click on End Task.
@@ -38,22 +44,27 @@ the background. Click on the application and click on End Task.
 **The code works fine for the most part but for some reason, Visual Studio likes adding NotesApp to the picture box everytime the project is reloaded.**
 
 # Things to Improve
-1. Get a new API key that shows the latest currency exchange rate. The API key that this project uses is outdated and not updated.
+1. Get a new API key that shows the latest currency exchange rate.  
+The API key that this project uses is outdated and not updated.
 
-2. Keep the history of the created notes and display it in the data grid view.  
+3. Keep the history of the created notes and display it in the data grid view.  
 Once the application is reloaded again, the history or previous txt files created will be gone from the data grid view. 
 
 *The saved txt files can still be found on the users machine where they stored it. Only the history disappears upon reload.*
 
-3. Make the delete button in the notes app also delete the actual file created. The delete button only deletes the notes 
-entry (sort of like a history tab of the created notes) not the note itself so the user has to delete the notes manually.
+3. Make the delete button in the notes app also delete the actual file created.  
+The delete button only deletes the notes entry (sort of like a history tab of the created notes) not the note itself so the user has to delete the notes manually.
 
-4. Make the music player be able to play a playlist instead of just one song
+4. Make the music player be able to play a playlist instead of just one song.  
 The media player library of Microsoft can only play one music so the user has to select another music file afterwards.
 Use the AxWMPLib instead to play a full playlist like in the media player of BeSMART.
 
-5. Add a Database
-Add a database to keep the "history" of the created entries of notes, to-do lists, and calendar events. 
+5. Add a Database.  
+Add a database to keep the "history" of the created entries of notes, to-do lists, and calendar events.
 
-6. Make the Rich Text Formatting style stay on the current session
-When a file is created, rich text formatting styles can be done by the user. When the file with rich text formatting is saved then reopened again the style will disappear. 
+6. Make the Rich Text Formatting style stay on the current session.  
+When a file is created, rich text formatting styles can be done by the user. When the file with rich text formatting is saved then reopened again the style will disappear.
+
+7. Optimize the program.  
+The program is poorly optimized and when a new feature is opened the previous feature is "hidden" instead of closed which
+leads to multiple windows of the previously opened features slowing down the machine.
