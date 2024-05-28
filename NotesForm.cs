@@ -18,7 +18,6 @@ using iText.Kernel.Pdf;
 using iTextLayout = iText.Layout;
 using iTextElement = iText.Layout.Element;
 
-
 namespace NotesApp
 {
     public partial class NotesForm : Form
@@ -115,36 +114,53 @@ namespace NotesApp
                 rTxtBoxNotes.Rtf = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[1].ToString();
                 editing = true;
             }
-
         }
 
         private void btn3NewNote_Click(object sender, EventArgs e)
         {
-            txtBoxTitle.Text = "";
-            rTxtBoxNotes.Text = "";
+            // Clear input fields and reset editing flag
+            txtBoxTitle.Clear();
+            rTxtBoxNotes.Clear();
+            editing = false;
+            dGR1previousNotes.ClearSelection(); // Optionally clear selection to avoid confusion
         }
 
         private void btn2Delete_Click(object sender, EventArgs e)
         {
             try
             {
-                notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].Delete();
+                if (dGR1previousNotes.CurrentCell != null && dGR1previousNotes.CurrentCell.RowIndex >= 0)
+                {
+                    // Confirm the deletion action
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this note?", "Confirm Deletion", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Delete the selected note
+                        notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].Delete();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a valid note to delete.", "Invalid Selection");
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Not a valid note.");
+                MessageBox.Show("An error occurred while trying to delete the note: " + ex.Message);
             }
         }
 
         private void btn4Save_Click(object sender, EventArgs e)
         {
-            if (editing)
+            if (editing && dGR1previousNotes.CurrentCell != null)
             {
+                // Update existing note
                 notes.Rows[dGR1previousNotes.CurrentCell.RowIndex]["Title"] = txtBoxTitle.Text;
                 notes.Rows[dGR1previousNotes.CurrentCell.RowIndex]["Note"] = rTxtBoxNotes.Rtf;
             }
             else
             {
+                // Add new note
                 notes.Rows.Add(txtBoxTitle.Text, rTxtBoxNotes.Rtf);
             }
 
@@ -185,7 +201,7 @@ namespace NotesApp
 
         private void SaveAsPdf(string filename, string rtfContent)
         {
-            //saved as plain text, no styles
+            // Save as plain text, no styles
             using (FileStream writer = new FileStream(filename, FileMode.Create))
             {
                 var pdfWriter = new PdfWriter(writer);
@@ -204,7 +220,7 @@ namespace NotesApp
 
         private void SaveAsDocx(string filename, string rtfContent)
         {
-            // saved as plain text, no formatting
+            // Save as plain text, no formatting
             string plainText = ConvertRtfToPlainText(rtfContent);
 
             using (var doc = WordprocessingDocument.Create(filename, WordprocessingDocumentType.Document))
@@ -241,9 +257,12 @@ namespace NotesApp
 
         private void dGR1previousNotes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtBoxTitle.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
-            rTxtBoxNotes.Text = notes.Rows[dGR1previousNotes.CurrentCell.RowIndex].ItemArray[0].ToString();
-            editing = true;
+            if (e.RowIndex >= 0)
+            {
+                txtBoxTitle.Text = notes.Rows[e.RowIndex].ItemArray[0].ToString();
+                rTxtBoxNotes.Rtf = notes.Rows[e.RowIndex].ItemArray[1].ToString();
+                editing = true;
+            }
         }
 
         private void btn5Bold_Click(object sender, EventArgs e)

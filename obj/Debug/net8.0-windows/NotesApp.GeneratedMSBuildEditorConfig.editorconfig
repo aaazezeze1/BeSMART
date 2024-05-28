@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NotesApp
-build_property.ProjectDir = C:\Users\acer\Source\Repos\Be_SMART\
+build_property.ProjectDir = C:\Users\acer\Source\Repos\Be_SMART_\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
