@@ -35,6 +35,9 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             rTxtBoxNotes = new RichTextBox();
             panel7 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
+            txtBoxTitle = new TextBox();
             btn10BulletList = new Button();
             label8 = new Label();
             btn9TextBackColor = new Button();
@@ -48,9 +51,6 @@
             btn6Italic = new Button();
             btn5Bold = new Button();
             label4 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            txtBoxTitle = new TextBox();
             dGR1previousNotes = new DataGridView();
             label3 = new Label();
             btn1Load = new Button();
@@ -77,49 +77,71 @@
             btn2ToDoList = new Button();
             btn4Formula = new Button();
             btn3Converter = new Button();
-            btn5MediaPlayer = new Button();
-            btnSearch = new Button();
-            btn2Play = new Button();
-            btn3Stop = new Button();
+            menuStrip2 = new MenuStrip();
+            fileToolStripMenuItem1 = new ToolStripMenuItem();
+            loadFolderToolStripMenuItem1 = new ToolStripMenuItem();
+            Playlist = new ListBox();
+            durationLbl = new Label();
+            FileName = new Label();
+            VidMedia = new AxWMPLib.AxWindowsMediaPlayer();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dGR1previousNotes).BeginInit();
             flowLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)VidMedia).BeginInit();
             SuspendLayout();
             // 
             // rTxtBoxNotes
             // 
             rTxtBoxNotes.BorderStyle = BorderStyle.None;
-            rTxtBoxNotes.Location = new Point(16, 103);
+            rTxtBoxNotes.Location = new Point(9, 112);
             rTxtBoxNotes.Name = "rTxtBoxNotes";
-            rTxtBoxNotes.Size = new Size(779, 537);
+            rTxtBoxNotes.Size = new Size(786, 553);
             rTxtBoxNotes.TabIndex = 0;
             rTxtBoxNotes.Text = "";
             // 
             // panel7
             // 
-            panel7.Controls.Add(btn10BulletList);
-            panel7.Controls.Add(label8);
-            panel7.Controls.Add(btn9TextBackColor);
-            panel7.Controls.Add(btn8TextColor);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(comboBox1FontSize);
-            panel7.Controls.Add(label6);
-            panel7.Controls.Add(label5);
-            panel7.Controls.Add(comboBox1Font);
-            panel7.Controls.Add(btn3Underline);
-            panel7.Controls.Add(btn6Italic);
-            panel7.Controls.Add(btn5Bold);
-            panel7.Controls.Add(label4);
             panel7.Controls.Add(label2);
             panel7.Controls.Add(label1);
             panel7.Controls.Add(txtBoxTitle);
             panel7.Controls.Add(rTxtBoxNotes);
-            panel7.Location = new Point(209, -1);
+            panel7.Location = new Point(209, 45);
             panel7.Name = "panel7";
-            panel7.Size = new Size(807, 721);
+            panel7.Size = new Size(806, 740);
             panel7.TabIndex = 6;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(9, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(55, 23);
+            label2.TabIndex = 3;
+            label2.Text = "Notes";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(9, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(42, 23);
+            label1.TabIndex = 2;
+            label1.Text = "Title";
+            // 
+            // txtBoxTitle
+            // 
+            txtBoxTitle.BorderStyle = BorderStyle.None;
+            txtBoxTitle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtBoxTitle.Location = new Point(9, 38);
+            txtBoxTitle.Name = "txtBoxTitle";
+            txtBoxTitle.Size = new Size(779, 23);
+            txtBoxTitle.TabIndex = 1;
             // 
             // btn10BulletList
             // 
@@ -127,7 +149,7 @@
             btn10BulletList.FlatAppearance.BorderSize = 0;
             btn10BulletList.FlatStyle = FlatStyle.Flat;
             btn10BulletList.Image = (Image)resources.GetObject("btn10BulletList.Image");
-            btn10BulletList.Location = new Point(685, 673);
+            btn10BulletList.Location = new Point(882, 743);
             btn10BulletList.Name = "btn10BulletList";
             btn10BulletList.Size = new Size(37, 33);
             btn10BulletList.TabIndex = 18;
@@ -138,7 +160,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(685, 643);
+            label8.Location = new Point(882, 713);
             label8.Name = "label8";
             label8.Size = new Size(77, 23);
             label8.TabIndex = 17;
@@ -150,7 +172,7 @@
             btn9TextBackColor.FlatAppearance.BorderSize = 0;
             btn9TextBackColor.FlatStyle = FlatStyle.Flat;
             btn9TextBackColor.Image = (Image)resources.GetObject("btn9TextBackColor.Image");
-            btn9TextBackColor.Location = new Point(610, 673);
+            btn9TextBackColor.Location = new Point(807, 743);
             btn9TextBackColor.Name = "btn9TextBackColor";
             btn9TextBackColor.Size = new Size(37, 33);
             btn9TextBackColor.TabIndex = 16;
@@ -163,7 +185,7 @@
             btn8TextColor.FlatAppearance.BorderSize = 0;
             btn8TextColor.FlatStyle = FlatStyle.Flat;
             btn8TextColor.Image = (Image)resources.GetObject("btn8TextColor.Image");
-            btn8TextColor.Location = new Point(568, 673);
+            btn8TextColor.Location = new Point(765, 743);
             btn8TextColor.Name = "btn8TextColor";
             btn8TextColor.Size = new Size(37, 33);
             btn8TextColor.TabIndex = 15;
@@ -174,7 +196,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(568, 643);
+            label7.Location = new Point(765, 713);
             label7.Name = "label7";
             label7.Size = new Size(91, 23);
             label7.TabIndex = 15;
@@ -184,7 +206,7 @@
             // 
             comboBox1FontSize.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1FontSize.FormattingEnabled = true;
-            comboBox1FontSize.Location = new Point(392, 673);
+            comboBox1FontSize.Location = new Point(589, 743);
             comboBox1FontSize.Name = "comboBox1FontSize";
             comboBox1FontSize.Size = new Size(155, 31);
             comboBox1FontSize.TabIndex = 11;
@@ -194,7 +216,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(392, 643);
+            label6.Location = new Point(589, 713);
             label6.Name = "label6";
             label6.Size = new Size(80, 23);
             label6.TabIndex = 10;
@@ -204,7 +226,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(177, 643);
+            label5.Location = new Point(374, 713);
             label5.Name = "label5";
             label5.Size = new Size(45, 23);
             label5.TabIndex = 9;
@@ -214,7 +236,7 @@
             // 
             comboBox1Font.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1Font.FormattingEnabled = true;
-            comboBox1Font.Location = new Point(177, 673);
+            comboBox1Font.Location = new Point(374, 743);
             comboBox1Font.Name = "comboBox1Font";
             comboBox1Font.Size = new Size(193, 31);
             comboBox1Font.TabIndex = 8;
@@ -226,7 +248,7 @@
             btn3Underline.FlatAppearance.BorderSize = 0;
             btn3Underline.FlatStyle = FlatStyle.Flat;
             btn3Underline.Image = (Image)resources.GetObject("btn3Underline.Image");
-            btn3Underline.Location = new Point(117, 673);
+            btn3Underline.Location = new Point(314, 743);
             btn3Underline.Name = "btn3Underline";
             btn3Underline.Size = new Size(37, 33);
             btn3Underline.TabIndex = 7;
@@ -239,7 +261,7 @@
             btn6Italic.FlatAppearance.BorderSize = 0;
             btn6Italic.FlatStyle = FlatStyle.Flat;
             btn6Italic.Image = (Image)resources.GetObject("btn6Italic.Image");
-            btn6Italic.Location = new Point(69, 673);
+            btn6Italic.Location = new Point(266, 743);
             btn6Italic.Name = "btn6Italic";
             btn6Italic.Size = new Size(37, 33);
             btn6Italic.TabIndex = 6;
@@ -253,7 +275,7 @@
             btn5Bold.FlatStyle = FlatStyle.Flat;
             btn5Bold.ForeColor = Color.White;
             btn5Bold.Image = (Image)resources.GetObject("btn5Bold.Image");
-            btn5Bold.Location = new Point(21, 673);
+            btn5Bold.Location = new Point(218, 743);
             btn5Bold.Name = "btn5Bold";
             btn5Bold.Size = new Size(37, 33);
             btn5Bold.TabIndex = 5;
@@ -264,40 +286,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(16, 643);
+            label4.Location = new Point(213, 713);
             label4.Name = "label4";
             label4.Size = new Size(83, 23);
             label4.TabIndex = 4;
             label4.Text = "Text Style";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(16, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(55, 23);
-            label2.TabIndex = 3;
-            label2.Text = "Notes";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(16, 11);
-            label1.Name = "label1";
-            label1.Size = new Size(42, 23);
-            label1.TabIndex = 2;
-            label1.Text = "Title";
-            // 
-            // txtBoxTitle
-            // 
-            txtBoxTitle.BorderStyle = BorderStyle.None;
-            txtBoxTitle.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBoxTitle.Location = new Point(16, 36);
-            txtBoxTitle.Name = "txtBoxTitle";
-            txtBoxTitle.Size = new Size(779, 23);
-            txtBoxTitle.TabIndex = 1;
             // 
             // dGR1previousNotes
             // 
@@ -326,13 +319,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dGR1previousNotes.DefaultCellStyle = dataGridViewCellStyle3;
             dGR1previousNotes.GridColor = Color.FromArgb(66, 69, 73);
-            dGR1previousNotes.Location = new Point(1034, 35);
+            dGR1previousNotes.Location = new Point(1021, 468);
             dGR1previousNotes.Name = "dGR1previousNotes";
             dGR1previousNotes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dGR1previousNotes.RowHeadersVisible = false;
             dGR1previousNotes.RowHeadersWidth = 51;
             dGR1previousNotes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dGR1previousNotes.Size = new Size(185, 293);
+            dGR1previousNotes.Size = new Size(185, 317);
             dGR1previousNotes.TabIndex = 6;
             dGR1previousNotes.CellDoubleClick += dGR1previousNotes_CellDoubleClick;
             // 
@@ -340,7 +333,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(1034, 7);
+            label3.Location = new Point(1021, 441);
             label3.Name = "label3";
             label3.Size = new Size(85, 23);
             label3.TabIndex = 4;
@@ -352,7 +345,7 @@
             btn1Load.FlatStyle = FlatStyle.Flat;
             btn1Load.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn1Load.ForeColor = Color.White;
-            btn1Load.Location = new Point(1034, 333);
+            btn1Load.Location = new Point(1212, 471);
             btn1Load.Name = "btn1Load";
             btn1Load.Size = new Size(87, 35);
             btn1Load.TabIndex = 10;
@@ -366,7 +359,7 @@
             btn3NewNote.FlatStyle = FlatStyle.Flat;
             btn3NewNote.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn3NewNote.ForeColor = Color.White;
-            btn3NewNote.Location = new Point(1034, 373);
+            btn3NewNote.Location = new Point(1212, 515);
             btn3NewNote.Name = "btn3NewNote";
             btn3NewNote.Size = new Size(89, 35);
             btn3NewNote.TabIndex = 12;
@@ -380,7 +373,7 @@
             btn4Save.FlatStyle = FlatStyle.Flat;
             btn4Save.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn4Save.ForeColor = Color.White;
-            btn4Save.Location = new Point(1133, 373);
+            btn4Save.Location = new Point(1212, 557);
             btn4Save.Name = "btn4Save";
             btn4Save.Size = new Size(87, 35);
             btn4Save.TabIndex = 14;
@@ -394,7 +387,7 @@
             btn2Delete.FlatStyle = FlatStyle.Flat;
             btn2Delete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn2Delete.ForeColor = Color.White;
-            btn2Delete.Location = new Point(1133, 333);
+            btn2Delete.Location = new Point(1212, 598);
             btn2Delete.Name = "btn2Delete";
             btn2Delete.Size = new Size(87, 35);
             btn2Delete.TabIndex = 13;
@@ -406,7 +399,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(1065, 411);
+            label9.Location = new Point(1381, 444);
             label9.Name = "label9";
             label9.Size = new Size(138, 23);
             label9.TabIndex = 15;
@@ -416,7 +409,7 @@
             // 
             minsLbl.AutoSize = true;
             minsLbl.Font = new Font("Franklin Gothic Medium Cond", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            minsLbl.Location = new Point(1065, 436);
+            minsLbl.Location = new Point(1381, 469);
             minsLbl.Name = "minsLbl";
             minsLbl.Size = new Size(66, 51);
             minsLbl.TabIndex = 16;
@@ -426,7 +419,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Franklin Gothic Medium Cond", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(1118, 436);
+            label10.Location = new Point(1434, 469);
             label10.Name = "label10";
             label10.Size = new Size(32, 51);
             label10.TabIndex = 17;
@@ -436,7 +429,7 @@
             // 
             secLbl.AutoSize = true;
             secLbl.Font = new Font("Franklin Gothic Medium Cond", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            secLbl.Location = new Point(1137, 436);
+            secLbl.Location = new Point(1453, 469);
             secLbl.Name = "secLbl";
             secLbl.Size = new Size(66, 51);
             secLbl.TabIndex = 18;
@@ -453,7 +446,7 @@
             shortBreakButton.FlatStyle = FlatStyle.Flat;
             shortBreakButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             shortBreakButton.ForeColor = Color.White;
-            shortBreakButton.Location = new Point(1134, 535);
+            shortBreakButton.Location = new Point(1450, 568);
             shortBreakButton.Name = "shortBreakButton";
             shortBreakButton.Size = new Size(96, 33);
             shortBreakButton.TabIndex = 23;
@@ -467,7 +460,7 @@
             longBreakButton.FlatStyle = FlatStyle.Flat;
             longBreakButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             longBreakButton.ForeColor = Color.White;
-            longBreakButton.Location = new Point(1024, 535);
+            longBreakButton.Location = new Point(1340, 568);
             longBreakButton.Name = "longBreakButton";
             longBreakButton.Size = new Size(104, 33);
             longBreakButton.TabIndex = 22;
@@ -481,7 +474,7 @@
             stopButon.FlatStyle = FlatStyle.Flat;
             stopButon.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stopButon.ForeColor = Color.White;
-            stopButon.Location = new Point(1178, 493);
+            stopButon.Location = new Point(1494, 526);
             stopButon.Name = "stopButon";
             stopButon.Size = new Size(51, 33);
             stopButon.TabIndex = 21;
@@ -493,7 +486,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(1031, 576);
+            label11.Location = new Point(1347, 609);
             label11.Name = "label11";
             label11.Size = new Size(188, 51);
             label11.TabIndex = 24;
@@ -506,7 +499,7 @@
             startButton.FlatStyle = FlatStyle.Flat;
             startButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             startButton.ForeColor = Color.White;
-            startButton.Location = new Point(1024, 493);
+            startButton.Location = new Point(1340, 526);
             startButton.Name = "startButton";
             startButton.Size = new Size(51, 33);
             startButton.TabIndex = 19;
@@ -520,7 +513,7 @@
             pomodoroButton.FlatStyle = FlatStyle.Flat;
             pomodoroButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pomodoroButton.ForeColor = Color.White;
-            pomodoroButton.Location = new Point(1080, 493);
+            pomodoroButton.Location = new Point(1396, 526);
             pomodoroButton.Name = "pomodoroButton";
             pomodoroButton.Size = new Size(91, 33);
             pomodoroButton.TabIndex = 20;
@@ -536,11 +529,10 @@
             flowLayoutPanel2.Controls.Add(btn2ToDoList);
             flowLayoutPanel2.Controls.Add(btn4Formula);
             flowLayoutPanel2.Controls.Add(btn3Converter);
-            flowLayoutPanel2.Controls.Add(btn5MediaPlayer);
-            flowLayoutPanel2.Location = new Point(-3, -4);
+            flowLayoutPanel2.Location = new Point(-3, 42);
             flowLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(206, 741);
+            flowLayoutPanel2.Size = new Size(206, 758);
             flowLayoutPanel2.TabIndex = 25;
             // 
             // panel1
@@ -653,89 +645,114 @@
             btn3Converter.UseVisualStyleBackColor = false;
             btn3Converter.Click += btn3Converter_Click;
             // 
-            // btn5MediaPlayer
+            // menuStrip2
             // 
-            btn5MediaPlayer.BackColor = Color.DarkSlateGray;
-            btn5MediaPlayer.FlatAppearance.BorderSize = 0;
-            btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
-            btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5MediaPlayer.ForeColor = Color.White;
-            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
-            btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.Location = new Point(3, 604);
-            btn5MediaPlayer.Name = "btn5MediaPlayer";
-            btn5MediaPlayer.Padding = new Padding(30, 0, 0, 0);
-            btn5MediaPlayer.Size = new Size(234, 120);
-            btn5MediaPlayer.TabIndex = 21;
-            btn5MediaPlayer.Text = "         Media Player";
-            btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.UseVisualStyleBackColor = false;
-            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
+            menuStrip2.ImageScalingSize = new Size(20, 20);
+            menuStrip2.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1 });
+            menuStrip2.Location = new Point(0, 0);
+            menuStrip2.Name = "menuStrip2";
+            menuStrip2.Padding = new Padding(7, 3, 0, 3);
+            menuStrip2.Size = new Size(1765, 38);
+            menuStrip2.TabIndex = 26;
+            menuStrip2.Text = "menuStrip2";
             // 
-            // btnSearch
+            // fileToolStripMenuItem1
             // 
-            btnSearch.BackColor = Color.DarkSlateGray;
-            btnSearch.FlatAppearance.BorderSize = 0;
-            btnSearch.FlatStyle = FlatStyle.Flat;
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(1034, 641);
-            btnSearch.Margin = new Padding(3, 4, 3, 4);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(182, 35);
-            btnSearch.TabIndex = 26;
-            btnSearch.Text = "Song Files";
-            btnSearch.UseVisualStyleBackColor = false;
-            btnSearch.Click += FSearchButton_Click;
+            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { loadFolderToolStripMenuItem1 });
+            fileToolStripMenuItem1.Font = new Font("Segoe UI", 12F);
+            fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
+            fileToolStripMenuItem1.Size = new Size(56, 32);
+            fileToolStripMenuItem1.Text = "File";
             // 
-            // btn2Play
+            // loadFolderToolStripMenuItem1
             // 
-            btn2Play.BackColor = Color.DarkSlateGray;
-            btn2Play.FlatAppearance.BorderSize = 0;
-            btn2Play.FlatStyle = FlatStyle.Flat;
-            btn2Play.ForeColor = Color.White;
-            btn2Play.Location = new Point(1034, 684);
-            btn2Play.Margin = new Padding(3, 4, 3, 4);
-            btn2Play.Name = "btn2Play";
-            btn2Play.Size = new Size(86, 35);
-            btn2Play.TabIndex = 27;
-            btn2Play.Text = "Play";
-            btn2Play.UseVisualStyleBackColor = false;
-            btn2Play.Click += PlayButton_Click;
+            loadFolderToolStripMenuItem1.Name = "loadFolderToolStripMenuItem1";
+            loadFolderToolStripMenuItem1.Size = new Size(202, 32);
+            loadFolderToolStripMenuItem1.Text = "Load Folder";
+            loadFolderToolStripMenuItem1.Click += LoadFolderEvent;
             // 
-            // btn3Stop
+            // Playlist
             // 
-            btn3Stop.BackColor = Color.DarkSlateGray;
-            btn3Stop.FlatAppearance.BorderSize = 0;
-            btn3Stop.FlatStyle = FlatStyle.Flat;
-            btn3Stop.ForeColor = Color.White;
-            btn3Stop.Location = new Point(1130, 683);
-            btn3Stop.Margin = new Padding(3, 4, 3, 4);
-            btn3Stop.Name = "btn3Stop";
-            btn3Stop.Size = new Size(86, 35);
-            btn3Stop.TabIndex = 28;
-            btn3Stop.Text = "Stop";
-            btn3Stop.UseVisualStyleBackColor = false;
-            btn3Stop.Click += StopButton_Click;
+            Playlist.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Playlist.FormattingEnabled = true;
+            Playlist.ItemHeight = 28;
+            Playlist.Location = new Point(1581, 444);
+            Playlist.Margin = new Padding(3, 4, 3, 4);
+            Playlist.Name = "Playlist";
+            Playlist.Size = new Size(172, 312);
+            Playlist.TabIndex = 27;
+            Playlist.SelectedIndexChanged += PlayListChanged;
+            // 
+            // durationLbl
+            // 
+            durationLbl.AutoSize = true;
+            durationLbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            durationLbl.ForeColor = Color.Black;
+            durationLbl.Location = new Point(1212, 728);
+            durationLbl.Name = "durationLbl";
+            durationLbl.Size = new Size(109, 28);
+            durationLbl.TabIndex = 30;
+            durationLbl.Text = "Duration: 0";
+            // 
+            // FileName
+            // 
+            FileName.AutoSize = true;
+            FileName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FileName.ForeColor = Color.Black;
+            FileName.Location = new Point(1212, 757);
+            FileName.Name = "FileName";
+            FileName.Size = new Size(99, 28);
+            FileName.TabIndex = 29;
+            FileName.Text = "File Name";
+            // 
+            // VidMedia
+            // 
+            VidMedia.Enabled = true;
+            VidMedia.Location = new Point(1021, 45);
+            VidMedia.Name = "VidMedia";
+            VidMedia.OcxState = (AxHost.State)resources.GetObject("VidMedia.OcxState");
+            VidMedia.Size = new Size(732, 392);
+            VidMedia.TabIndex = 31;
+            VidMedia.PlayStateChange += MediaPlayer_PlayStateChange;
+            // 
+            // timer1
+            // 
+            timer1.Tick += TimerEvent;
             // 
             // NotesForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1239, 735);
-            Controls.Add(btn3Stop);
-            Controls.Add(btn2Play);
-            Controls.Add(btnSearch);
+            ClientSize = new Size(1765, 797);
+            Controls.Add(Playlist);
+            Controls.Add(VidMedia);
+            Controls.Add(durationLbl);
+            Controls.Add(FileName);
+            Controls.Add(menuStrip2);
+            Controls.Add(btn10BulletList);
             Controls.Add(flowLayoutPanel2);
+            Controls.Add(label8);
             Controls.Add(label11);
+            Controls.Add(btn9TextBackColor);
             Controls.Add(shortBreakButton);
+            Controls.Add(btn8TextColor);
             Controls.Add(stopButon);
+            Controls.Add(label7);
             Controls.Add(pomodoroButton);
+            Controls.Add(comboBox1FontSize);
+            Controls.Add(label6);
             Controls.Add(secLbl);
+            Controls.Add(label5);
             Controls.Add(label10);
+            Controls.Add(comboBox1Font);
             Controls.Add(minsLbl);
+            Controls.Add(btn3Underline);
             Controls.Add(btn4Save);
+            Controls.Add(btn6Italic);
             Controls.Add(btn2Delete);
+            Controls.Add(btn5Bold);
             Controls.Add(btn1Load);
+            Controls.Add(label4);
             Controls.Add(btn3NewNote);
             Controls.Add(dGR1previousNotes);
             Controls.Add(panel7);
@@ -757,6 +774,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip2.ResumeLayout(false);
+            menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)VidMedia).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -803,12 +823,16 @@
         private Button btn2ToDoList;
         private Button btn4Formula;
         private Button btn3Converter;
-        private Button btn5MediaPlayer;
-        private Button btnSearch;
-        private Button btn2Play;
-        private Button btn3Stop;
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label labl1BeSMART;
+        private MenuStrip menuStrip2;
+        private ToolStripMenuItem fileToolStripMenuItem1;
+        private ToolStripMenuItem loadFolderToolStripMenuItem1;
+        private ListBox Playlist;
+        private AxWMPLib.AxWindowsMediaPlayer VidMedia;
+        private Label durationLbl;
+        private Label FileName;
+        private System.Windows.Forms.Timer timer1;
     }
 }

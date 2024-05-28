@@ -50,17 +50,21 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label1.Location = new Point(235, 644);
+            label1.BackColor = Color.DarkSlateGray;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(144, 478);
             label1.Name = "label1";
-            label1.Size = new Size(120, 23);
+            label1.Size = new Size(117, 23);
             label1.TabIndex = 1;
             label1.Text = "Create a Note";
+            label1.Click += label1_Click;
             // 
             // pbtn2AddNotes
             // 
+            pbtn2AddNotes.BackColor = Color.DarkSlateGray;
             pbtn2AddNotes.Image = (Image)resources.GetObject("pbtn2AddNotes.Image");
-            pbtn2AddNotes.Location = new Point(271, 592);
+            pbtn2AddNotes.Location = new Point(70, 464);
             pbtn2AddNotes.Name = "pbtn2AddNotes";
             pbtn2AddNotes.Size = new Size(55, 60);
             pbtn2AddNotes.TabIndex = 0;
@@ -156,17 +160,15 @@
             btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
             btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn5MediaPlayer.ForeColor = Color.White;
-            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
             btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
             btn5MediaPlayer.Location = new Point(52, 441);
             btn5MediaPlayer.Name = "btn5MediaPlayer";
             btn5MediaPlayer.Padding = new Padding(30, 0, 0, 0);
             btn5MediaPlayer.Size = new Size(226, 97);
             btn5MediaPlayer.TabIndex = 3;
-            btn5MediaPlayer.Text = "         Media Player";
             btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
             btn5MediaPlayer.UseVisualStyleBackColor = false;
-            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
+            btn5MediaPlayer.Click += pbtn2AddNotes_Click;
             // 
             // pictureBox1LogowithMimi
             // 
@@ -204,10 +206,10 @@
             panel1.Controls.Add(btn4Formula);
             panel1.Controls.Add(btnAbout);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btn5MediaPlayer);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btn3Converter);
             panel1.Controls.Add(pbtn2AddNotes);
+            panel1.Controls.Add(btn5MediaPlayer);
             panel1.Location = new Point(553, -2);
             panel1.Name = "panel1";
             panel1.Size = new Size(580, 693);

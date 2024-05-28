@@ -381,7 +381,6 @@
             btn5MediaPlayer.Text = "         Media Player";
             btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
             btn5MediaPlayer.UseVisualStyleBackColor = false;
-            btn5MediaPlayer.Click += btn5MediaPlayer_Click;
             // 
             // dtpDueDate
             // 

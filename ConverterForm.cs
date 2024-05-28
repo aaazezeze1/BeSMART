@@ -263,14 +263,6 @@ namespace NotesApp
             //ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
-        private void btn5MediaPlayer_Click(object sender, EventArgs e)
-        {
-            var MediaPlayerForm6 = new MediaPlayerForm();
-            MediaPlayerForm6.Show();
-            this.Hide();
-            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             var NotesApp = new NotesApp();

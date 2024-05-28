@@ -13,8 +13,6 @@ using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static NotesApp.UserControlDay;
 
-
-
 namespace NotesApp
 {
     public partial class CalendarForm : Form
@@ -40,13 +38,13 @@ namespace NotesApp
             string monthname = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDATE.Text = monthname + " " + year;
 
-            //first date of the month
+            // First date of the month
             DateTime startofthemonth = new DateTime(year, month, 1);
 
-            //count of the days of the month
+            // Count of the days of the month
             int days = DateTime.DaysInMonth(year, month);
 
-            //convert startoftthemonth to integer
+            // Convert startoftthemonth to integer
             int daysoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
 
             // UserControlBlank for the empty days at the start of the month
@@ -56,7 +54,7 @@ namespace NotesApp
                 UserControlBlank ucBlank = new UserControlBlank();
                 flp1DayContainer.Controls.Add(ucBlank);
             }
-            //UserControlDay for the days in the calendar
+            // UserControlDay for the days in the calendar
             DateTime today = DateTime.Now;
             for (int i = 1; i <= days; i++)
             {
@@ -85,7 +83,7 @@ namespace NotesApp
 
         private void btn2Next_Click(object sender, EventArgs e)
         {
-            //increment month
+            // Increment month
             month++;
             if (month > 12)
             {
@@ -97,7 +95,7 @@ namespace NotesApp
         }
         private void btn1Previous_Click(object sender, EventArgs e)
         {
-            //decrement month
+            // Decrement month
             month--;
             if (month < 1)
             {
@@ -199,14 +197,6 @@ namespace NotesApp
             ConverterForm7.Show();
             this.Hide();
             ConverterForm7.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn5MediaPlayer_Click(object sender, EventArgs e)
-        {
-            var MediaPlayerForm6 = new MediaPlayerForm();
-            MediaPlayerForm6.Show();
-            this.Hide();
-            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
         private void labl1BeSMART_Click(object sender, EventArgs e)

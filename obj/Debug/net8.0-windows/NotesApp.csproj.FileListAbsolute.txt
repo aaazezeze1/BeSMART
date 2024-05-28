@@ -129,7 +129,6 @@ C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.csproj.R
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ConverterForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.FormulaForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.NotesApp.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.MediaPlayerForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.NotesForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.Properties.Resources.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Debug\net8.0-windows\NotesApp.ToDoForm.resources
@@ -404,3 +403,4 @@ C:\Users\acer\Source\Repos\Be_SMART_\obj\Debug\net8.0-windows\refint\BeSMART.dll
 C:\Users\acer\Source\Repos\Be_SMART_\obj\Debug\net8.0-windows\BeSMART.pdb
 C:\Users\acer\Source\Repos\Be_SMART_\obj\Debug\net8.0-windows\NotesApp.genruntimeconfig.cache
 C:\Users\acer\Source\Repos\Be_SMART_\obj\Debug\net8.0-windows\ref\BeSMART.dll
+C:\Users\Amazing\Source\Repos\BeSMART\bin\Debug\net8.0-windows\itext.html2pdf.dll

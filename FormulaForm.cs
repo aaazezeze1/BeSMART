@@ -140,13 +140,6 @@ namespace NotesApp
             ConverterForm7.FormClosed += (s, args) => this.Show();
         }
 
-        private void btn5Settings_Click(object sender, EventArgs e)
-        {
-            var MediaPlayerForm6 = new MediaPlayerForm();
-            MediaPlayerForm6.Show();
-            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
-        }
-
         private void btn1Schedule_Click_1(object sender, EventArgs e)
         {
             var SchedForm3 = new CalendarForm();
@@ -177,14 +170,6 @@ namespace NotesApp
             ConverterForm7.Show();
             this.Hide();
             ConverterForm7.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btn5MediaPlayer_Click(object sender, EventArgs e)
-        {
-            var MediaPlayerForm6 = new MediaPlayerForm();
-            MediaPlayerForm6.Show();
-            this.Hide();
-            MediaPlayerForm6.FormClosed += (s, args) => this.Show();
         }
 
         private void btnprevious_MouseHover(object sender, EventArgs e)
