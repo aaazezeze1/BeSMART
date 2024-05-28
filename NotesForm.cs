@@ -272,6 +272,18 @@ namespace NotesApp
             }
         }
 
+        private void ToggleButtonColor(Button button, bool isActive)
+        {
+            if (isActive)
+            {
+                button.BackColor = Color.LightGray;
+            }
+            else
+            {
+                button.BackColor = Color.SeaGreen;
+            }
+        }
+
         private void btn5Bold_Click(object sender, EventArgs e)
         {
             if (rTxtBoxNotes.SelectionFont != null)
@@ -280,6 +292,7 @@ namespace NotesApp
                 FontStyle newStyle = currentFont.Style ^ FontStyle.Bold;
                 System.Drawing.Font newFont = new System.Drawing.Font(currentFont, newStyle);
                 rTxtBoxNotes.SelectionFont = newFont;
+                ToggleButtonColor((Button)sender, newFont.Bold);
             }
         }
 
@@ -291,6 +304,7 @@ namespace NotesApp
                 FontStyle newStyle = currentFont.Style ^ FontStyle.Italic;
                 System.Drawing.Font newFont = new System.Drawing.Font(currentFont, newStyle);
                 rTxtBoxNotes.SelectionFont = newFont;
+                ToggleButtonColor((Button)sender, newFont.Italic);
             }
         }
 
@@ -302,6 +316,7 @@ namespace NotesApp
                 FontStyle newStyle = currentFont.Style ^ FontStyle.Underline;
                 System.Drawing.Font newFont = new System.Drawing.Font(currentFont, newStyle);
                 rTxtBoxNotes.SelectionFont = newFont;
+                ToggleButtonColor((Button)sender, newFont.Underline);
             }
         }
 
@@ -335,9 +350,36 @@ namespace NotesApp
         private void btn10BulletList_Click(object sender, EventArgs e)
         {
             rTxtBoxNotes.SelectionBullet = true;
-            rTxtBoxNotes.SelectionIndent = 20;  // Optional: Sets indent for better visibility
+            rTxtBoxNotes.SelectionIndent = 20;
         }
+        private void btnClearTextFormat_Click(object sender, EventArgs e)
+        {
+            // Save the current selection
+            int start = rTxtBoxNotes.SelectionStart;
+            int length = rTxtBoxNotes.SelectionLength;
 
+            // Select the entire text if nothing is selected
+            if (length == 0)
+            {
+                rTxtBoxNotes.SelectAll();
+            }
+
+            // Remove formatting from the selected text
+            rTxtBoxNotes.SelectionFont = new Font(rTxtBoxNotes.Font, FontStyle.Regular);
+            rTxtBoxNotes.SelectionColor = rTxtBoxNotes.ForeColor;
+            rTxtBoxNotes.SelectionBackColor = rTxtBoxNotes.BackColor;
+            rTxtBoxNotes.SelectionBullet = false;
+            rTxtBoxNotes.SelectionIndent = 0;
+
+            // Clear the selection and reset the cursor position
+            rTxtBoxNotes.SelectionLength = 0;
+            rTxtBoxNotes.SelectionStart = start;
+
+            // Clear formatting toggles for buttons (if applicable)
+            ToggleButtonColor(btn5Bold, false);
+            ToggleButtonColor(btn6Italic, false);
+            ToggleButtonColor(btn3Underline, false);
+        }
         // Timer code starts here
         private void UpdateLabel()
         {
@@ -583,5 +625,12 @@ namespace NotesApp
             string file = Path.GetFileName(Playlist.SelectedItem.ToString());
             name.Text = "Currently Playing: " + file;
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
