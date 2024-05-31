@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotesForm));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotesForm));
             rTxtBoxNotes = new RichTextBox();
             panel7 = new Panel();
+            btnClearTextFormat = new Button();
+            label12 = new Label();
             label2 = new Label();
             label1 = new Label();
             txtBoxTitle = new TextBox();
@@ -86,8 +88,6 @@
             dGR1previousNotes = new DataGridView();
             label3 = new Label();
             panel2 = new Panel();
-            label12 = new Label();
-            btnClearTextFormat = new Button();
             panel7.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -132,6 +132,29 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(743, 852);
             panel7.TabIndex = 6;
+            // 
+            // btnClearTextFormat
+            // 
+            btnClearTextFormat.BackColor = Color.SeaGreen;
+            btnClearTextFormat.FlatAppearance.BorderSize = 0;
+            btnClearTextFormat.FlatStyle = FlatStyle.Flat;
+            btnClearTextFormat.Image = (Image)resources.GetObject("btnClearTextFormat.Image");
+            btnClearTextFormat.Location = new Point(691, 800);
+            btnClearTextFormat.Name = "btnClearTextFormat";
+            btnClearTextFormat.Size = new Size(37, 33);
+            btnClearTextFormat.TabIndex = 20;
+            btnClearTextFormat.UseVisualStyleBackColor = false;
+            btnClearTextFormat.Click += btnClearTextFormat_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(684, 777);
+            label12.Name = "label12";
+            label12.Size = new Size(49, 23);
+            label12.TabIndex = 19;
+            label12.Text = "Clear";
             // 
             // label2
             // 
@@ -373,7 +396,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(6, 12);
+            label9.Location = new Point(48, 18);
             label9.Name = "label9";
             label9.Size = new Size(138, 23);
             label9.TabIndex = 15;
@@ -770,29 +793,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(218, 852);
             panel2.TabIndex = 32;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(684, 777);
-            label12.Name = "label12";
-            label12.Size = new Size(49, 23);
-            label12.TabIndex = 19;
-            label12.Text = "Clear";
-            // 
-            // btnClearTextFormat
-            // 
-            btnClearTextFormat.BackColor = Color.SeaGreen;
-            btnClearTextFormat.FlatAppearance.BorderSize = 0;
-            btnClearTextFormat.FlatStyle = FlatStyle.Flat;
-            btnClearTextFormat.Image = (Image)resources.GetObject("btnClearTextFormat.Image");
-            btnClearTextFormat.Location = new Point(691, 800);
-            btnClearTextFormat.Name = "btnClearTextFormat";
-            btnClearTextFormat.Size = new Size(37, 33);
-            btnClearTextFormat.TabIndex = 20;
-            btnClearTextFormat.UseVisualStyleBackColor = false;
-            btnClearTextFormat.Click += btnClearTextFormat_Click;
             // 
             // NotesForm
             // 

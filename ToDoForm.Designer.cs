@@ -51,8 +51,6 @@
             btn4Formula = new Button();
             panel4 = new Panel();
             btn3Converter = new Button();
-            panel6 = new Panel();
-            btn5MediaPlayer = new Button();
             dtpDueDate = new DateTimePicker();
             label1 = new Label();
             label2 = new Label();
@@ -65,7 +63,6 @@
             panel3.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
-            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // TitleTxtBox
@@ -207,7 +204,6 @@
             fLP1Sidebar.Controls.Add(panel3);
             fLP1Sidebar.Controls.Add(panel5);
             fLP1Sidebar.Controls.Add(panel4);
-            fLP1Sidebar.Controls.Add(panel6);
             fLP1Sidebar.Dock = DockStyle.Left;
             fLP1Sidebar.Location = new Point(0, 0);
             fLP1Sidebar.Name = "fLP1Sidebar";
@@ -356,32 +352,6 @@
             btn3Converter.UseVisualStyleBackColor = false;
             btn3Converter.Click += btn3Converter_Click;
             // 
-            // panel6
-            // 
-            panel6.BackColor = Color.DarkSlateGray;
-            panel6.Controls.Add(btn5MediaPlayer);
-            panel6.Location = new Point(3, 516);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(211, 99);
-            panel6.TabIndex = 6;
-            // 
-            // btn5MediaPlayer
-            // 
-            btn5MediaPlayer.BackColor = Color.DarkSlateGray;
-            btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
-            btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5MediaPlayer.ForeColor = Color.White;
-            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
-            btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.Location = new Point(-8, -13);
-            btn5MediaPlayer.Name = "btn5MediaPlayer";
-            btn5MediaPlayer.Padding = new Padding(30, 0, 0, 0);
-            btn5MediaPlayer.Size = new Size(234, 120);
-            btn5MediaPlayer.TabIndex = 3;
-            btn5MediaPlayer.Text = "         Media Player";
-            btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.UseVisualStyleBackColor = false;
-            // 
             // dtpDueDate
             // 
             dtpDueDate.Location = new Point(316, 163);
@@ -452,7 +422,6 @@
             panel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            panel6.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -478,8 +447,6 @@
         private Button btn4Formula;
         private Panel panel4;
         private Button btn3Converter;
-        private Panel panel6;
-        private Button btn5MediaPlayer;
         private DateTimePicker dtpDueDate;
         private Label label1;
         private Label label2;

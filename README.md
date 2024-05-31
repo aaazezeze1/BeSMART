@@ -26,9 +26,11 @@ go open Task Manager, on the Processes tab click the Search bar. Type BeSMART an
 the background. Click on the application and click on End Task. Reopen the app again and make sure that when closing the app
 all windows are close to prevent this error.  
 
-2. Visual Studio Bug - Media Player disappeared or enlarged itself. This is due to the app being set to 125% dpi scaling by default. The app
-does not support monitors or screen lower than 14 inches or greater 15.6 inches. Windows will automatically resize the media player if
-the display scale setting is set to 100% and the screen size is not 14 or 15.6 inches which leads to this problem.
+2. Visual Studio Bug - Media Player disappeared or enlarged itself. This is due to the app being made for 125% dpi scaling. The app
+does not work well with monitors or screen lower than 14 inches or greater than 15.6 inches. Windows will automatically resize the media player if
+the display scale setting is set to 100% or any value other than 125% and the screen size is not 14 or 15.6 inches which leads to this problem. 
+The application *can work* in screens that are larger than 15.6 inches but the display setting has to set to 125%.  
+**Doing it this way leads to the text being blurry.**
 
 # Things to Improve
 1. Get a new API key that shows the latest currency exchange rate.  

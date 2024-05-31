@@ -199,13 +199,13 @@ namespace NotesApp
 
         private void ConvertUnitButton_MouseHover(object sender, EventArgs e)
         {
-            ConvertUnitButton.BackColor = Color.DarkSlateGray;
+            ConvertUnitButton.BackColor = Color.DimGray;
         }
 
         private void ConvertUnitButton_MouseLeave(object sender, EventArgs e)
         {
             ConvertUnitButton.ResetBackColor();
-            ConvertUnitButton.BackColor = Color.DimGray;
+            ConvertUnitButton.BackColor = Color.DarkSlateGray;
         }
 
         private void label12_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeSMART")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e864cc5181e821cbb48e6089d9149b825892afc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f120147e5ba24e1c095354d06599287efd8d9747")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeSMART")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeSMART")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

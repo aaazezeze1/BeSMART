@@ -74,8 +74,6 @@
             btn4Formula = new Button();
             panel6 = new Panel();
             btn3Converter = new Button();
-            panel7 = new Panel();
-            btn5MediaPlayer = new Button();
             pictureBox4 = new PictureBox();
             label15 = new Label();
             panel1.SuspendLayout();
@@ -88,7 +86,6 @@
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
-            panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
@@ -167,6 +164,7 @@
             // ConvertTempButton
             // 
             ConvertTempButton.BackColor = Color.DarkSlateGray;
+            ConvertTempButton.FlatAppearance.BorderSize = 0;
             ConvertTempButton.FlatStyle = FlatStyle.Flat;
             ConvertTempButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertTempButton.ForeColor = Color.White;
@@ -286,6 +284,7 @@
             // TempResetButton
             // 
             TempResetButton.BackColor = Color.DarkSlateGray;
+            TempResetButton.FlatAppearance.BorderSize = 0;
             TempResetButton.FlatStyle = FlatStyle.Flat;
             TempResetButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TempResetButton.ForeColor = Color.White;
@@ -507,7 +506,6 @@
             fLP1Sidebar.Controls.Add(panel4);
             fLP1Sidebar.Controls.Add(panel5);
             fLP1Sidebar.Controls.Add(panel6);
-            fLP1Sidebar.Controls.Add(panel7);
             fLP1Sidebar.Dock = DockStyle.Left;
             fLP1Sidebar.Location = new Point(0, 0);
             fLP1Sidebar.Margin = new Padding(3, 2, 3, 2);
@@ -667,34 +665,6 @@
             btn3Converter.UseVisualStyleBackColor = false;
             btn3Converter.Click += btn3Converter_Click;
             // 
-            // panel7
-            // 
-            panel7.BackColor = Color.DarkSlateGray;
-            panel7.Controls.Add(btn5MediaPlayer);
-            panel7.Location = new Point(3, 612);
-            panel7.Margin = new Padding(3, 2, 3, 2);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(207, 121);
-            panel7.TabIndex = 6;
-            // 
-            // btn5MediaPlayer
-            // 
-            btn5MediaPlayer.BackColor = Color.DarkSlateGray;
-            btn5MediaPlayer.FlatStyle = FlatStyle.Flat;
-            btn5MediaPlayer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5MediaPlayer.ForeColor = Color.White;
-            btn5MediaPlayer.Image = (Image)resources.GetObject("btn5MediaPlayer.Image");
-            btn5MediaPlayer.ImageAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.Location = new Point(-7, -10);
-            btn5MediaPlayer.Margin = new Padding(3, 2, 3, 2);
-            btn5MediaPlayer.Name = "btn5MediaPlayer";
-            btn5MediaPlayer.Padding = new Padding(30, 0, 0, 0);
-            btn5MediaPlayer.Size = new Size(253, 139);
-            btn5MediaPlayer.TabIndex = 3;
-            btn5MediaPlayer.Text = "         Media Player";
-            btn5MediaPlayer.TextAlign = ContentAlignment.MiddleLeft;
-            btn5MediaPlayer.UseVisualStyleBackColor = false;
-            // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
@@ -757,7 +727,6 @@
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -806,8 +775,6 @@
         private Button btn4Formula;
         private Panel panel6;
         private Button btn3Converter;
-        private Panel panel7;
-        private Button btn5MediaPlayer;
         private Label label13;
         private PictureBox pictureBox2;
         private Label label14;

@@ -11,7 +11,7 @@
         "projectName": "BeSMART",
         "projectPath": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj",
         "packagesPath": "C:\\Users\\Amazing\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\obj\\",
+        "outputPath": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amazing\\AppData\\Roaming\\NuGet\\NuGet.Config",
