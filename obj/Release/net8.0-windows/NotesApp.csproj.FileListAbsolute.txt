@@ -57,13 +57,10 @@ C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\Interop.WMPLib.
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\AxInterop.WMPLib.dll
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.csproj.ResolveComReference.cache
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.ConverterForm.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.EventsSchedForm4.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.FormulaForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.NotesApp.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.MediaPlayerForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.NotesForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.Properties.Resources.resources
-C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.ScheduleForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.ToDoForm.resources
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.csproj.GenerateResource.cache
 C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.GeneratedMSBuildEditorConfig.editorconfig
@@ -98,3 +95,6 @@ C:\Users\Amazing\Source\Repos\BeSMART\bin\Release\net8.0-windows\Images\Trigonom
 C:\Users\Amazing\Source\Repos\BeSMART\obj\Release\net8.0-windows\NotesApp.AboutForm.resources
 C:\Users\Amazing\Source\Repos\BeSMART\obj\Release\net8.0-windows\NotesApp.UserControlBlank.resources
 C:\Users\Amazing\Source\Repos\BeSMART\obj\Release\net8.0-windows\NotesApp.UserControlDay.resources
+C:\Users\Amazing\source\repos\BeSMART\bin\Release\net8.0-windows\itext.html2pdf.dll
+C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.CalendarForm.resources
+C:\Users\Amazing\source\repos\BeSMART\obj\Release\net8.0-windows\NotesApp.MakeEventsForm.resources
