@@ -631,6 +631,81 @@ namespace NotesApp
 
         }
 
-        
+        private void btn5Bold_MouseHover(object sender, EventArgs e)
+        {
+            btn5Bold.BackColor = Color.DimGray;
+        }
+
+        private void btn5Bold_MouseLeave(object sender, EventArgs e)
+        {
+            btn5Bold.ResetBackColor();
+            btn5Bold.BackColor = Color.SeaGreen;
+        }
+
+        private void btn6Italic_MouseHover(object sender, EventArgs e)
+        {
+            btn6Italic.BackColor = Color.DimGray;
+        }
+
+        private void btn6Italic_MouseLeave(object sender, EventArgs e)
+        {
+            btn6Italic.ResetBackColor();
+            btn6Italic.BackColor = Color.SeaGreen;
+        }
+
+        private void btn3Underline_MouseHover(object sender, EventArgs e)
+        {
+            btn3Underline.BackColor = Color.DimGray;
+        }
+
+        private void btn3Underline_MouseLeave(object sender, EventArgs e)
+        {
+            btn3Underline.ResetBackColor();
+            btn3Underline.BackColor = Color.SeaGreen;
+        }
+
+        private void btn8TextColor_MouseHover(object sender, EventArgs e)
+        {
+            btn8TextColor.BackColor = Color.DimGray;
+        }
+
+        private void btn8TextColor_MouseLeave(object sender, EventArgs e)
+        {
+            btn8TextColor.ResetBackColor();
+            btn8TextColor.BackColor = Color.SeaGreen;
+        }
+
+        private void btn9TextBackColor_MouseHover(object sender, EventArgs e)
+        {
+            btn9TextBackColor.BackColor = Color.DimGray;
+        }
+
+        private void btn9TextBackColor_MouseLeave(object sender, EventArgs e)
+        {
+            btn9TextBackColor.ResetBackColor();
+            btn9TextBackColor.BackColor = Color.SeaGreen;
+        }
+
+        private void btn10BulletList_MouseHover(object sender, EventArgs e)
+        {
+            btn10BulletList.BackColor = Color.DimGray;
+        }
+
+        private void btn10BulletList_MouseLeave(object sender, EventArgs e)
+        {
+            btn10BulletList.ResetBackColor();
+            btn10BulletList.BackColor = Color.SeaGreen;
+        }
+
+        private void btnClearTextFormat_MouseHover(object sender, EventArgs e)
+        {
+            btnClearTextFormat.BackColor = Color.DimGray;
+        }
+
+        private void btnClearTextFormat_MouseLeave(object sender, EventArgs e)
+        {
+            btnClearTextFormat.ResetBackColor();
+            btnClearTextFormat.BackColor = Color.SeaGreen;
+        }
     }
 }

@@ -145,6 +145,8 @@
             btnClearTextFormat.TabIndex = 20;
             btnClearTextFormat.UseVisualStyleBackColor = false;
             btnClearTextFormat.Click += btnClearTextFormat_Click;
+            btnClearTextFormat.MouseLeave += btnClearTextFormat_MouseLeave;
+            btnClearTextFormat.MouseHover += btnClearTextFormat_MouseHover;
             // 
             // label12
             // 
@@ -207,6 +209,8 @@
             btn10BulletList.TabIndex = 18;
             btn10BulletList.UseVisualStyleBackColor = false;
             btn10BulletList.Click += btn10BulletList_Click;
+            btn10BulletList.MouseLeave += btn10BulletList_MouseLeave;
+            btn10BulletList.MouseHover += btn10BulletList_MouseHover;
             // 
             // label8
             // 
@@ -231,6 +235,8 @@
             btn9TextBackColor.TabIndex = 16;
             btn9TextBackColor.UseVisualStyleBackColor = false;
             btn9TextBackColor.Click += btn9TextBackColor_Click;
+            btn9TextBackColor.MouseLeave += btn9TextBackColor_MouseLeave;
+            btn9TextBackColor.MouseHover += btn9TextBackColor_MouseHover;
             // 
             // btn8TextColor
             // 
@@ -244,6 +250,8 @@
             btn8TextColor.TabIndex = 15;
             btn8TextColor.UseVisualStyleBackColor = false;
             btn8TextColor.Click += btn8TextColor_Click;
+            btn8TextColor.MouseLeave += btn8TextColor_MouseLeave;
+            btn8TextColor.MouseHover += btn8TextColor_MouseHover;
             // 
             // btn5Bold
             // 
@@ -258,6 +266,8 @@
             btn5Bold.TabIndex = 5;
             btn5Bold.UseVisualStyleBackColor = false;
             btn5Bold.Click += btn5Bold_Click;
+            btn5Bold.MouseLeave += btn5Bold_MouseLeave;
+            btn5Bold.MouseHover += btn5Bold_MouseHover;
             // 
             // btn6Italic
             // 
@@ -271,6 +281,8 @@
             btn6Italic.TabIndex = 6;
             btn6Italic.UseVisualStyleBackColor = false;
             btn6Italic.Click += btn6Italic_Click;
+            btn6Italic.MouseLeave += btn6Italic_MouseLeave;
+            btn6Italic.MouseHover += btn6Italic_MouseHover;
             // 
             // label7
             // 
@@ -294,6 +306,8 @@
             btn3Underline.TabIndex = 7;
             btn3Underline.UseVisualStyleBackColor = false;
             btn3Underline.Click += btn3Underline_Click;
+            btn3Underline.MouseLeave += btn3Underline_MouseLeave;
+            btn3Underline.MouseHover += btn3Underline_MouseHover;
             // 
             // label5
             // 
@@ -338,6 +352,7 @@
             // btn1Load
             // 
             btn1Load.BackColor = Color.DarkSlateGray;
+            btn1Load.FlatAppearance.BorderSize = 0;
             btn1Load.FlatStyle = FlatStyle.Flat;
             btn1Load.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn1Load.ForeColor = Color.White;
@@ -352,6 +367,7 @@
             // btn3NewNote
             // 
             btn3NewNote.BackColor = Color.DarkSlateGray;
+            btn3NewNote.FlatAppearance.BorderSize = 0;
             btn3NewNote.FlatStyle = FlatStyle.Flat;
             btn3NewNote.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn3NewNote.ForeColor = Color.White;
@@ -366,6 +382,7 @@
             // btn4Save
             // 
             btn4Save.BackColor = Color.DarkSlateGray;
+            btn4Save.FlatAppearance.BorderSize = 0;
             btn4Save.FlatStyle = FlatStyle.Flat;
             btn4Save.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn4Save.ForeColor = Color.White;
@@ -380,6 +397,7 @@
             // btn2Delete
             // 
             btn2Delete.BackColor = Color.DarkSlateGray;
+            btn2Delete.FlatAppearance.BorderSize = 0;
             btn2Delete.FlatStyle = FlatStyle.Flat;
             btn2Delete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn2Delete.ForeColor = Color.White;
@@ -443,6 +461,7 @@
             // shortBreakButton
             // 
             shortBreakButton.BackColor = Color.DarkSlateGray;
+            shortBreakButton.FlatAppearance.BorderSize = 0;
             shortBreakButton.FlatStyle = FlatStyle.Flat;
             shortBreakButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             shortBreakButton.ForeColor = Color.White;
@@ -457,6 +476,7 @@
             // longBreakButton
             // 
             longBreakButton.BackColor = Color.DarkSlateGray;
+            longBreakButton.FlatAppearance.BorderSize = 0;
             longBreakButton.FlatStyle = FlatStyle.Flat;
             longBreakButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             longBreakButton.ForeColor = Color.White;
@@ -471,6 +491,7 @@
             // stopButon
             // 
             stopButon.BackColor = Color.DarkSlateGray;
+            stopButon.FlatAppearance.BorderSize = 0;
             stopButon.FlatStyle = FlatStyle.Flat;
             stopButon.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             stopButon.ForeColor = Color.White;
@@ -497,6 +518,7 @@
             // startButton
             // 
             startButton.BackColor = Color.DarkSlateGray;
+            startButton.FlatAppearance.BorderSize = 0;
             startButton.FlatStyle = FlatStyle.Flat;
             startButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             startButton.ForeColor = Color.White;
@@ -511,6 +533,7 @@
             // pomodoroButton
             // 
             pomodoroButton.BackColor = Color.DarkSlateGray;
+            pomodoroButton.FlatAppearance.BorderSize = 0;
             pomodoroButton.FlatStyle = FlatStyle.Flat;
             pomodoroButton.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pomodoroButton.ForeColor = Color.White;
