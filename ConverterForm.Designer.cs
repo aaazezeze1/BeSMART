@@ -166,7 +166,7 @@
             ConvertTempButton.BackColor = Color.DarkSlateGray;
             ConvertTempButton.FlatAppearance.BorderSize = 0;
             ConvertTempButton.FlatStyle = FlatStyle.Flat;
-            ConvertTempButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ConvertTempButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConvertTempButton.ForeColor = Color.White;
             ConvertTempButton.Location = new Point(102, 356);
             ConvertTempButton.Margin = new Padding(3, 4, 3, 4);
@@ -286,7 +286,7 @@
             TempResetButton.BackColor = Color.DarkSlateGray;
             TempResetButton.FlatAppearance.BorderSize = 0;
             TempResetButton.FlatStyle = FlatStyle.Flat;
-            TempResetButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TempResetButton.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TempResetButton.ForeColor = Color.White;
             TempResetButton.Location = new Point(232, 356);
             TempResetButton.Margin = new Padding(3, 4, 3, 4);
