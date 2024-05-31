@@ -4,7 +4,17 @@ BeSMART is a user-friendly notes application that allows users to take notes eff
 This application is our Final Project in ITEC 103 (Intermediate Programming). Project made by Amazing Grace Cabiles and Cyrelle Kristin Gapit from BSCS-1B.  
 
 # Application Screenshots
-
+![main](https://github.com/aaazezeze1/BeSMART/assets/81816019/4da2e880-abbe-449b-a46a-90370f6923e6)
+![notes1](https://github.com/aaazezeze1/BeSMART/assets/81816019/b01156d9-3128-46d0-ba3b-065b7a2fd84b)
+![notes2](https://github.com/aaazezeze1/BeSMART/assets/81816019/26e88d09-f590-46a1-b319-8a536f81b42c)
+![calendar1](https://github.com/aaazezeze1/BeSMART/assets/81816019/e09115c9-76ec-41c6-a000-ef5367418101)
+![calendar2](https://github.com/aaazezeze1/BeSMART/assets/81816019/ec747cf2-2295-4150-8cb7-49a3e2e87375)
+![todo](https://github.com/aaazezeze1/BeSMART/assets/81816019/c202b840-74c7-4109-9d93-cef04e7edd4e)
+![converter](https://github.com/aaazezeze1/BeSMART/assets/81816019/3ee242a7-2f81-4723-adcc-0fa05240c48f)
+![formula1](https://github.com/aaazezeze1/BeSMART/assets/81816019/46513628-97b7-46c0-a19a-e6a14d089e66)
+![formula2](https://github.com/aaazezeze1/BeSMART/assets/81816019/efc85442-ffce-4a44-a2f4-fd647a41700a)
+![about](https://github.com/aaazezeze1/BeSMART/assets/81816019/d5d38cfa-044f-479b-a97e-f5eec6ad322e)
+  
 # What we used for the project
 1. Visual Studio Community 2022 (17.9.5)
 2. .NET 8 (Long Term Support)
@@ -24,13 +34,17 @@ Newtonsoft can now be imported by typing using Newtonsoft.Json.Linq;**
 background (you can notice it on the task manager). This is a Visual Studio bug and unfortunately the only solution is to 
 go open Task Manager, on the Processes tab click the Search bar. Type BeSMART and you will see the application running in 
 the background. Click on the application and click on End Task. Reopen the app again and make sure that when closing the app
-all windows are close to prevent this error.  
+all windows are close to prevent this error.
 
-2. Visual Studio Bug - Media Player disappeared or enlarged itself. This is due to the app being made for 125% dpi scaling. The app
+![taskmanager](https://github.com/aaazezeze1/BeSMART/assets/81816019/41d1c4e7-0587-4c5f-9ea5-fa3af076c274)  
+  
+3. Visual Studio Bug - Media Player disappeared or enlarged itself. This is due to the app being made for 125% dpi scaling. The app
 does not work well with monitors or screen lower than 14 inches or greater than 15.6 inches. Windows will automatically resize the media player if
 the display scale setting is set to 100% or any value other than 125% and the screen size is not 14 or 15.6 inches which leads to this problem. 
-The application *can work* in screens that are larger than 15.6 inches but the display setting has to set to 125%. **Doing it this way leads to the text being blurry.**
+The application *can work* in screens that are larger than 15.6 inches but the display setting has to set to 125%. **Doing it this way leads to the text being blurry.**  
 
+![dpiscaling](https://github.com/aaazezeze1/BeSMART/assets/81816019/d73252a4-33f0-4ac4-90de-d824a6274247)
+  
 # Things to Improve
 1. Get a new API key that shows the latest currency exchange rate.  
 The API key that this project uses is outdated and not updated.
