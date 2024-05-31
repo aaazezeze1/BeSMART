@@ -34,11 +34,9 @@ Newtonsoft can now be imported by typing using Newtonsoft.Json.Linq;**
 background (you can notice it on the task manager). This is a Visual Studio bug and unfortunately the only solution is to 
 go open Task Manager, on the Processes tab click the Search bar. Type BeSMART and you will see the application running in 
 the background. Click on the application and click on End Task. Reopen the app again and make sure that when closing the app
-all windows are close to prevent this error.
-
-![taskmanager](https://github.com/aaazezeze1/BeSMART/assets/81816019/41d1c4e7-0587-4c5f-9ea5-fa3af076c274)  
+all windows are close to prevent this error.  
   
-3. Visual Studio Bug - Media Player disappeared or enlarged itself. This is due to the app being made for
+2. Visual Studio Bug - Media Player disappeared or enlarged itself. This is due to the app being made for
 125% dpi scaling. The app does not work well with monitors or screens lower than 14 inches or greater 
 than 15.6 inches. Windows will automatically resize the media player if the display scale setting is 
 set to 100% or any value other than 125% and the screen size is not 14 or 15.6 inches which leads to 
