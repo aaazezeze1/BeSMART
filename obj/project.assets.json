@@ -4893,11 +4893,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\NotesApp.csproj",
+      "projectUniqueName": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj",
       "projectName": "BeSMART",
-      "projectPath": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\NotesApp.csproj",
+      "projectPath": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\NotesApp.csproj",
       "packagesPath": "C:\\Users\\Amazing\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amazing\\Source\\Repos\\BeSMART\\obj\\",
+      "outputPath": "C:\\Users\\Amazing\\source\\repos\\BeSMART\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Amazing\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4908,6 +4908,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
